@@ -1,0 +1,79 @@
+D:\Code\PBL3 - Cosmetics Store Management App\PBL3 - Cosmetics Store Management App\bin\Debug\SqlServerTypes\x64\msvcr120.dll
+D:\Code\PBL3 - Cosmetics Store Management App\PBL3 - Cosmetics Store Management App\bin\Debug\SqlServerTypes\x64\SqlServerSpatial140.dll
+D:\Code\PBL3 - Cosmetics Store Management App\PBL3 - Cosmetics Store Management App\bin\Debug\SqlServerTypes\x86\msvcr120.dll
+D:\Code\PBL3 - Cosmetics Store Management App\PBL3 - Cosmetics Store Management App\bin\Debug\SqlServerTypes\x86\SqlServerSpatial140.dll
+D:\Code\PBL3 - Cosmetics Store Management App\PBL3 - Cosmetics Store Management App\bin\Debug\PBL3 - Cosmetics Store Management App.exe.config
+D:\Code\PBL3 - Cosmetics Store Management App\PBL3 - Cosmetics Store Management App\bin\Debug\PBL3 - Cosmetics Store Management App.exe
+D:\Code\PBL3 - Cosmetics Store Management App\PBL3 - Cosmetics Store Management App\bin\Debug\PBL3 - Cosmetics Store Management App.pdb
+D:\Code\PBL3 - Cosmetics Store Management App\PBL3 - Cosmetics Store Management App\bin\Debug\Guna.UI2.dll
+D:\Code\PBL3 - Cosmetics Store Management App\PBL3 - Cosmetics Store Management App\bin\Debug\Microsoft.ReportViewer.Common.dll
+D:\Code\PBL3 - Cosmetics Store Management App\PBL3 - Cosmetics Store Management App\bin\Debug\Microsoft.ReportViewer.DataVisualization.dll
+D:\Code\PBL3 - Cosmetics Store Management App\PBL3 - Cosmetics Store Management App\bin\Debug\Microsoft.ReportViewer.Design.dll
+D:\Code\PBL3 - Cosmetics Store Management App\PBL3 - Cosmetics Store Management App\bin\Debug\Microsoft.ReportViewer.ProcessingObjectModel.dll
+D:\Code\PBL3 - Cosmetics Store Management App\PBL3 - Cosmetics Store Management App\bin\Debug\Microsoft.ReportViewer.WinForms.dll
+D:\Code\PBL3 - Cosmetics Store Management App\PBL3 - Cosmetics Store Management App\bin\Debug\Microsoft.SqlServer.Types.dll
+D:\Code\PBL3 - Cosmetics Store Management App\PBL3 - Cosmetics Store Management App\bin\Debug\EnvDTE.dll
+D:\Code\PBL3 - Cosmetics Store Management App\PBL3 - Cosmetics Store Management App\bin\Debug\stdole.dll
+D:\Code\PBL3 - Cosmetics Store Management App\PBL3 - Cosmetics Store Management App\bin\Debug\de\Microsoft.ReportViewer.Common.resources.dll
+D:\Code\PBL3 - Cosmetics Store Management App\PBL3 - Cosmetics Store Management App\bin\Debug\es\Microsoft.ReportViewer.Common.resources.dll
+D:\Code\PBL3 - Cosmetics Store Management App\PBL3 - Cosmetics Store Management App\bin\Debug\fr\Microsoft.ReportViewer.Common.resources.dll
+D:\Code\PBL3 - Cosmetics Store Management App\PBL3 - Cosmetics Store Management App\bin\Debug\it\Microsoft.ReportViewer.Common.resources.dll
+D:\Code\PBL3 - Cosmetics Store Management App\PBL3 - Cosmetics Store Management App\bin\Debug\ja\Microsoft.ReportViewer.Common.resources.dll
+D:\Code\PBL3 - Cosmetics Store Management App\PBL3 - Cosmetics Store Management App\bin\Debug\ko\Microsoft.ReportViewer.Common.resources.dll
+D:\Code\PBL3 - Cosmetics Store Management App\PBL3 - Cosmetics Store Management App\bin\Debug\pt\Microsoft.ReportViewer.Common.resources.dll
+D:\Code\PBL3 - Cosmetics Store Management App\PBL3 - Cosmetics Store Management App\bin\Debug\ru\Microsoft.ReportViewer.Common.resources.dll
+D:\Code\PBL3 - Cosmetics Store Management App\PBL3 - Cosmetics Store Management App\bin\Debug\zh-CHS\Microsoft.ReportViewer.Common.resources.dll
+D:\Code\PBL3 - Cosmetics Store Management App\PBL3 - Cosmetics Store Management App\bin\Debug\zh-CHT\Microsoft.ReportViewer.Common.resources.dll
+D:\Code\PBL3 - Cosmetics Store Management App\PBL3 - Cosmetics Store Management App\bin\Debug\de\Microsoft.ReportViewer.DataVisualization.resources.dll
+D:\Code\PBL3 - Cosmetics Store Management App\PBL3 - Cosmetics Store Management App\bin\Debug\es\Microsoft.ReportViewer.DataVisualization.resources.dll
+D:\Code\PBL3 - Cosmetics Store Management App\PBL3 - Cosmetics Store Management App\bin\Debug\fr\Microsoft.ReportViewer.DataVisualization.resources.dll
+D:\Code\PBL3 - Cosmetics Store Management App\PBL3 - Cosmetics Store Management App\bin\Debug\it\Microsoft.ReportViewer.DataVisualization.resources.dll
+D:\Code\PBL3 - Cosmetics Store Management App\PBL3 - Cosmetics Store Management App\bin\Debug\ja\Microsoft.ReportViewer.DataVisualization.resources.dll
+D:\Code\PBL3 - Cosmetics Store Management App\PBL3 - Cosmetics Store Management App\bin\Debug\ko\Microsoft.ReportViewer.DataVisualization.resources.dll
+D:\Code\PBL3 - Cosmetics Store Management App\PBL3 - Cosmetics Store Management App\bin\Debug\pt\Microsoft.ReportViewer.DataVisualization.resources.dll
+D:\Code\PBL3 - Cosmetics Store Management App\PBL3 - Cosmetics Store Management App\bin\Debug\ru\Microsoft.ReportViewer.DataVisualization.resources.dll
+D:\Code\PBL3 - Cosmetics Store Management App\PBL3 - Cosmetics Store Management App\bin\Debug\zh-CHS\Microsoft.ReportViewer.DataVisualization.resources.dll
+D:\Code\PBL3 - Cosmetics Store Management App\PBL3 - Cosmetics Store Management App\bin\Debug\zh-CHT\Microsoft.ReportViewer.DataVisualization.resources.dll
+D:\Code\PBL3 - Cosmetics Store Management App\PBL3 - Cosmetics Store Management App\bin\Debug\de\Microsoft.ReportViewer.Design.resources.dll
+D:\Code\PBL3 - Cosmetics Store Management App\PBL3 - Cosmetics Store Management App\bin\Debug\es\Microsoft.ReportViewer.Design.resources.dll
+D:\Code\PBL3 - Cosmetics Store Management App\PBL3 - Cosmetics Store Management App\bin\Debug\fr\Microsoft.ReportViewer.Design.resources.dll
+D:\Code\PBL3 - Cosmetics Store Management App\PBL3 - Cosmetics Store Management App\bin\Debug\it\Microsoft.ReportViewer.Design.resources.dll
+D:\Code\PBL3 - Cosmetics Store Management App\PBL3 - Cosmetics Store Management App\bin\Debug\ja\Microsoft.ReportViewer.Design.resources.dll
+D:\Code\PBL3 - Cosmetics Store Management App\PBL3 - Cosmetics Store Management App\bin\Debug\ko\Microsoft.ReportViewer.Design.resources.dll
+D:\Code\PBL3 - Cosmetics Store Management App\PBL3 - Cosmetics Store Management App\bin\Debug\pt\Microsoft.ReportViewer.Design.resources.dll
+D:\Code\PBL3 - Cosmetics Store Management App\PBL3 - Cosmetics Store Management App\bin\Debug\ru\Microsoft.ReportViewer.Design.resources.dll
+D:\Code\PBL3 - Cosmetics Store Management App\PBL3 - Cosmetics Store Management App\bin\Debug\zh-CHS\Microsoft.ReportViewer.Design.resources.dll
+D:\Code\PBL3 - Cosmetics Store Management App\PBL3 - Cosmetics Store Management App\bin\Debug\zh-CHT\Microsoft.ReportViewer.Design.resources.dll
+D:\Code\PBL3 - Cosmetics Store Management App\PBL3 - Cosmetics Store Management App\bin\Debug\de\Microsoft.ReportViewer.WinForms.resources.dll
+D:\Code\PBL3 - Cosmetics Store Management App\PBL3 - Cosmetics Store Management App\bin\Debug\es\Microsoft.ReportViewer.WinForms.resources.dll
+D:\Code\PBL3 - Cosmetics Store Management App\PBL3 - Cosmetics Store Management App\bin\Debug\fr\Microsoft.ReportViewer.WinForms.resources.dll
+D:\Code\PBL3 - Cosmetics Store Management App\PBL3 - Cosmetics Store Management App\bin\Debug\it\Microsoft.ReportViewer.WinForms.resources.dll
+D:\Code\PBL3 - Cosmetics Store Management App\PBL3 - Cosmetics Store Management App\bin\Debug\ja\Microsoft.ReportViewer.WinForms.resources.dll
+D:\Code\PBL3 - Cosmetics Store Management App\PBL3 - Cosmetics Store Management App\bin\Debug\ko\Microsoft.ReportViewer.WinForms.resources.dll
+D:\Code\PBL3 - Cosmetics Store Management App\PBL3 - Cosmetics Store Management App\bin\Debug\pt\Microsoft.ReportViewer.WinForms.resources.dll
+D:\Code\PBL3 - Cosmetics Store Management App\PBL3 - Cosmetics Store Management App\bin\Debug\ru\Microsoft.ReportViewer.WinForms.resources.dll
+D:\Code\PBL3 - Cosmetics Store Management App\PBL3 - Cosmetics Store Management App\bin\Debug\zh-CHS\Microsoft.ReportViewer.WinForms.resources.dll
+D:\Code\PBL3 - Cosmetics Store Management App\PBL3 - Cosmetics Store Management App\bin\Debug\zh-CHT\Microsoft.ReportViewer.WinForms.resources.dll
+D:\Code\PBL3 - Cosmetics Store Management App\PBL3 - Cosmetics Store Management App\obj\Debug\PBL3 - Cosmetics Store Management App.csproj.AssemblyReference.cache
+D:\Code\PBL3 - Cosmetics Store Management App\PBL3 - Cosmetics Store Management App\obj\Debug\PBL3___Cosmetics_Store_Management_App.frmPOS.resources
+D:\Code\PBL3 - Cosmetics Store Management App\PBL3 - Cosmetics Store Management App\obj\Debug\PBL3___Cosmetics_Store_Management_App.frmStaffAdd.resources
+D:\Code\PBL3 - Cosmetics Store Management App\PBL3 - Cosmetics Store Management App\obj\Debug\PBL3___Cosmetics_Store_Management_App.frmMain.resources
+D:\Code\PBL3 - Cosmetics Store Management App\PBL3 - Cosmetics Store Management App\obj\Debug\PBL3___Cosmetics_Store_Management_App.Properties.Resources.resources
+D:\Code\PBL3 - Cosmetics Store Management App\PBL3 - Cosmetics Store Management App\obj\Debug\PBL3___Cosmetics_Store_Management_App.usProduct.resources
+D:\Code\PBL3 - Cosmetics Store Management App\PBL3 - Cosmetics Store Management App\obj\Debug\PBL3___Cosmetics_Store_Management_App.View.frmCategoryAdd.resources
+D:\Code\PBL3 - Cosmetics Store Management App\PBL3 - Cosmetics Store Management App\obj\Debug\PBL3___Cosmetics_Store_Management_App.View.frmCategoryView.resources
+D:\Code\PBL3 - Cosmetics Store Management App\PBL3 - Cosmetics Store Management App\obj\Debug\PBL3___Cosmetics_Store_Management_App.View.frmCustomerAdd.resources
+D:\Code\PBL3 - Cosmetics Store Management App\PBL3 - Cosmetics Store Management App\obj\Debug\PBL3___Cosmetics_Store_Management_App.View.frmCustomerView.resources
+D:\Code\PBL3 - Cosmetics Store Management App\PBL3 - Cosmetics Store Management App\obj\Debug\PBL3___Cosmetics_Store_Management_App.View.frmProductAdd.resources
+D:\Code\PBL3 - Cosmetics Store Management App\PBL3 - Cosmetics Store Management App\obj\Debug\PBL3___Cosmetics_Store_Management_App.View.frmProductDetails.resources
+D:\Code\PBL3 - Cosmetics Store Management App\PBL3 - Cosmetics Store Management App\obj\Debug\PBL3___Cosmetics_Store_Management_App.View.frmProductView.resources
+D:\Code\PBL3 - Cosmetics Store Management App\PBL3 - Cosmetics Store Management App\obj\Debug\PBL3___Cosmetics_Store_Management_App.View.frmStaffView.resources
+D:\Code\PBL3 - Cosmetics Store Management App\PBL3 - Cosmetics Store Management App\obj\Debug\PBL3___Cosmetics_Store_Management_App.View.frmReportView.resources
+D:\Code\PBL3 - Cosmetics Store Management App\PBL3 - Cosmetics Store Management App\obj\Debug\PBL3___Cosmetics_Store_Management_App.View.frmStorageAdd.resources
+D:\Code\PBL3 - Cosmetics Store Management App\PBL3 - Cosmetics Store Management App\obj\Debug\PBL3___Cosmetics_Store_Management_App.View.frmStorageView.resources
+D:\Code\PBL3 - Cosmetics Store Management App\PBL3 - Cosmetics Store Management App\obj\Debug\PBL3___Cosmetics_Store_Management_App.View.Report.resources
+D:\Code\PBL3 - Cosmetics Store Management App\PBL3 - Cosmetics Store Management App\obj\Debug\PBL3 - Cosmetics Store Management App.csproj.GenerateResource.cache
+D:\Code\PBL3 - Cosmetics Store Management App\PBL3 - Cosmetics Store Management App\obj\Debug\PBL3 - Cosmetics Store Management App.csproj.CoreCompileInputs.cache
+D:\Code\PBL3 - Cosmetics Store Management App\PBL3 - Cosmetics Store Management App\obj\Debug\PBL3 - C.806AFD89.Up2Date
+D:\Code\PBL3 - Cosmetics Store Management App\PBL3 - Cosmetics Store Management App\obj\Debug\PBL3 - Cosmetics Store Management App.exe
+D:\Code\PBL3 - Cosmetics Store Management App\PBL3 - Cosmetics Store Management App\obj\Debug\PBL3 - Cosmetics Store Management App.pdb
