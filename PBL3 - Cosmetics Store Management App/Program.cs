@@ -1,4 +1,5 @@
-﻿using System;
+﻿using PBL3___Cosmetics_Store_Management_App.Views;
+using System;
 using System.Windows.Forms;
 
 namespace PBL3___Cosmetics_Store_Management_App
@@ -13,7 +14,8 @@ namespace PBL3___Cosmetics_Store_Management_App
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new frmMain());
+            Application.Run(new frmLogin());
+            
         }
     }
 }

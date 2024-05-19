@@ -76,6 +76,12 @@
     <Compile Include="Models\Category_Model.cs" />
     <Compile Include="Models\ExecuteDB.cs" />
     <Compile Include="Presenters\Category_Presenter.cs" />
+    <Compile Include="Views\frmLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\frmLogin.Designer.cs">
+      <DependentUpon>frmLogin.cs</DependentUpon>
+    </Compile>
     <Compile Include="Views\frmPOS.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -175,6 +181,9 @@
     <Compile Include="Views\Report.Designer.cs">
       <DependentUpon>Report.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Views\frmLogin.resx">
+      <DependentUpon>frmLogin.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Views\frmPOS.resx">
       <DependentUpon>frmPOS.cs</DependentUpon>
     </EmbeddedResource>
@@ -339,6 +348,7 @@
     <None Include="Resources\obagi.png" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\user_white.png" />
     <Content Include="SqlServerTypes\readme.htm" />
     <Content Include="SqlServerTypes\x64\msvcr120.dll">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
