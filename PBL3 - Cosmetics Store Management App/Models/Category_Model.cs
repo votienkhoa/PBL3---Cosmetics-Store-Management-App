@@ -27,6 +27,27 @@ namespace PBL3___Cosmetics_Store_Management_App.Models
             return ExecuteDB.Instance.ExecuteQuery(sql, name, id);
         }
 
+        public List<Category> GetList()
+        {
+            List<Category> list = new List<Category>();
+            list.Add(new Category { ID = 0, Name = "Tất cả" });
+            foreach(DataRow i in GetData().Rows)
+            {
+                list.Add(GetCategory(i));
+            }
+
+            return list;
+        }
+
+        public Category GetCategory(DataRow row)
+        {
+            return new Category
+            {
+                ID = Convert.ToInt32(row["category_id"].ToString()),
+                Name = Convert.ToString(row["category_name"].ToString())
+            };
+        }
+
         public void Add(SqlParameter p)
         {
             string sql = "INSERT INTO categories (category_name) " +
