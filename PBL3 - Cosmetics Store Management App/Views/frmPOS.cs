@@ -1,6 +1,4 @@
 ﻿using Guna.UI2.WinForms;
-using PBL3___Cosmetics_Store_Management_App.Models;
-using PBL3___Cosmetics_Store_Management_App.Presenters;
 using System;
 using System.Data;
 using System.Windows.Forms;
@@ -19,10 +17,10 @@ namespace PBL3___Cosmetics_Store_Management_App
 
         private void FormLoad()
         {
-            foreach (Guna2Button i in Category_Presenter.Instance.GetButtonList())
-            {
-                pnCategories.Controls.Add(i);
-            }
+            //foreach (Guna2Button i in Category_Presenter.Instance.GetButtonList())
+            //{
+            //    pnCategories.Controls.Add(i);
+            //}
         }
 
         private void guna2Button1_Click(object sender, EventArgs e)

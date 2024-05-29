@@ -1,5 +1,6 @@
-﻿using PBL3___Cosmetics_Store_Management_App.DTO;
-using PBL3___Cosmetics_Store_Management_App.Presenters;
+﻿using PBL3___Cosmetics_Store_Management_App.Controllers;
+using PBL3___Cosmetics_Store_Management_App.DTO;
+using PBL3___Cosmetics_Store_Management_App.Entities;
 using System.Windows.Forms;
 
 namespace PBL3___Cosmetics_Store_Management_App.View
@@ -7,6 +8,7 @@ namespace PBL3___Cosmetics_Store_Management_App.View
     public partial class frmCategoryAdd : Form
     {
         public Category currentCategory = null;
+
         public delegate void MyDel();
         public MyDel reload { get; set; }
         public frmCategoryAdd()
@@ -19,7 +21,7 @@ namespace PBL3___Cosmetics_Store_Management_App.View
             if (currentCategory != null)
             {
                 label1.Text = "Edit Category";
-                txtName.Text = currentCategory.Name;
+                txtName.Text = currentCategory.category_name;
             }
         }
 
@@ -30,9 +32,14 @@ namespace PBL3___Cosmetics_Store_Management_App.View
 
         private void btnSave_Click(object sender, System.EventArgs e)
         {
-            string name = txtName.Text;
-            Category_Presenter.Instance.AddOrEditCategory(currentCategory, name);
-
+            if (currentCategory == null)
+            {
+                CategoryController.Instance.Add(txtName.Text);
+            }
+            else
+            {
+                CategoryController.Instance.Update(currentCategory, txtName.Text);
+            }
             reload();
             this.Dispose();
         }

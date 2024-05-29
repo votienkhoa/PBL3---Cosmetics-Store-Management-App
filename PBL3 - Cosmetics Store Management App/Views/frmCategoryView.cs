@@ -1,7 +1,10 @@
-﻿using PBL3___Cosmetics_Store_Management_App.DTO;
-using PBL3___Cosmetics_Store_Management_App.Presenters;
+﻿using PBL3___Cosmetics_Store_Management_App.Controllers;
+using PBL3___Cosmetics_Store_Management_App.Data_Access;
+using PBL3___Cosmetics_Store_Management_App.DTO;
+using PBL3___Cosmetics_Store_Management_App.Entities;
 using System;
 using System.Data;
+using System.Linq;
 using System.Windows.Forms;
 
 namespace PBL3___Cosmetics_Store_Management_App.View
@@ -11,24 +14,23 @@ namespace PBL3___Cosmetics_Store_Management_App.View
         public frmCategoryView()
         {
             InitializeComponent();
-            
         }
-        private void frmLoad()
-        {
-            dgvCategories.DataSource = Category_Presenter.Instance.ViewCategories();
-
-        }
-
         private void frmCategoryView_Load(object sender, EventArgs e)
         {
             frmLoad();
+        }
+
+
+        private void frmLoad()
+        {
+            dgvCategories.DataSource = CategoryController.Instance.GetData();
         }
 
         private void btnAdd_Click(object sender, EventArgs e)
         {
             frmCategoryAdd frm = new frmCategoryAdd();
             frm.reload += new frmCategoryAdd.MyDel(frmLoad);
-            
+
             frm.ShowDialog();
         }
 
@@ -39,8 +41,8 @@ namespace PBL3___Cosmetics_Store_Management_App.View
 
             Category x = new Category()
             {
-                ID = ID,
-                Name = Name
+                category_id = ID,
+                category_name = Name
             };
 
             if (dgvCategories.CurrentCell.OwningColumn.Name == "Category_Edit")
@@ -50,19 +52,20 @@ namespace PBL3___Cosmetics_Store_Management_App.View
                     currentCategory = x
                 };
                 frm.reload += new frmCategoryAdd.MyDel(frmLoad);
-                frm.Show();
+                frm.ShowDialog ();
             }
 
             if (dgvCategories.CurrentCell.OwningColumn.Name == "Category_Del")
             {
-                Category_Presenter.Instance.RemoveCategory(x);
-                frmLoad();
+                CategoryController.Instance.Delete(x);
             }
+
+            frmLoad();
         }
 
         private void txtSearch_TextChanged(object sender, EventArgs e)
         {
-            dgvCategories.DataSource = Category_Presenter.Instance.SearchCategory(txtSearch.Text);
+            dgvCategories.DataSource = CategoryController.Instance.Search(txtSearch.Text);
         }
     }
 }

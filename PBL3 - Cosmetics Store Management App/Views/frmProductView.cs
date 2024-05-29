@@ -1,4 +1,6 @@
-﻿using System;
+﻿using PBL3___Cosmetics_Store_Management_App.Controllers;
+using PBL3___Cosmetics_Store_Management_App.Entities;
+using System;
 using System.Data;
 using System.Windows.Forms;
 
@@ -9,33 +11,52 @@ namespace PBL3___Cosmetics_Store_Management_App.View
         public frmProductView()
         {
             InitializeComponent();
-            dgvLoad();
+            dgvProducts.AutoGenerateColumns = false;
+        }
+        private void frmProductView_Load(object sender, EventArgs e)
+        {
+            frmLoad();
         }
 
-        public void dgvLoad()
+        private void frmLoad()
         {
-            DataTable dt = new DataTable();
-            dt.Columns.AddRange(new DataColumn[]
-            {
-                new DataColumn("ID", typeof(string)),
-                new DataColumn("Name", typeof(string)),
-                new DataColumn("Price", typeof(int))
-            });
+            dgvProducts.DataSource = ProductController.Instance.GetData();
+        }
 
-            dt.Rows.Add("SP0001", "Sữa rửa mặt Innisfree", 150000);
-            dt.Rows.Add("SP0002", "Kem chống nắng", 120000);
+        private void btnAdd_Click(object sender, EventArgs e)
+        {
+            frmProductAdd frm = new frmProductAdd();
+            frm.ShowDialog();
+            frmLoad();
+        }
 
-            foreach (DataRow i in dt.Rows)
+        private void dgvProducts_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            string ID = dgvProducts.CurrentRow.Cells[0].Value.ToString();
+            Product cur = ProductController.Instance.GetByID(ID);
+
+            if (dgvProducts.CurrentCell.OwningColumn.Name == "Product_Detail")
             {
-                dgvStaff.Rows.Add(i.ItemArray);
+                frmProductDetails frm = new frmProductDetails()
+                {
+                    currentProduct = cur
+                };
+                frm.ShowDialog();
+            }
+            if (dgvProducts.CurrentCell.OwningColumn.Name == "Product_Edit")
+            {
+                frmProductAdd frm = new frmProductAdd()
+                {
+                    currentProduct = cur
+                };
+                frm.ShowDialog();
+            }
+            if (dgvProducts.CurrentCell.OwningColumn.Name == "Product_Delete")
+            {
+                ProductController.Instance.Delete(cur);
             }
 
-        }
-
-        private void guna2ImageButton1_Click(object sender, EventArgs e)
-        {
-            frmProductAdd frmProductAdd = new frmProductAdd();
-            frmProductAdd.Show();
+            frmLoad();
         }
     }
 }

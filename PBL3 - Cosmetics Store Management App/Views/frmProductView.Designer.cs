@@ -31,30 +31,30 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            this.dgvStaff = new Guna.UI2.WinForms.Guna2DataGridView();
-            this.Product_ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Product_Name = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Product_Price = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Staff_Detail = new System.Windows.Forms.DataGridViewImageColumn();
-            this.Staff_Edit = new System.Windows.Forms.DataGridViewImageColumn();
-            this.Staff_Del = new System.Windows.Forms.DataGridViewImageColumn();
+            this.dgvProducts = new Guna.UI2.WinForms.Guna2DataGridView();
             this.guna2TextBox1 = new Guna.UI2.WinForms.Guna2TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.guna2Separator1 = new Guna.UI2.WinForms.Guna2Separator();
-            this.guna2ImageButton1 = new Guna.UI2.WinForms.Guna2ImageButton();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvStaff)).BeginInit();
+            this.btnAdd = new Guna.UI2.WinForms.Guna2ImageButton();
+            this.Product_ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Product_Name = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Product_Price = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Product_Detail = new System.Windows.Forms.DataGridViewImageColumn();
+            this.Product_Edit = new System.Windows.Forms.DataGridViewImageColumn();
+            this.Product_Delete = new System.Windows.Forms.DataGridViewImageColumn();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvProducts)).BeginInit();
             this.SuspendLayout();
             // 
-            // dgvStaff
+            // dgvProducts
             // 
-            this.dgvStaff.AllowUserToAddRows = false;
-            this.dgvStaff.AllowUserToDeleteRows = false;
-            this.dgvStaff.AllowUserToResizeColumns = false;
-            this.dgvStaff.AllowUserToResizeRows = false;
+            this.dgvProducts.AllowUserToAddRows = false;
+            this.dgvProducts.AllowUserToDeleteRows = false;
+            this.dgvProducts.AllowUserToResizeColumns = false;
+            this.dgvProducts.AllowUserToResizeRows = false;
             dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
-            this.dgvStaff.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
-            this.dgvStaff.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.dgvProducts.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            this.dgvProducts.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
@@ -64,15 +64,15 @@
             dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Control;
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvStaff.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
-            this.dgvStaff.ColumnHeadersHeight = 40;
-            this.dgvStaff.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dgvProducts.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            this.dgvProducts.ColumnHeadersHeight = 40;
+            this.dgvProducts.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Product_ID,
             this.Product_Name,
             this.Product_Price,
-            this.Staff_Detail,
-            this.Staff_Edit,
-            this.Staff_Del});
+            this.Product_Detail,
+            this.Product_Edit,
+            this.Product_Delete});
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
             dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.139131F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(254)));
@@ -80,100 +80,39 @@
             dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(241)))), ((int)(((byte)(243)))));
             dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.Black;
             dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvStaff.DefaultCellStyle = dataGridViewCellStyle3;
-            this.dgvStaff.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(241)))), ((int)(((byte)(243)))));
-            this.dgvStaff.Location = new System.Drawing.Point(51, 175);
-            this.dgvStaff.Name = "dgvStaff";
-            this.dgvStaff.ReadOnly = true;
-            this.dgvStaff.RowHeadersVisible = false;
-            this.dgvStaff.RowHeadersWidth = 49;
-            this.dgvStaff.RowTemplate.Height = 30;
-            this.dgvStaff.Size = new System.Drawing.Size(988, 475);
-            this.dgvStaff.TabIndex = 16;
-            this.dgvStaff.Theme = Guna.UI2.WinForms.Enums.DataGridViewPresetThemes.LightGrid;
-            this.dgvStaff.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
-            this.dgvStaff.ThemeStyle.AlternatingRowsStyle.Font = null;
-            this.dgvStaff.ThemeStyle.AlternatingRowsStyle.ForeColor = System.Drawing.Color.Empty;
-            this.dgvStaff.ThemeStyle.AlternatingRowsStyle.SelectionBackColor = System.Drawing.Color.Empty;
-            this.dgvStaff.ThemeStyle.AlternatingRowsStyle.SelectionForeColor = System.Drawing.Color.Empty;
-            this.dgvStaff.ThemeStyle.BackColor = System.Drawing.Color.White;
-            this.dgvStaff.ThemeStyle.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(241)))), ((int)(((byte)(243)))));
-            this.dgvStaff.ThemeStyle.HeaderStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(232)))), ((int)(((byte)(234)))), ((int)(((byte)(237)))));
-            this.dgvStaff.ThemeStyle.HeaderStyle.BorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            this.dgvStaff.ThemeStyle.HeaderStyle.Font = new System.Drawing.Font("Segoe UI Semibold", 10.01739F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dgvStaff.ThemeStyle.HeaderStyle.ForeColor = System.Drawing.Color.Black;
-            this.dgvStaff.ThemeStyle.HeaderStyle.HeaightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
-            this.dgvStaff.ThemeStyle.HeaderStyle.Height = 40;
-            this.dgvStaff.ThemeStyle.ReadOnly = true;
-            this.dgvStaff.ThemeStyle.RowsStyle.BackColor = System.Drawing.Color.White;
-            this.dgvStaff.ThemeStyle.RowsStyle.BorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
-            this.dgvStaff.ThemeStyle.RowsStyle.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.139131F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(254)));
-            this.dgvStaff.ThemeStyle.RowsStyle.ForeColor = System.Drawing.Color.Black;
-            this.dgvStaff.ThemeStyle.RowsStyle.Height = 30;
-            this.dgvStaff.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(241)))), ((int)(((byte)(243)))));
-            this.dgvStaff.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.Black;
-            // 
-            // Product_ID
-            // 
-            this.Product_ID.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            this.Product_ID.HeaderText = "ID";
-            this.Product_ID.MinimumWidth = 70;
-            this.Product_ID.Name = "Product_ID";
-            this.Product_ID.ReadOnly = true;
-            this.Product_ID.Width = 150;
-            // 
-            // Product_Name
-            // 
-            this.Product_Name.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            this.Product_Name.FillWeight = 70F;
-            this.Product_Name.HeaderText = "Name";
-            this.Product_Name.MinimumWidth = 6;
-            this.Product_Name.Name = "Product_Name";
-            this.Product_Name.ReadOnly = true;
-            this.Product_Name.Width = 350;
-            // 
-            // Product_Price
-            // 
-            this.Product_Price.HeaderText = "Price";
-            this.Product_Price.MinimumWidth = 6;
-            this.Product_Price.Name = "Product_Price";
-            this.Product_Price.ReadOnly = true;
-            // 
-            // Staff_Detail
-            // 
-            this.Staff_Detail.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            this.Staff_Detail.FillWeight = 50F;
-            this.Staff_Detail.HeaderText = "";
-            this.Staff_Detail.Image = global::PBL3___Cosmetics_Store_Management_App.Properties.Resources.detail;
-            this.Staff_Detail.ImageLayout = System.Windows.Forms.DataGridViewImageCellLayout.Zoom;
-            this.Staff_Detail.MinimumWidth = 6;
-            this.Staff_Detail.Name = "Staff_Detail";
-            this.Staff_Detail.ReadOnly = true;
-            this.Staff_Detail.Width = 40;
-            // 
-            // Staff_Edit
-            // 
-            this.Staff_Edit.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            this.Staff_Edit.FillWeight = 50F;
-            this.Staff_Edit.HeaderText = "";
-            this.Staff_Edit.Image = global::PBL3___Cosmetics_Store_Management_App.Properties.Resources.edit;
-            this.Staff_Edit.ImageLayout = System.Windows.Forms.DataGridViewImageCellLayout.Zoom;
-            this.Staff_Edit.MinimumWidth = 6;
-            this.Staff_Edit.Name = "Staff_Edit";
-            this.Staff_Edit.ReadOnly = true;
-            this.Staff_Edit.Width = 40;
-            // 
-            // Staff_Del
-            // 
-            this.Staff_Del.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            this.Staff_Del.FillWeight = 50F;
-            this.Staff_Del.HeaderText = "";
-            this.Staff_Del.Image = global::PBL3___Cosmetics_Store_Management_App.Properties.Resources.delete;
-            this.Staff_Del.ImageLayout = System.Windows.Forms.DataGridViewImageCellLayout.Zoom;
-            this.Staff_Del.MinimumWidth = 6;
-            this.Staff_Del.Name = "Staff_Del";
-            this.Staff_Del.ReadOnly = true;
-            this.Staff_Del.Width = 40;
+            this.dgvProducts.DefaultCellStyle = dataGridViewCellStyle3;
+            this.dgvProducts.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(241)))), ((int)(((byte)(243)))));
+            this.dgvProducts.Location = new System.Drawing.Point(51, 175);
+            this.dgvProducts.Name = "dgvProducts";
+            this.dgvProducts.ReadOnly = true;
+            this.dgvProducts.RowHeadersVisible = false;
+            this.dgvProducts.RowHeadersWidth = 49;
+            this.dgvProducts.RowTemplate.Height = 30;
+            this.dgvProducts.Size = new System.Drawing.Size(988, 475);
+            this.dgvProducts.TabIndex = 16;
+            this.dgvProducts.Theme = Guna.UI2.WinForms.Enums.DataGridViewPresetThemes.LightGrid;
+            this.dgvProducts.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
+            this.dgvProducts.ThemeStyle.AlternatingRowsStyle.Font = null;
+            this.dgvProducts.ThemeStyle.AlternatingRowsStyle.ForeColor = System.Drawing.Color.Empty;
+            this.dgvProducts.ThemeStyle.AlternatingRowsStyle.SelectionBackColor = System.Drawing.Color.Empty;
+            this.dgvProducts.ThemeStyle.AlternatingRowsStyle.SelectionForeColor = System.Drawing.Color.Empty;
+            this.dgvProducts.ThemeStyle.BackColor = System.Drawing.Color.White;
+            this.dgvProducts.ThemeStyle.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(241)))), ((int)(((byte)(243)))));
+            this.dgvProducts.ThemeStyle.HeaderStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(232)))), ((int)(((byte)(234)))), ((int)(((byte)(237)))));
+            this.dgvProducts.ThemeStyle.HeaderStyle.BorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            this.dgvProducts.ThemeStyle.HeaderStyle.Font = new System.Drawing.Font("Segoe UI Semibold", 10.01739F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dgvProducts.ThemeStyle.HeaderStyle.ForeColor = System.Drawing.Color.Black;
+            this.dgvProducts.ThemeStyle.HeaderStyle.HeaightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
+            this.dgvProducts.ThemeStyle.HeaderStyle.Height = 40;
+            this.dgvProducts.ThemeStyle.ReadOnly = true;
+            this.dgvProducts.ThemeStyle.RowsStyle.BackColor = System.Drawing.Color.White;
+            this.dgvProducts.ThemeStyle.RowsStyle.BorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
+            this.dgvProducts.ThemeStyle.RowsStyle.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.139131F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(254)));
+            this.dgvProducts.ThemeStyle.RowsStyle.ForeColor = System.Drawing.Color.Black;
+            this.dgvProducts.ThemeStyle.RowsStyle.Height = 30;
+            this.dgvProducts.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(241)))), ((int)(((byte)(243)))));
+            this.dgvProducts.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.Black;
+            this.dgvProducts.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvProducts_CellContentClick);
             // 
             // guna2TextBox1
             // 
@@ -235,19 +174,84 @@
             this.guna2Separator1.Size = new System.Drawing.Size(988, 27);
             this.guna2Separator1.TabIndex = 12;
             // 
-            // guna2ImageButton1
+            // btnAdd
             // 
-            this.guna2ImageButton1.CheckedState.ImageSize = new System.Drawing.Size(64, 64);
-            this.guna2ImageButton1.HoverState.ImageSize = new System.Drawing.Size(64, 64);
-            this.guna2ImageButton1.Image = global::PBL3___Cosmetics_Store_Management_App.Properties.Resources.plus_green;
-            this.guna2ImageButton1.ImageOffset = new System.Drawing.Point(0, 0);
-            this.guna2ImageButton1.ImageRotate = 0F;
-            this.guna2ImageButton1.Location = new System.Drawing.Point(67, 71);
-            this.guna2ImageButton1.Name = "guna2ImageButton1";
-            this.guna2ImageButton1.PressedState.ImageSize = new System.Drawing.Size(64, 64);
-            this.guna2ImageButton1.Size = new System.Drawing.Size(72, 70);
-            this.guna2ImageButton1.TabIndex = 11;
-            this.guna2ImageButton1.Click += new System.EventHandler(this.guna2ImageButton1_Click);
+            this.btnAdd.CheckedState.ImageSize = new System.Drawing.Size(64, 64);
+            this.btnAdd.HoverState.ImageSize = new System.Drawing.Size(64, 64);
+            this.btnAdd.Image = global::PBL3___Cosmetics_Store_Management_App.Properties.Resources.plus_green;
+            this.btnAdd.ImageOffset = new System.Drawing.Point(0, 0);
+            this.btnAdd.ImageRotate = 0F;
+            this.btnAdd.Location = new System.Drawing.Point(67, 71);
+            this.btnAdd.Name = "btnAdd";
+            this.btnAdd.PressedState.ImageSize = new System.Drawing.Size(64, 64);
+            this.btnAdd.Size = new System.Drawing.Size(72, 70);
+            this.btnAdd.TabIndex = 11;
+            this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
+            // 
+            // Product_ID
+            // 
+            this.Product_ID.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.Product_ID.DataPropertyName = "product_id";
+            this.Product_ID.HeaderText = "ID";
+            this.Product_ID.MinimumWidth = 70;
+            this.Product_ID.Name = "Product_ID";
+            this.Product_ID.ReadOnly = true;
+            this.Product_ID.Width = 150;
+            // 
+            // Product_Name
+            // 
+            this.Product_Name.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.Product_Name.DataPropertyName = "product_name";
+            this.Product_Name.FillWeight = 70F;
+            this.Product_Name.HeaderText = "Name";
+            this.Product_Name.MinimumWidth = 6;
+            this.Product_Name.Name = "Product_Name";
+            this.Product_Name.ReadOnly = true;
+            this.Product_Name.Width = 350;
+            // 
+            // Product_Price
+            // 
+            this.Product_Price.DataPropertyName = "product_price";
+            this.Product_Price.HeaderText = "Price";
+            this.Product_Price.MinimumWidth = 6;
+            this.Product_Price.Name = "Product_Price";
+            this.Product_Price.ReadOnly = true;
+            // 
+            // Product_Detail
+            // 
+            this.Product_Detail.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.Product_Detail.FillWeight = 50F;
+            this.Product_Detail.HeaderText = "";
+            this.Product_Detail.Image = global::PBL3___Cosmetics_Store_Management_App.Properties.Resources.detail;
+            this.Product_Detail.ImageLayout = System.Windows.Forms.DataGridViewImageCellLayout.Zoom;
+            this.Product_Detail.MinimumWidth = 6;
+            this.Product_Detail.Name = "Product_Detail";
+            this.Product_Detail.ReadOnly = true;
+            this.Product_Detail.Width = 40;
+            // 
+            // Product_Edit
+            // 
+            this.Product_Edit.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.Product_Edit.FillWeight = 50F;
+            this.Product_Edit.HeaderText = "";
+            this.Product_Edit.Image = global::PBL3___Cosmetics_Store_Management_App.Properties.Resources.edit;
+            this.Product_Edit.ImageLayout = System.Windows.Forms.DataGridViewImageCellLayout.Zoom;
+            this.Product_Edit.MinimumWidth = 6;
+            this.Product_Edit.Name = "Product_Edit";
+            this.Product_Edit.ReadOnly = true;
+            this.Product_Edit.Width = 40;
+            // 
+            // Product_Delete
+            // 
+            this.Product_Delete.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.Product_Delete.FillWeight = 50F;
+            this.Product_Delete.HeaderText = "";
+            this.Product_Delete.Image = global::PBL3___Cosmetics_Store_Management_App.Properties.Resources.delete;
+            this.Product_Delete.ImageLayout = System.Windows.Forms.DataGridViewImageCellLayout.Zoom;
+            this.Product_Delete.MinimumWidth = 6;
+            this.Product_Delete.Name = "Product_Delete";
+            this.Product_Delete.ReadOnly = true;
+            this.Product_Delete.Width = 40;
             // 
             // frmProductView
             // 
@@ -256,34 +260,35 @@
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(239)))), ((int)(((byte)(230)))));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.ClientSize = new System.Drawing.Size(1090, 680);
-            this.Controls.Add(this.dgvStaff);
+            this.Controls.Add(this.dgvProducts);
             this.Controls.Add(this.guna2TextBox1);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.guna2Separator1);
-            this.Controls.Add(this.guna2ImageButton1);
+            this.Controls.Add(this.btnAdd);
             this.DoubleBuffered = true;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frmProductView";
             this.Text = "frmProductView";
-            ((System.ComponentModel.ISupportInitialize)(this.dgvStaff)).EndInit();
+            this.Load += new System.EventHandler(this.frmProductView_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.dgvProducts)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-        private Guna.UI2.WinForms.Guna2DataGridView dgvStaff;
+        private Guna.UI2.WinForms.Guna2DataGridView dgvProducts;
         private Guna.UI2.WinForms.Guna2TextBox guna2TextBox1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private Guna.UI2.WinForms.Guna2Separator guna2Separator1;
-        private Guna.UI2.WinForms.Guna2ImageButton guna2ImageButton1;
+        private Guna.UI2.WinForms.Guna2ImageButton btnAdd;
         private System.Windows.Forms.DataGridViewTextBoxColumn Product_ID;
         private System.Windows.Forms.DataGridViewTextBoxColumn Product_Name;
         private System.Windows.Forms.DataGridViewTextBoxColumn Product_Price;
-        private System.Windows.Forms.DataGridViewImageColumn Staff_Detail;
-        private System.Windows.Forms.DataGridViewImageColumn Staff_Edit;
-        private System.Windows.Forms.DataGridViewImageColumn Staff_Del;
+        private System.Windows.Forms.DataGridViewImageColumn Product_Detail;
+        private System.Windows.Forms.DataGridViewImageColumn Product_Edit;
+        private System.Windows.Forms.DataGridViewImageColumn Product_Delete;
     }
 }
