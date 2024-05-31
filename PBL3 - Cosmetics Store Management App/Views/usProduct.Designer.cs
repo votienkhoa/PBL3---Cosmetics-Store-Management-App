@@ -78,15 +78,16 @@
             this.guna2Separator1.Name = "guna2Separator1";
             this.guna2Separator1.Size = new System.Drawing.Size(149, 10);
             this.guna2Separator1.TabIndex = 0;
-            this.guna2Separator1.Click += new System.EventHandler(this.guna2Separator1_Click);
             // 
-            // UserControl1
+            // usProduct
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.guna2ShadowPanel1);
-            this.Name = "UserControl1";
+            this.Name = "usProduct";
             this.Size = new System.Drawing.Size(162, 180);
+            this.Load += new System.EventHandler(this.usProduct_Load);
+            this.Click += new System.EventHandler(this.RaiseProductClick);
             this.guna2ShadowPanel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.picProduct)).EndInit();
             this.ResumeLayout(false);

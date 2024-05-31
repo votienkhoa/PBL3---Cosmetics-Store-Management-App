@@ -1,7 +1,10 @@
 ﻿using Guna.UI2.WinForms;
+using PBL3___Cosmetics_Store_Management_App.Controllers;
+using PBL3___Cosmetics_Store_Management_App.Entities;
 using System;
 using System.Data;
 using System.Windows.Forms;
+using System.Xml.Linq;
 
 namespace PBL3___Cosmetics_Store_Management_App
 {
@@ -11,77 +14,62 @@ namespace PBL3___Cosmetics_Store_Management_App
         {
             InitializeComponent();
             dgvLoad();
-            AddSample();
-            FormLoad();
+            CategoryButtonLoad();
         }
 
-        private void FormLoad()
+        private void CategoryButtonLoad()
         {
-            //foreach (Guna2Button i in Category_Presenter.Instance.GetButtonList())
-            //{
-            //    pnCategories.Controls.Add(i);
-            //}
+            Guna2Button All = new Guna2Button();
+            All.Text = "All";
+            All.BorderRadius = 10;
+            All.Animated = true;
+            All.Font = new System.Drawing.Font("Segoe UI Semibold", 8.765218F, System.Drawing.FontStyle.Bold);
+            All.Size = new System.Drawing.Size(170, 49);
+            All.FillColor = System.Drawing.Color.FromArgb(79, 111, 82);
+            All.ButtonMode = Guna.UI2.WinForms.Enums.ButtonMode.RadioButton;
+            All.CheckedChanged += new EventHandler(btnCategory_CheckChange);
+
+            pnCategories.Controls.Add(All);
+
+            foreach (string name in CategoryController.Instance.GetAllName())
+            {
+                Guna2Button tmp = new Guna2Button();
+                tmp.Text = name;
+                tmp.BorderRadius = 10;
+                tmp.Animated = true;
+                tmp.Font = new System.Drawing.Font("Segoe UI Semibold", 8.765218F, System.Drawing.FontStyle.Bold);
+                tmp.Size = new System.Drawing.Size(170, 49);
+                tmp.FillColor = System.Drawing.Color.FromArgb(79, 111, 82);
+                tmp.ButtonMode = Guna.UI2.WinForms.Enums.ButtonMode.RadioButton;
+                tmp.CheckedChanged += new EventHandler(btnCategory_CheckChange);
+
+                pnCategories.Controls.Add(tmp);
+            }
         }
 
-        private void guna2Button1_Click(object sender, EventArgs e)
+        private void btnCategory_CheckChange(object sender, EventArgs e)
         {
-
+            Guna2Button button = (Guna2Button)sender;
+            if (button.Checked == true)
+            {
+                if (button.Text == "All") Product_Load("");
+                else Product_Load(button.Text);
+            }
         }
 
-        public void AddSample()
+        private void Product_Load(string category)
         {
-            usProduct userControl1 = new usProduct()
+            pnProduct.Controls.Clear();
+            var productList = ProductController.Instance.GetByCategory(category);
+            foreach (var product in productList)
             {
-                Name = "Nước tẩy trang Bioderma",
-                PImage = PBL3___Cosmetics_Store_Management_App.Properties.Resources.bioderma
-            };
-
-
-            usProduct userControl7 = new usProduct()
-            {
-                Name = "Nước tẩy trang L'Oreal",
-                PImage = PBL3___Cosmetics_Store_Management_App.Properties.Resources.loreal
-            };
-
-            usProduct userControl3 = new usProduct()
-            {
-                Name = "Kem chống nắng Anessa",
-                PImage = PBL3___Cosmetics_Store_Management_App.Properties.Resources.anessa
-            };
-
-            usProduct userControl4 = new usProduct()
-            {
-                Name = "Kem dưỡng La Roche-Posay",
-                PImage = PBL3___Cosmetics_Store_Management_App.Properties.Resources.laroche
-            };
-
-            usProduct userControl5 = new usProduct()
-            {
-                Name = "Kem Obagi Retinol 0.5%",
-                PImage = PBL3___Cosmetics_Store_Management_App.Properties.Resources.obagi
-            };
-
-            usProduct userControl6 = new usProduct()
-            {
-                Name = "Mặt nạ Naruko tràm trà",
-                PImage = PBL3___Cosmetics_Store_Management_App.Properties.Resources.naruko
-            };
-
-            usProduct userControl2 = new usProduct()
-            {
-                Name = "Sữa rửa mặt Innisfree Trà xanh",
-                PImage = PBL3___Cosmetics_Store_Management_App.Properties.Resources.innisfree
-            };
-
-
-            flowLayoutPanel2.Controls.Add(userControl1);
-            flowLayoutPanel2.Controls.Add(userControl2);
-            flowLayoutPanel2.Controls.Add(userControl3);
-            flowLayoutPanel2.Controls.Add(userControl4);
-            flowLayoutPanel2.Controls.Add(userControl5);
-            flowLayoutPanel2.Controls.Add(userControl6);
-            flowLayoutPanel2.Controls.Add(userControl7);
-
+                usProduct usProduct = new usProduct()
+                {
+                    product = product
+                };
+                usProduct.UserControlClick += Product_Click;
+                pnProduct.Controls.Add(usProduct);
+            }
         }
 
         public void dgvLoad()
@@ -109,29 +97,10 @@ namespace PBL3___Cosmetics_Store_Management_App
 
         }
 
-        private void guna2Button2_Click(object sender, EventArgs e)
+        public void Product_Click(object sender, Product e)
         {
-
+            MessageBox.Show(e.product_name);
         }
 
-        private void guna2Button6_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void guna2Button10_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void guna2Panel2_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void pnCategories_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
     }
 }

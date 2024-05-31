@@ -1,4 +1,6 @@
-﻿using System;
+﻿using PBL3___Cosmetics_Store_Management_App.Controllers;
+using PBL3___Cosmetics_Store_Management_App.Entities;
+using System;
 using System.Drawing;
 using System.Windows.Forms;
 
@@ -6,26 +8,34 @@ namespace PBL3___Cosmetics_Store_Management_App
 {
     public partial class usProduct : UserControl
     {
+        public Product product { get; set; }
+        public event EventHandler<Product> UserControlClick;
+
         public usProduct()
         {
             InitializeComponent();
+            RegisterClick(this);
         }
 
-        private void guna2Separator1_Click(object sender, EventArgs e)
+        private void usProduct_Load(object sender, EventArgs e)
         {
-
+            lbName.Text = product.product_name;
+            picProduct.Image = FileHelper.BytesToBitmap(product.product_image);
         }
 
-        public string Name
+        private void RegisterClick(Control control)
         {
-            get { return lbName.Text; }
-            set { lbName.Text = value; }
+            control.Click += new EventHandler(RaiseProductClick);
+            
+            foreach (Control c in control.Controls)
+            {
+                RegisterClick(c);
+            }
         }
 
-        public Image PImage
+        private void RaiseProductClick(object sender, EventArgs e)
         {
-            get { return picProduct.Image; }
-            set { picProduct.Image = value; }
-        }
+            UserControlClick?.Invoke(this, product);
+        }        
     }
 }
