@@ -29,28 +29,36 @@ namespace PBL3___Cosmetics_Store_Management_App.Views
             string acc = txtUsername.Text;
             string pass = txtPassword.Text;
             Entities.Staff _staff= StaffController.Instance.login(acc, pass);
-            if (_staff.staff_role == 1)
+            if (_staff == null)
             {
+                MessageBox.Show("Incorrect password or username!", "Login failed!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            else if (_staff.staff_role == 1)
+            {
+                frmMain frm = new frmMain()
+                {
+                    currentStaff = _staff
+                };
                 this.Hide();
-                frmMain frmMain = new frmMain(_staff);
-                frmMain.ShowDialog();
+                frm.ShowDialog();
                 this.Close();
             }
-            if (_staff.staff_role == 2)
+            else if (_staff.staff_role == 2)
             {
+                MessageBox.Show("called1");
                 this.Hide();
                 frmPOS frmMain = new frmPOS();
                 frmMain.ShowDialog();
                 this.Close();
             }
-            if (_staff.staff_role == 3)
+            else if (_staff.staff_role == 3)
             {
+                MessageBox.Show("called2");
                 this.Hide();
                 frmStorageView frmMain = new frmStorageView();
                 frmMain.ShowDialog();
                 this.Close();
             }
-
         }
     }
 }

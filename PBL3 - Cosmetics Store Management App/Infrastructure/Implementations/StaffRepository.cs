@@ -7,6 +7,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace PBL3___Cosmetics_Store_Management_App.Infrastructure.Implementations
 {
@@ -14,5 +15,14 @@ namespace PBL3___Cosmetics_Store_Management_App.Infrastructure.Implementations
     {
         public StaffRepository(DatabaseContext context) : base(context) { }
 
+        public DatabaseContext DatabaseContext
+        {
+            get { return Context as DatabaseContext; }
+        }
+
+        public Staff GetStaffByID(string id)
+        {
+            return DatabaseContext.Staffs.Find(id);
+        }
     }
 }

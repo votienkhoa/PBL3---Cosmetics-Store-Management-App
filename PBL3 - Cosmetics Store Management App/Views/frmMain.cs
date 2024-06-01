@@ -1,4 +1,5 @@
-﻿using PBL3___Cosmetics_Store_Management_App.Entities;
+﻿using PBL3___Cosmetics_Store_Management_App.Controllers;
+using PBL3___Cosmetics_Store_Management_App.Entities;
 using System;
 using System.Windows.Forms;
 
@@ -6,10 +7,16 @@ namespace PBL3___Cosmetics_Store_Management_App
 {
     public partial class frmMain : Form
     {
-        public frmMain(Staff s)
+        public Staff currentStaff = null;
+        public frmMain()
         {
             InitializeComponent();
-            User.Text = s.staff_id + "   " + s.staff_name;
+        }
+
+        private void frmMain_Load(object sender, EventArgs e)
+        {
+            if (currentStaff != null) txtUser.Text = currentStaff.staff_name + " - " + currentStaff.staff_id;
+            MessageBox.Show(StaffController.Instance.AutoGenerateID(1));
         }
 
         public void AddControl(Form f)
@@ -45,5 +52,6 @@ namespace PBL3___Cosmetics_Store_Management_App
         {
             AddControl(new View.frmReportView());
         }
+
     }
 }

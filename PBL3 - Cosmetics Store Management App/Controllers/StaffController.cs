@@ -6,6 +6,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace PBL3___Cosmetics_Store_Management_App.Controllers
 {
@@ -16,6 +17,7 @@ namespace PBL3___Cosmetics_Store_Management_App.Controllers
         {
             return unitOfWork.StaffRepo.GetAll().ToList();
         }
+
         public void add(Staff data) 
         {
             unitOfWork.StaffRepo.Add(data);
@@ -48,6 +50,29 @@ namespace PBL3___Cosmetics_Store_Management_App.Controllers
         public Staff login(string username, string password)
         {
             return unitOfWork.StaffRepo.Find(p => p.staff_id == username && p.staff_password== password).FirstOrDefault();
+        }
+        public string GenerateID(int role, int index)
+        {
+            string prefix;
+            if (role == 1) prefix = "MNG-";
+            else if (role == 2) prefix = "SLR-";
+            else prefix = "SKP-";
+
+            string result = prefix + index.ToString("D3");
+
+            return result;
+        }
+        public string AutoGenerateID(int role)
+        {
+            int min_id = 0;
+
+            while (true)
+            {
+                min_id++;
+                if (unitOfWork.StaffRepo.GetStaffByID(GenerateID(role, min_id)) == null) break;
+            }
+
+            return GenerateID(role, min_id);
         }
     }
 }
