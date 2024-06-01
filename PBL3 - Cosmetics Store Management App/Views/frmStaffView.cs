@@ -1,4 +1,6 @@
-﻿using System;
+﻿using PBL3___Cosmetics_Store_Management_App.Controllers;
+using PBL3___Cosmetics_Store_Management_App.Entities;
+using System;
 using System.Data;
 using System.Windows.Forms;
 
@@ -9,30 +11,15 @@ namespace PBL3___Cosmetics_Store_Management_App.View
         public frmStaffView()
         {
             InitializeComponent();
-            dgvLoad();
-        }
+            frmLoad();
 
-        public void dgvLoad()
+        }
+        private void frmLoad()
         {
-            DataTable dt = new DataTable();
-            dt.Columns.AddRange(new DataColumn[]
-            {
-                new DataColumn("IDD", typeof(string)),
-                new DataColumn("Name", typeof(string)),
-                new DataColumn("Role", typeof (string))
-            });
-
-            dt.Rows.Add("NV0002", "Vo Tien Khoa", "Sales");
-            dt.Rows.Add("NV0001", "Tran Duc Huy", "Manager");
-            dt.Rows.Add("NV0003", "Nguyen Van Thuong", "Storekeeper");
-            dt.Rows.Add("NV0004", "Nguyen Huu Hung Dung", "Sales");
-
-            foreach (DataRow i in dt.Rows)
-            {
-                dgvStaff.Rows.Add(i.ItemArray);
-            }
-
+            dtgv_staff.AutoGenerateColumns= false;
+            dtgv_staff.DataSource = StaffController.Instance.getData();
         }
+        
 
         private void dgvStaff_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
@@ -41,8 +28,67 @@ namespace PBL3___Cosmetics_Store_Management_App.View
 
         private void guna2ImageButton1_Click(object sender, EventArgs e)
         {
-            frmStaffAdd test = new frmStaffAdd();
-            test.Show();
+            Staff staff = new Staff();
+            frmStaffAdd frm = new frmStaffAdd(true,false,staff);
+            frm.back += new frmStaffAdd.Mydelegate(frmLoad);
+
+            frm.ShowDialog();
+        }
+
+
+
+        private void dtgv_staff_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
+        {
+            if (dtgv_staff.Columns[e.ColumnIndex].Name == "Staff_role")
+            {
+                if (e.Value != null && int.TryParse(e.Value.ToString(), out int value))
+                {
+                    if (value == 1)
+                    {
+                        e.Value = "Manager";
+                        e.FormattingApplied = true;
+                    }
+                    else if (value == 2)
+                    {
+                        e.Value = "Sales agent";
+                        e.FormattingApplied = true;
+                    }
+                    else if (value == 3)
+                    {
+                        e.Value = "StoreKeeper";
+                        e.FormattingApplied = true;
+                    }
+                }
+            }
+        }
+
+        private void dtgv_staff_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            string id_staff = dtgv_staff.SelectedCells[0].Value.ToString();
+            Staff staff = StaffController.Instance.getstaff(id_staff);
+            if(dtgv_staff.CurrentCell.OwningColumn.Name == "Staff_edit_button") 
+            {
+                frmStaffAdd frm = new frmStaffAdd(false,false, staff); 
+                frm.back += new frmStaffAdd.Mydelegate(frmLoad);
+                frm.ShowDialog();
+            }
+            if (dtgv_staff.CurrentCell.OwningColumn.Name == "Staff_detail_button")
+            {
+                frmStaffAdd frm = new frmStaffAdd(false, true, staff); 
+                frm.back += new frmStaffAdd.Mydelegate(frmLoad);
+                frm.ShowDialog();
+            }
+            if (dtgv_staff.CurrentCell.OwningColumn.Name == "Staff_dele_button")
+            {
+                StaffController.Instance.Delete(staff);
+                frmLoad();
+            }
+        }
+
+        private void guna2TextBox1_TextChanged(object sender, EventArgs e)
+        {
+            string m = Searchtxtbox.Text;
+            dtgv_staff.DataSource= StaffController.Instance.Search(m);
         }
     }
 

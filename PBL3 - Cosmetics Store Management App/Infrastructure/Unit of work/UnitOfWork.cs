@@ -19,6 +19,10 @@ namespace PBL3___Cosmetics_Store_Management_App.Repositories.Unit_of_work
         private IProductRepository _ProductRepo;
         private IReceiptRepository _ReceiptRepo;
         private IReceiptDetailRepository _ReceiptDetailRepo;
+        private IStaffRepository _StaffRepo;
+
+
+
 
         public UnitOfWork(DatabaseContext context)
         {
@@ -48,7 +52,6 @@ namespace PBL3___Cosmetics_Store_Management_App.Repositories.Unit_of_work
                 return _ProductRepo;
             }
         }
-
         public IReceiptRepository ReceiptRepo
         {
             get
@@ -72,7 +75,17 @@ namespace PBL3___Cosmetics_Store_Management_App.Repositories.Unit_of_work
                 return _ReceiptDetailRepo;
             }
         }
-
+        public IStaffRepository StaffRepo
+        {
+            get
+            {
+                if (_StaffRepo == null)
+                {
+                    _StaffRepo = new StaffRepository(Context);
+                }
+                return _StaffRepo;
+            }
+        }
         #endregion
 
         #region Method
