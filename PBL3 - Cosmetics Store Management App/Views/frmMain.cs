@@ -1,13 +1,15 @@
-﻿using System;
+﻿using PBL3___Cosmetics_Store_Management_App.Entities;
+using System;
 using System.Windows.Forms;
 
 namespace PBL3___Cosmetics_Store_Management_App
 {
     public partial class frmMain : Form
     {
-        public frmMain()
+        public frmMain(Staff s)
         {
             InitializeComponent();
+            User.Text = s.staff_id + "   " + s.staff_name;
         }
 
         public void AddControl(Form f)

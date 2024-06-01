@@ -36,8 +36,8 @@ namespace PBL3___Cosmetics_Store_Management_App.Controllers
             else
             {
                 return unitOfWork.CategoryRepo.Find(p => p.category_name.Contains(txt)
-                                                      || p.category_id.ToString().Contains(txt))
-                                              .ToList();  
+                                                      || p.category_id.ToString().Contains(txt)
+                                                      ).ToList();  
             }
         }
 
