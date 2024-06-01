@@ -2,7 +2,9 @@
 using PBL3___Cosmetics_Store_Management_App.Controllers;
 using PBL3___Cosmetics_Store_Management_App.Entities;
 using System;
+using System.Collections.Generic;
 using System.Data;
+using System.Security.Cryptography;
 using System.Windows.Forms;
 using System.Xml.Linq;
 
@@ -10,41 +12,52 @@ namespace PBL3___Cosmetics_Store_Management_App
 {
     public partial class frmPOS : Form
     {
+        DataTable Dt;
+        
         public frmPOS()
         {
             InitializeComponent();
-            dgvLoad();
             CategoryButtonLoad();
+            DtCreate();
+
+            dgvReceipt.AutoGenerateColumns = false;
+            dgvReceipt.DataSource = Dt;
         }
 
         private void CategoryButtonLoad()
         {
-            Guna2Button All = new Guna2Button();
-            All.Text = "All";
-            All.BorderRadius = 10;
-            All.Animated = true;
-            All.Font = new System.Drawing.Font("Segoe UI Semibold", 8.765218F, System.Drawing.FontStyle.Bold);
-            All.Size = new System.Drawing.Size(170, 49);
-            All.FillColor = System.Drawing.Color.FromArgb(79, 111, 82);
-            All.ButtonMode = Guna.UI2.WinForms.Enums.ButtonMode.RadioButton;
-            All.CheckedChanged += new EventHandler(btnCategory_CheckChange);
+            List<string> data = CategoryController.Instance.GetAllName();
+            data.Insert(0, "All");
 
-            pnCategories.Controls.Add(All);
-
-            foreach (string name in CategoryController.Instance.GetAllName())
+            foreach (string name in data)
             {
                 Guna2Button tmp = new Guna2Button();
                 tmp.Text = name;
-                tmp.BorderRadius = 10;
+                tmp.BorderRadius = 15;
                 tmp.Animated = true;
                 tmp.Font = new System.Drawing.Font("Segoe UI Semibold", 8.765218F, System.Drawing.FontStyle.Bold);
-                tmp.Size = new System.Drawing.Size(170, 49);
+                tmp.Size = new System.Drawing.Size(182, 49);
                 tmp.FillColor = System.Drawing.Color.FromArgb(79, 111, 82);
                 tmp.ButtonMode = Guna.UI2.WinForms.Enums.ButtonMode.RadioButton;
                 tmp.CheckedChanged += new EventHandler(btnCategory_CheckChange);
 
                 pnCategories.Controls.Add(tmp);
             }
+        }
+
+        public void DtCreate()
+        {
+            Dt = new DataTable();
+            Dt.Columns.AddRange(new DataColumn[]
+            {
+                new DataColumn("No", typeof(int)),
+                new DataColumn("ID", typeof(string)),
+                new DataColumn("Name", typeof(string)),
+                new DataColumn("Qty", typeof(int)),
+                new DataColumn("Price", typeof(int)),
+                new DataColumn("Amount", typeof(int))
+
+            });
         }
 
         private void btnCategory_CheckChange(object sender, EventArgs e)
@@ -72,35 +85,58 @@ namespace PBL3___Cosmetics_Store_Management_App
             }
         }
 
-        public void dgvLoad()
-        {
-
-
-            DataTable dt = new DataTable();
-            dt.Columns.AddRange(new DataColumn[]
-            {
-                new DataColumn("No", typeof(int)),
-                new DataColumn("Name", typeof(string)),
-                new DataColumn("Qty", typeof(int)),
-                new DataColumn("Price", typeof(int)),
-                new DataColumn("Amount", typeof(int))
-
-            });
-
-            dt.Rows.Add(1, "Sữa rửa mặt Innisfree", 1, 150000, 150000);
-            dt.Rows.Add(2, "Kem chống nắng Anessa", 2, 130000, 260000);
-
-            foreach (DataRow i in dt.Rows)
-            {
-                dgvBill.Rows.Add(i.ItemArray);
-            }
-
-        }
 
         public void Product_Click(object sender, Product e)
         {
-            MessageBox.Show(e.product_name);
+            Update_Total(e.product_price);
+            //-----------------------------
+            bool check = false;
+            foreach (DataRow i in Dt.Rows)
+            {
+               if (i[2].ToString() == e.product_name)
+               {
+                    check = true;
+                    break;
+               }
+            }
+            if (!check)
+            {
+                Dt.Rows.Add(Dt.Rows.Count + 1,e.product_id, e.product_name, 1, e.product_price, e.product_price);
+            }
+            else
+            {
+                foreach (DataRow i in Dt.Rows)
+                {
+                    if (i[2].ToString() == e.product_name)
+                    {
+                        i[3] = Convert.ToInt32(i[3]) + 1;
+                        i[5] = Convert.ToInt32(i[5]) * Convert.ToInt32(i[3]);
+                        break;
+                    }
+                }
+            }
+        }
+        private void Update_Total(double price)
+        {
+            double current_total = Convert.ToDouble(lbTotal.Text);
+            lbTotal.Text = (current_total + price).ToString("N0");
+        }
+        private void btnNew_Click(object sender, EventArgs e)
+        {
+            Dt.Rows.Clear();
         }
 
+        private void btnPay_Click(object sender, EventArgs e)
+        {
+            if (Dt.Rows.Count == 0) MessageBox.Show("The receipt is empty. Please add products before payment!", "Empty Receipt", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+
+            else
+            {
+                ReceiptController.Instance.Receipt_Pay(Dt, lbTotal.Text);
+                Dt.Rows.Clear();
+            }
+        }
+
+        
     }
 }

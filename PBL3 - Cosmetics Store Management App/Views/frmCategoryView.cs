@@ -5,6 +5,7 @@ using PBL3___Cosmetics_Store_Management_App.Entities;
 using System;
 using System.Data;
 using System.Linq;
+using System.Web.UI.WebControls;
 using System.Windows.Forms;
 
 namespace PBL3___Cosmetics_Store_Management_App.View
@@ -37,19 +38,14 @@ namespace PBL3___Cosmetics_Store_Management_App.View
         private void dgvCategories_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
             int ID = Convert.ToInt32(dgvCategories.CurrentRow.Cells["Category_ID"].Value);
-            string Name = dgvCategories.CurrentRow.Cells["Category_Name"].Value.ToString();
-
-            Category x = new Category()
-            {
-                category_id = ID,
-                category_name = Name
-            };
+            
+            Category cur = CategoryController.Instance.GetCategory(ID);
 
             if (dgvCategories.CurrentCell.OwningColumn.Name == "Category_Edit")
             {
                 frmCategoryAdd frm = new frmCategoryAdd()
                 {
-                    currentCategory = x
+                    currentCategory = cur
                 };
                 frm.reload += new frmCategoryAdd.MyDel(frmLoad);
                 frm.ShowDialog ();
@@ -57,7 +53,7 @@ namespace PBL3___Cosmetics_Store_Management_App.View
 
             if (dgvCategories.CurrentCell.OwningColumn.Name == "Category_Del")
             {
-                CategoryController.Instance.Delete(x);
+                CategoryController.Instance.Delete(cur);
             }
 
             frmLoad();

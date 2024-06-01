@@ -1,4 +1,5 @@
-﻿using PBL3___Cosmetics_Store_Management_App.Repositories.Interfaces;
+﻿using PBL3___Cosmetics_Store_Management_App.Infrastructure.Interfaces;
+using PBL3___Cosmetics_Store_Management_App.Repositories.Interfaces;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -11,6 +12,8 @@ namespace PBL3___Cosmetics_Store_Management_App.Repositories.Unit_of_work
     {
         ICategoryRepository CategoryRepo { get; }
         IProductRepository ProductRepo { get; }
+        IReceiptRepository ReceiptRepo { get; }
+        IReceiptDetailRepository ReceiptDetailRepo { get; }
         void Save();
 
     }

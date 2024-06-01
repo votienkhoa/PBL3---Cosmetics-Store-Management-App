@@ -11,6 +11,11 @@ namespace PBL3___Cosmetics_Store_Management_App.Entities
     [Table("products")]
     public class Product
     {
+        public Product()
+        {
+            receiptdetails = new HashSet<ReceiptDetail>();
+        }
+
         [Key]
         public string product_id { get; set; }
         public string product_name { get; set;}
@@ -22,6 +27,7 @@ namespace PBL3___Cosmetics_Store_Management_App.Entities
 
         [ForeignKey("category_id")]
         public virtual Category category { get; set; }
+        public virtual ICollection<ReceiptDetail> receiptdetails { get; set; }
 
     }
 }
