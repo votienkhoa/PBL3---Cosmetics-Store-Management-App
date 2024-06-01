@@ -1,4 +1,6 @@
 ﻿using PBL3___Cosmetics_Store_Management_App.Data_Access;
+using PBL3___Cosmetics_Store_Management_App.Infrastructure.Implementations;
+using PBL3___Cosmetics_Store_Management_App.Infrastructure.Interfaces;
 using PBL3___Cosmetics_Store_Management_App.Repositories.Implementations;
 using PBL3___Cosmetics_Store_Management_App.Repositories.Interfaces;
 using System;
@@ -15,6 +17,7 @@ namespace PBL3___Cosmetics_Store_Management_App.Repositories.Unit_of_work
         private readonly DatabaseContext Context;
         private ICategoryRepository _CategoryRepo;
         private IProductRepository _ProductRepo;
+        private IStaffRepository _StaffRepo;
 
         public UnitOfWork(DatabaseContext context)
         {
@@ -42,6 +45,17 @@ namespace PBL3___Cosmetics_Store_Management_App.Repositories.Unit_of_work
                     _ProductRepo = new ProductRepository(Context);
                 }
                 return _ProductRepo;
+            }
+        }
+        public IStaffRepository StaffRepo
+        {
+            get
+            {
+                if(_StaffRepo == null)
+                {
+                    _StaffRepo = new StaffRepository(Context);
+                } 
+                return _StaffRepo;
             }
         }
         #endregion

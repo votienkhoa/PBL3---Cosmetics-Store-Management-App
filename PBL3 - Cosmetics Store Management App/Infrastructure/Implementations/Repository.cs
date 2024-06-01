@@ -53,7 +53,6 @@ namespace PBL3___Cosmetics_Store_Management_App.Repositories.Implementations
         #region Remove
         public void Remove(T entity)
         {
-            Context.Set<T>().Attach(entity);
             Context.Set<T>().Remove(entity);
         }
 

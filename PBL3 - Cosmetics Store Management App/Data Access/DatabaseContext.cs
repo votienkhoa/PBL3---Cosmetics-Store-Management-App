@@ -22,6 +22,7 @@ namespace PBL3___Cosmetics_Store_Management_App.Data_Access
 
         public virtual DbSet<Product> Products { get; set; }
         public virtual DbSet<Category> Categories { get; set; }
+        public virtual DbSet<Staff> Staffs { get; set;}
 
 
 
