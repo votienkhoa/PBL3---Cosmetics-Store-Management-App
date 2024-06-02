@@ -20,6 +20,9 @@ namespace PBL3___Cosmetics_Store_Management_App.Entities
         public DateTime receipt_date { get; set; }
         public double receipt_total { get; set; }
         public double receipt_discount { get; set; }
+        public string staff_id { get; set; }
         public virtual ICollection<ReceiptDetail> receiptdetails { get; set; }
+        [ForeignKey("staff_id")]
+        public virtual Staff staff { get; set; }
     }
 }

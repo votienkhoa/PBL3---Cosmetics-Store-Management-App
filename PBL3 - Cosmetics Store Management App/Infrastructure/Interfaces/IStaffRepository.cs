@@ -12,6 +12,5 @@ namespace PBL3___Cosmetics_Store_Management_App.Infrastructure.Interfaces
 {
     public interface IStaffRepository: IRepository<Staff>
     {
-        Staff GetStaffByID(string id);
     }
 }

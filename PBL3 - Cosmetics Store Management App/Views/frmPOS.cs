@@ -4,6 +4,7 @@ using PBL3___Cosmetics_Store_Management_App.Entities;
 using System;
 using System.Collections.Generic;
 using System.Data;
+using System.Drawing;
 using System.Security.Cryptography;
 using System.Windows.Forms;
 using System.Xml.Linq;
@@ -12,11 +13,18 @@ namespace PBL3___Cosmetics_Store_Management_App
 {
     public partial class frmPOS : Form
     {
-        DataTable Dt;
-        
+        private DataTable Dt;
+        public Staff currentStaff = null;
+
+
         public frmPOS()
         {
             InitializeComponent();
+            this.WindowState = FormWindowState.Maximized;
+        }
+        #region Load Form
+        private void frmPOS_Load(object sender, EventArgs e)
+        {
             CategoryButtonLoad();
             DtCreate();
 
@@ -69,7 +77,7 @@ namespace PBL3___Cosmetics_Store_Management_App
                 else Product_Load(button.Text);
             }
         }
-
+        
         private void Product_Load(string category)
         {
             pnProduct.Controls.Clear();
@@ -84,12 +92,11 @@ namespace PBL3___Cosmetics_Store_Management_App
                 pnProduct.Controls.Add(usProduct);
             }
         }
+        #endregion
 
-
+        #region Events
         public void Product_Click(object sender, Product e)
         {
-            Update_Total(e.product_price);
-            //-----------------------------
             bool check = false;
             foreach (DataRow i in Dt.Rows)
             {
@@ -110,20 +117,38 @@ namespace PBL3___Cosmetics_Store_Management_App
                     if (i[2].ToString() == e.product_name)
                     {
                         i[3] = Convert.ToInt32(i[3]) + 1;
-                        i[5] = Convert.ToInt32(i[5]) * Convert.ToInt32(i[3]);
+                        i[5] = Convert.ToInt32(i[4]) * Convert.ToInt32(i[3]);
                         break;
                     }
                 }
             }
+            //-----------------------------
+            Update_Total();
         }
-        private void Update_Total(double price)
+        private void dgvReceipt_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            double current_total = Convert.ToDouble(lbTotal.Text);
-            lbTotal.Text = (current_total + price).ToString("N0");
+            if (dgvReceipt.CurrentCell.OwningColumn.Name == "POS_Del")
+            {
+                string name = dgvReceipt.CurrentRow.Cells[1].Value.ToString();
+                MessageBox.Show(name);
+            }
+        }
+
+        private void Update_Total()
+        {
+            double new_subtotal, new_total;
+            ReceiptController.Instance.Calculate(Dt, txtDiscount.Text, out new_subtotal, out new_total);
+
+            lbSubtotal.Text = new_subtotal.ToString("N0");
+            lbTotal.Text = new_total.ToString("N0");
         }
         private void btnNew_Click(object sender, EventArgs e)
         {
             Dt.Rows.Clear();
+
+            lbSubtotal.Text = 0.ToString(); 
+            lbTotal.Text = 0.ToString();
+            txtDiscount.Text = 0.ToString();
         }
 
         private void btnPay_Click(object sender, EventArgs e)
@@ -132,10 +157,34 @@ namespace PBL3___Cosmetics_Store_Management_App
 
             else
             {
-                ReceiptController.Instance.Receipt_Pay(Dt, lbTotal.Text);
+                ReceiptController.Instance.Receipt_Pay(Dt, lbSubtotal.Text, currentStaff.staff_id, txtDiscount.Text);
                 Dt.Rows.Clear();
             }
         }
+
+        private void txtDiscount_Leave(object sender, EventArgs e)
+        {
+            double subtotal = Convert.ToDouble(lbSubtotal.Text);
+            if (!ReceiptController.Instance.DiscountValidataion(txtDiscount.Text))
+            {
+                MessageBox.Show("The discount value is invalid!", "Invalid Input", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                txtDiscount.Text = "";
+            }
+            else
+            {
+                Update_Total();
+            }
+        }
+        private void txtDiscount_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                txtDiscount_Leave(sender, new EventArgs());
+                this.ActiveControl = null;
+            }
+        }
+
+        #endregion
 
         
     }

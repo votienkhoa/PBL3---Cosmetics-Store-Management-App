@@ -15,8 +15,7 @@ namespace PBL3___Cosmetics_Store_Management_App
 
         private void frmMain_Load(object sender, EventArgs e)
         {
-            if (currentStaff != null) txtUser.Text = currentStaff.staff_name + " - " + currentStaff.staff_id;
-            MessageBox.Show(StaffController.Instance.AutoGenerateID(1));
+            if (currentStaff != null) txtUser.Text = currentStaff.staff_name + "____" + currentStaff.staff_id;
         }
 
         public void AddControl(Form f)

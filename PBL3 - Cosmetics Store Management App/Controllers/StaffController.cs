@@ -3,6 +3,7 @@ using PBL3___Cosmetics_Store_Management_App.Entities;
 using PBL3___Cosmetics_Store_Management_App.Repositories.Unit_of_work;
 using System;
 using System.Collections.Generic;
+using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -64,14 +65,15 @@ namespace PBL3___Cosmetics_Store_Management_App.Controllers
         }
         public string AutoGenerateID(int role)
         {
-            int min_id = 0;
+            int min_id = 1;
+            string current_id;
 
             while (true)
             {
+                current_id = GenerateID(role, min_id);
+                if (unitOfWork.StaffRepo.Find(p => p.staff_id == current_id).FirstOrDefault() == null) break;
                 min_id++;
-                if (unitOfWork.StaffRepo.GetStaffByID(GenerateID(role, min_id)) == null) break;
             }
-
             return GenerateID(role, min_id);
         }
     }

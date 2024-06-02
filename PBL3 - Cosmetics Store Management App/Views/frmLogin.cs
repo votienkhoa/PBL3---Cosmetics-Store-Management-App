@@ -45,15 +45,16 @@ namespace PBL3___Cosmetics_Store_Management_App.Views
             }
             else if (_staff.staff_role == 2)
             {
-                MessageBox.Show("called1");
-                this.Hide();
-                frmPOS frmMain = new frmPOS();
-                frmMain.ShowDialog();
+                frmPOS frm = new frmPOS()
+                {
+                    currentStaff = _staff
+                };
+                this.Hide();               
+                frm.ShowDialog();
                 this.Close();
             }
             else if (_staff.staff_role == 3)
             {
-                MessageBox.Show("called2");
                 this.Hide();
                 frmStorageView frmMain = new frmStorageView();
                 frmMain.ShowDialog();

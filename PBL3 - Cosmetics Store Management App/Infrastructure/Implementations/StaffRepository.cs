@@ -19,10 +19,5 @@ namespace PBL3___Cosmetics_Store_Management_App.Infrastructure.Implementations
         {
             get { return Context as DatabaseContext; }
         }
-
-        public Staff GetStaffByID(string id)
-        {
-            return DatabaseContext.Staffs.Find(id);
-        }
     }
 }
