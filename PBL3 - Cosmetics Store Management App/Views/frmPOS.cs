@@ -130,7 +130,26 @@ namespace PBL3___Cosmetics_Store_Management_App
             if (dgvReceipt.CurrentCell.OwningColumn.Name == "POS_Del")
             {
                 string name = dgvReceipt.CurrentRow.Cells[1].Value.ToString();
-                MessageBox.Show(name);
+                foreach (DataRow i in Dt.Rows)
+                {
+                    if (i[2].ToString() == name)
+                    {
+                        if (Convert.ToInt32(i[3]) == 1) Dt.Rows.Remove(i);
+                        else
+                        {
+                            i[3] = Convert.ToInt32(i[3]) - 1;
+                            i[5] = Convert.ToInt32(i[4]) * Convert.ToInt32(i[3]);
+                        }
+                        break;
+                    }
+                }
+                int index = 1;
+                foreach (DataRow i in Dt.Rows)
+                {
+                    i[0] = index;
+                    index++;
+                }
+                Update_Total();
             }
         }
 
