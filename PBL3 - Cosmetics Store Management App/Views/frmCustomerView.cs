@@ -1,4 +1,5 @@
-﻿using System;
+﻿using PBL3___Cosmetics_Store_Management_App.Controllers;
+using System;
 using System.Data;
 using System.Windows.Forms;
 
@@ -14,20 +15,8 @@ namespace PBL3___Cosmetics_Store_Management_App.View
 
         public void dgvLoad()
         {
-            DataTable dt = new DataTable();
-            dt.Columns.AddRange(new DataColumn[]
-            {
-                new DataColumn("IDD", typeof(string)),
-                new DataColumn("Name", typeof(string))
-            });
-
-            dt.Rows.Add("KH00001", "Vo Tien Khoa");
-            dt.Rows.Add("KH00002", "Tran Duc Huy");
-
-            foreach (DataRow i in dt.Rows)
-            {
-                dgvStaff.Rows.Add(i.ItemArray);
-            }
+            // dtgv_customer.AutoGenerateColumns = false;
+            //dtgv_customer.DataSource = CustomerController.Instance.getData();
 
         }
 
@@ -35,6 +24,12 @@ namespace PBL3___Cosmetics_Store_Management_App.View
         {
             frmCustomerAdd frmCustomerAdd = new frmCustomerAdd();
             frmCustomerAdd.Show();
+        }
+
+
+        private void dtgv_customer_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
         }
     }
 }

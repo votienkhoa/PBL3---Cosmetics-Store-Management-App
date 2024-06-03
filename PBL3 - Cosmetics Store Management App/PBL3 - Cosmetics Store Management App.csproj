@@ -84,24 +84,25 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Controllers\CategoryController.cs" />
+    <Compile Include="Controllers\CustomerController.cs" />
     <Compile Include="Controllers\FileHelper.cs" />
     <Compile Include="Controllers\ProductController.cs" />
-
     <Compile Include="Controllers\ReceiptController.cs" />
     <Compile Include="Data Access\DatabaseContext.cs" />
+    <Compile Include="Entities\Customer.cs" />
     <Compile Include="Entities\Receipt.cs" />
     <Compile Include="Entities\ReceiptDetail.cs" />
+    <Compile Include="Infrastructure\Implementations\CustomerRepository.cs" />
     <Compile Include="Infrastructure\Implementations\ReceiptDetailRepository.cs" />
     <Compile Include="Infrastructure\Implementations\ReceiptRepository.cs" />
+    <Compile Include="Infrastructure\Interfaces\ICustomerRepository.cs" />
     <Compile Include="Infrastructure\Interfaces\IReceiptDetailRepository.cs" />
     <Compile Include="Infrastructure\Interfaces\IReceiptRepository.cs" />
-
     <Compile Include="Controllers\StaffController.cs" />
     <Compile Include="Data Access\DatabaseContext.cs" />
     <Compile Include="Entities\Staff.cs" />
     <Compile Include="Infrastructure\Implementations\StaffRepository.cs" />
     <Compile Include="Infrastructure\Interfaces\IStaffRepository.cs" />
-
     <Compile Include="Infrastructure\SingletonBase.cs" />
     <Compile Include="Entities\Category.cs" />
     <Compile Include="Entities\Product.cs" />

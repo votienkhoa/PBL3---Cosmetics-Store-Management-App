@@ -20,6 +20,7 @@ namespace PBL3___Cosmetics_Store_Management_App.Repositories.Unit_of_work
         private IReceiptRepository _ReceiptRepo;
         private IReceiptDetailRepository _ReceiptDetailRepo;
         private IStaffRepository _StaffRepo;
+        private ICustomerRepository _CustomerRepo;
 
 
 
@@ -84,6 +85,17 @@ namespace PBL3___Cosmetics_Store_Management_App.Repositories.Unit_of_work
                     _StaffRepo = new StaffRepository(Context);
                 }
                 return _StaffRepo;
+            }
+        }
+        public ICustomerRepository CustomerRepo
+        {
+            get
+            {
+                if (_CustomerRepo == null) 
+                {
+                    _CustomerRepo = new CustomerRepository(Context);
+                }
+                return _CustomerRepo;
             }
         }
         #endregion

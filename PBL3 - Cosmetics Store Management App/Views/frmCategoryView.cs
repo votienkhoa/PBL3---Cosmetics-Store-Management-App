@@ -63,5 +63,10 @@ namespace PBL3___Cosmetics_Store_Management_App.View
         {
             dgvCategories.DataSource = CategoryController.Instance.Search(txtSearch.Text);
         }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

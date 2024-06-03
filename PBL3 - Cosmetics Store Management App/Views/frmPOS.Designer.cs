@@ -193,7 +193,7 @@
             this.label1.Font = new System.Drawing.Font("Segoe UI", 20.03478F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(185, 56);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(82, 45);
+            this.label1.Size = new System.Drawing.Size(86, 46);
             this.label1.TabIndex = 1;
             this.label1.Text = "POS";
             // 

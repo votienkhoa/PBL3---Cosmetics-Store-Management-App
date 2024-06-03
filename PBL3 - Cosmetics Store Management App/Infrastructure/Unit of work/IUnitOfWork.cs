@@ -15,6 +15,7 @@ namespace PBL3___Cosmetics_Store_Management_App.Repositories.Unit_of_work
         IReceiptRepository ReceiptRepo { get; }
         IReceiptDetailRepository ReceiptDetailRepo { get; }
         IStaffRepository StaffRepo { get; }
+        ICustomerRepository CustomerRepo { get; }
 
         void Save();
 
