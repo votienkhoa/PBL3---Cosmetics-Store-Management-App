@@ -18,6 +18,10 @@ namespace PBL3___Cosmetics_Store_Management_App.Controllers
         {
             return unitOfWork.StaffRepo.GetAll().ToList();
         }
+        public Staff GetByID(string id)
+        {
+            return unitOfWork.StaffRepo.Get(id);
+        }
 
         public void add(Staff data) 
         {

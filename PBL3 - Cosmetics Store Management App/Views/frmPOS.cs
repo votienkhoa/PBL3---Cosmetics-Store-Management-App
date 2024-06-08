@@ -1,6 +1,7 @@
 ﻿using Guna.UI2.WinForms;
 using PBL3___Cosmetics_Store_Management_App.Controllers;
 using PBL3___Cosmetics_Store_Management_App.Entities;
+using PBL3___Cosmetics_Store_Management_App.Views;
 using System;
 using System.Collections.Generic;
 using System.Data;
@@ -176,7 +177,12 @@ namespace PBL3___Cosmetics_Store_Management_App
 
             else
             {
-                ReceiptController.Instance.Receipt_Pay(Dt, lbSubtotal.Text, currentStaff.staff_id, txtDiscount.Text);
+                frmReceipt frm = new frmReceipt()
+                {
+                    listReceipt = ReceiptController.Instance.GetListReceiptPrint(Dt),
+                    receipt = ReceiptController.Instance.Receipt_Pay(Dt, lbSubtotal.Text, currentStaff.staff_id, txtDiscount.Text)
+                };
+                frm.ShowDialog();
                 Dt.Rows.Clear();
             }
         }
@@ -202,9 +208,13 @@ namespace PBL3___Cosmetics_Store_Management_App
                 this.ActiveControl = null;
             }
         }
+        private void btnPrint_Click(object sender, EventArgs e)
+        {
+            
+        }
 
         #endregion
 
-        
+
     }
 }
