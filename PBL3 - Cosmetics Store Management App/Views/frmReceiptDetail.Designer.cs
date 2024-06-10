@@ -1,6 +1,6 @@
 ﻿namespace PBL3___Cosmetics_Store_Management_App.Views
 {
-    partial class frmReceipt
+    partial class frmReceiptDetail
     {
         /// <summary>
         /// Required designer variable.

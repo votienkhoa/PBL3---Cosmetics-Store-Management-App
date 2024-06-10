@@ -15,6 +15,7 @@ namespace PBL3___Cosmetics_Store_Management_App.View
         public frmCategoryView()
         {
             InitializeComponent();
+            dgvCategories.AutoGenerateColumns = false;
         }
         private void frmCategoryView_Load(object sender, EventArgs e)
         {

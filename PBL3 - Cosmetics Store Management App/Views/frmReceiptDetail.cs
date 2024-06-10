@@ -15,12 +15,12 @@ using System.Windows.Forms;
 
 namespace PBL3___Cosmetics_Store_Management_App.Views
 {
-    public partial class frmReceipt : Form
+    public partial class frmReceiptDetail : Form
     {
         public List<ReceiptPrint> listReceipt {  get; set; }
         public Receipt receipt { get; set; }
 
-        public frmReceipt()
+        public frmReceiptDetail()
         {
             InitializeComponent();
             

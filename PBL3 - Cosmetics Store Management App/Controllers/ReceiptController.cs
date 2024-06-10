@@ -15,9 +15,13 @@ namespace PBL3___Cosmetics_Store_Management_App.Controllers
     {
         private UnitOfWork unitOfWork = new UnitOfWork(new DatabaseContext());
 
-        public Receipt GetByID(string id)
+        public Receipt GetByID(string ID)
         {
-            return unitOfWork.ReceiptRepo.Get(id);
+            return unitOfWork.ReceiptRepo.Get(ID);
+        }
+        public List<Receipt> GetData()
+        {
+            return unitOfWork.ReceiptRepo.GetAll().ToList();
         }
         public string GenerateID()
         {
@@ -47,7 +51,7 @@ namespace PBL3___Cosmetics_Store_Management_App.Controllers
                 {
                     receipt_id = receipt_id,
                     product_id = row[1].ToString(),
-                    product_quantity = row[3].ToString()
+                    product_quantity = Convert.ToInt32(row[3])
                 };
                 unitOfWork.ReceiptDetailRepo.Add(detail);
             }
@@ -76,24 +80,28 @@ namespace PBL3___Cosmetics_Store_Management_App.Controllers
             return true;         
         }
 
-        public List<ReceiptPrint> GetListReceiptPrint(DataTable dt)
+        public List<ReceiptPrint> GetList_ReceiptPrint(string id)
         {
-            List<ReceiptPrint> receipt_list = new List<ReceiptPrint>();
+            List<ReceiptDetail> receipt_list = unitOfWork.ReceiptRepo.Get(id).receiptdetails.ToList();
+            List<ReceiptPrint> receipt_printlist = new List<ReceiptPrint>();
 
-            foreach (DataRow row in  dt.Rows)
+            int index = 1;
+            foreach (ReceiptDetail receipt_row in receipt_list)
             {
+                Product current_product = unitOfWork.ProductRepo.Get(receipt_row.product_id);
                 ReceiptPrint receipt = new ReceiptPrint()
                 {
-                    number = Convert.ToInt32(row[0]),
-                    name = row[2].ToString(),
-                    quantity = Convert.ToInt32(row[3]),
-                    price = Convert.ToDouble(row[4]),
-                    amount = Convert.ToDouble(row[5]),
+                    number = index,
+                    name = current_product.product_name,
+                    quantity = receipt_row.product_quantity,
+                    price = current_product.product_price,
+                    amount = current_product.product_price * receipt_row.product_quantity,
                 };
-                receipt_list.Add(receipt);
+                index++;
+                receipt_printlist.Add(receipt);
             }
 
-            return receipt_list;
+            return receipt_printlist;
         } 
     }
 }

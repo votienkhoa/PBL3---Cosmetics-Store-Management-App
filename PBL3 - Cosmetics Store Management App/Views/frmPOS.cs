@@ -177,13 +177,24 @@ namespace PBL3___Cosmetics_Store_Management_App
 
             else
             {
-                frmReceipt frm = new frmReceipt()
+                DialogResult confirmation = MessageBox.Show(
+                    "Are you sure you want to proceed with payment and print the receipt?",
+                    "Payment Confirmation",
+                    MessageBoxButtons.YesNo,
+                    MessageBoxIcon.Question
+                );
+                if (confirmation == DialogResult.Yes)
                 {
-                    listReceipt = ReceiptController.Instance.GetListReceiptPrint(Dt),
-                    receipt = ReceiptController.Instance.Receipt_Pay(Dt, lbSubtotal.Text, currentStaff.staff_id, txtDiscount.Text)
-                };
-                frm.ShowDialog();
-                Dt.Rows.Clear();
+                    Receipt new_receipt = ReceiptController.Instance.Receipt_Pay(Dt, lbSubtotal.Text, currentStaff.staff_id, txtDiscount.Text);
+                    frmReceiptDetail frm = new frmReceiptDetail()
+                    {
+                        listReceipt = ReceiptController.Instance.GetList_ReceiptPrint(new_receipt.receipt_id),
+                        receipt = new_receipt
+                    };
+                    frm.ShowDialog();
+                    Dt.Rows.Clear();
+                }
+                
             }
         }
 
@@ -207,10 +218,6 @@ namespace PBL3___Cosmetics_Store_Management_App
                 txtDiscount_Leave(sender, new EventArgs());
                 this.ActiveControl = null;
             }
-        }
-        private void btnPrint_Click(object sender, EventArgs e)
-        {
-            
         }
 
         #endregion

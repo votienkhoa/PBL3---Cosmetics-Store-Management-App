@@ -112,11 +112,11 @@
     <Compile Include="Infrastructure\Interfaces\IRepository.cs" />
     <Compile Include="Infrastructure\Unit of work\IUnitOfWork.cs" />
     <Compile Include="Infrastructure\Unit of work\UnitOfWork.cs" />
-    <Compile Include="Views\frmReceipt.cs">
+    <Compile Include="Views\frmReceiptDetail.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Views\frmReceipt.Designer.cs">
-      <DependentUpon>frmReceipt.cs</DependentUpon>
+    <Compile Include="Views\frmReceiptDetail.Designer.cs">
+      <DependentUpon>frmReceiptDetail.cs</DependentUpon>
     </Compile>
     <Compile Include="Views\frmLogin.cs">
       <SubType>Form</SubType>
@@ -131,6 +131,12 @@
       <DependentUpon>frmPOS.cs</DependentUpon>
     </Compile>
     <Compile Include="SqlServerTypes\Loader.cs" />
+    <Compile Include="Views\frmReceiptView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\frmReceiptView.Designer.cs">
+      <DependentUpon>frmReceiptView.cs</DependentUpon>
+    </Compile>
     <Compile Include="Views\frmStaffAdd.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -219,14 +225,17 @@
     <Compile Include="Views\frmStorageView.Designer.cs">
       <DependentUpon>frmStorageView.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="Views\frmReceipt.resx">
-      <DependentUpon>frmReceipt.cs</DependentUpon>
+    <EmbeddedResource Include="Views\frmReceiptDetail.resx">
+      <DependentUpon>frmReceiptDetail.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Views\frmLogin.resx">
       <DependentUpon>frmLogin.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Views\frmPOS.resx">
       <DependentUpon>frmPOS.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\frmReceiptView.resx">
+      <DependentUpon>frmReceiptView.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Views\frmStaffAdd.resx">
       <DependentUpon>frmStaffAdd.cs</DependentUpon>
@@ -391,6 +400,8 @@
   <ItemGroup>
     <None Include="Resources\user_white.png" />
     <None Include="Resources\printer_green.png" />
+    <None Include="Resources\receipt_green.png" />
+    <None Include="Resources\receipt_white.png" />
     <Content Include="SqlServerTypes\readme.htm" />
     <Content Include="SqlServerTypes\x64\msvcr120.dll">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
