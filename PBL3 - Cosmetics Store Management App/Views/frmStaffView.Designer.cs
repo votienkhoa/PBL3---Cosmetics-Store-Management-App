@@ -55,9 +55,9 @@
             this.label2.AutoSize = true;
             this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Font = new System.Drawing.Font("Segoe UI Semibold", 10.01739F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(775, 86);
+            this.label2.Location = new System.Drawing.Point(689, 69);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(76, 30);
+            this.label2.Size = new System.Drawing.Size(59, 21);
             this.label2.TabIndex = 8;
             this.label2.Text = "Search";
             // 
@@ -66,9 +66,9 @@
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Segoe UI Semibold", 13.77391F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(71, 40);
+            this.label1.Location = new System.Drawing.Point(63, 32);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(127, 38);
+            this.label1.Size = new System.Drawing.Size(99, 30);
             this.label1.TabIndex = 7;
             this.label1.Text = "Staff List";
             // 
@@ -77,10 +77,9 @@
             this.guna2Separator1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.guna2Separator1.FillThickness = 2;
-            this.guna2Separator1.Location = new System.Drawing.Point(58, 179);
-            this.guna2Separator1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.guna2Separator1.Location = new System.Drawing.Point(52, 143);
             this.guna2Separator1.Name = "guna2Separator1";
-            this.guna2Separator1.Size = new System.Drawing.Size(1112, 34);
+            this.guna2Separator1.Size = new System.Drawing.Size(988, 27);
             this.guna2Separator1.TabIndex = 6;
             // 
             // dataGridViewImageColumn1
@@ -123,7 +122,7 @@
             // 
             this.Searchtxtbox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.Searchtxtbox.AutoRoundedCorners = true;
-            this.Searchtxtbox.BorderRadius = 28;
+            this.Searchtxtbox.BorderRadius = 22;
             this.Searchtxtbox.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.Searchtxtbox.DefaultText = "";
             this.Searchtxtbox.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
@@ -135,13 +134,13 @@
             this.Searchtxtbox.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.Searchtxtbox.IconLeft = global::PBL3___Cosmetics_Store_Management_App.Properties.Resources.search_green;
             this.Searchtxtbox.IconLeftOffset = new System.Drawing.Point(10, 0);
-            this.Searchtxtbox.Location = new System.Drawing.Point(762, 120);
-            this.Searchtxtbox.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
+            this.Searchtxtbox.Location = new System.Drawing.Point(677, 96);
+            this.Searchtxtbox.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Searchtxtbox.Name = "Searchtxtbox";
             this.Searchtxtbox.PasswordChar = '\0';
             this.Searchtxtbox.PlaceholderText = "Search Here";
             this.Searchtxtbox.SelectedText = "";
-            this.Searchtxtbox.Size = new System.Drawing.Size(360, 58);
+            this.Searchtxtbox.Size = new System.Drawing.Size(320, 46);
             this.Searchtxtbox.TabIndex = 9;
             this.Searchtxtbox.TextOffset = new System.Drawing.Point(10, 0);
             this.Searchtxtbox.TextChanged += new System.EventHandler(this.guna2TextBox1_TextChanged);
@@ -153,30 +152,33 @@
             this.guna2ImageButton1.Image = global::PBL3___Cosmetics_Store_Management_App.Properties.Resources.plus_green;
             this.guna2ImageButton1.ImageOffset = new System.Drawing.Point(0, 0);
             this.guna2ImageButton1.ImageRotate = 0F;
-            this.guna2ImageButton1.Location = new System.Drawing.Point(76, 90);
-            this.guna2ImageButton1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.guna2ImageButton1.Location = new System.Drawing.Point(68, 72);
             this.guna2ImageButton1.Name = "guna2ImageButton1";
             this.guna2ImageButton1.PressedState.ImageSize = new System.Drawing.Size(64, 64);
-            this.guna2ImageButton1.Size = new System.Drawing.Size(81, 88);
+            this.guna2ImageButton1.Size = new System.Drawing.Size(72, 70);
             this.guna2ImageButton1.TabIndex = 5;
             this.guna2ImageButton1.Click += new System.EventHandler(this.guna2ImageButton1_Click);
             // 
             // dtgv_staff
             // 
+            this.dtgv_staff.AllowUserToAddRows = false;
+            this.dtgv_staff.AllowUserToDeleteRows = false;
+            this.dtgv_staff.AllowUserToResizeColumns = false;
+            this.dtgv_staff.AllowUserToResizeRows = false;
             dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
             this.dtgv_staff.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.dtgv_staff.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(232)))), ((int)(((byte)(234)))), ((int)(((byte)(237)))));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI Semibold", 10.01739F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(232)))), ((int)(((byte)(234)))), ((int)(((byte)(237)))));
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.dtgv_staff.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
-            this.dtgv_staff.ColumnHeadersHeight = 35;
+            this.dtgv_staff.ColumnHeadersHeight = 40;
             this.dtgv_staff.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.ID_Staff,
             this.Staff_Name,
@@ -186,42 +188,44 @@
             this.Staff_dele_button});
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.139131F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(241)))), ((int)(((byte)(243)))));
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.Black;
             dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.dtgv_staff.DefaultCellStyle = dataGridViewCellStyle3;
-            this.dtgv_staff.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            this.dtgv_staff.Location = new System.Drawing.Point(58, 220);
+            this.dtgv_staff.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(241)))), ((int)(((byte)(243)))));
+            this.dtgv_staff.Location = new System.Drawing.Point(52, 176);
+            this.dtgv_staff.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dtgv_staff.Name = "dtgv_staff";
             this.dtgv_staff.ReadOnly = true;
             this.dtgv_staff.RowHeadersVisible = false;
             this.dtgv_staff.RowHeadersWidth = 62;
-            this.dtgv_staff.RowTemplate.Height = 28;
-            this.dtgv_staff.Size = new System.Drawing.Size(1112, 586);
+            this.dtgv_staff.RowTemplate.Height = 30;
+            this.dtgv_staff.Size = new System.Drawing.Size(988, 469);
             this.dtgv_staff.TabIndex = 10;
+            this.dtgv_staff.Theme = Guna.UI2.WinForms.Enums.DataGridViewPresetThemes.LightGrid;
             this.dtgv_staff.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
             this.dtgv_staff.ThemeStyle.AlternatingRowsStyle.Font = null;
             this.dtgv_staff.ThemeStyle.AlternatingRowsStyle.ForeColor = System.Drawing.Color.Empty;
             this.dtgv_staff.ThemeStyle.AlternatingRowsStyle.SelectionBackColor = System.Drawing.Color.Empty;
             this.dtgv_staff.ThemeStyle.AlternatingRowsStyle.SelectionForeColor = System.Drawing.Color.Empty;
             this.dtgv_staff.ThemeStyle.BackColor = System.Drawing.Color.White;
-            this.dtgv_staff.ThemeStyle.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            this.dtgv_staff.ThemeStyle.HeaderStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            this.dtgv_staff.ThemeStyle.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(241)))), ((int)(((byte)(243)))));
+            this.dtgv_staff.ThemeStyle.HeaderStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(232)))), ((int)(((byte)(234)))), ((int)(((byte)(237)))));
             this.dtgv_staff.ThemeStyle.HeaderStyle.BorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            this.dtgv_staff.ThemeStyle.HeaderStyle.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dtgv_staff.ThemeStyle.HeaderStyle.ForeColor = System.Drawing.Color.White;
+            this.dtgv_staff.ThemeStyle.HeaderStyle.Font = new System.Drawing.Font("Segoe UI Semibold", 10.01739F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dtgv_staff.ThemeStyle.HeaderStyle.ForeColor = System.Drawing.Color.Black;
             this.dtgv_staff.ThemeStyle.HeaderStyle.HeaightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
-            this.dtgv_staff.ThemeStyle.HeaderStyle.Height = 35;
+            this.dtgv_staff.ThemeStyle.HeaderStyle.Height = 40;
             this.dtgv_staff.ThemeStyle.ReadOnly = true;
             this.dtgv_staff.ThemeStyle.RowsStyle.BackColor = System.Drawing.Color.White;
             this.dtgv_staff.ThemeStyle.RowsStyle.BorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
             this.dtgv_staff.ThemeStyle.RowsStyle.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dtgv_staff.ThemeStyle.RowsStyle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            this.dtgv_staff.ThemeStyle.RowsStyle.Height = 28;
-            this.dtgv_staff.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            this.dtgv_staff.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            this.dtgv_staff.ThemeStyle.RowsStyle.ForeColor = System.Drawing.Color.Black;
+            this.dtgv_staff.ThemeStyle.RowsStyle.Height = 30;
+            this.dtgv_staff.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(241)))), ((int)(((byte)(243)))));
+            this.dtgv_staff.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.Black;
             this.dtgv_staff.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtgv_staff_CellContentClick);
             this.dtgv_staff.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.dtgv_staff_CellFormatting);
             // 
@@ -229,74 +233,75 @@
             // 
             this.ID_Staff.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
             this.ID_Staff.DataPropertyName = "staff_id";
-            this.ID_Staff.FillWeight = 94.49339F;
             this.ID_Staff.Frozen = true;
             this.ID_Staff.HeaderText = "ID";
             this.ID_Staff.MinimumWidth = 8;
             this.ID_Staff.Name = "ID_Staff";
             this.ID_Staff.ReadOnly = true;
-            this.ID_Staff.Width = 40;
+            this.ID_Staff.Width = 200;
             // 
             // Staff_Name
             // 
             this.Staff_Name.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
             this.Staff_Name.DataPropertyName = "staff_name";
-            this.Staff_Name.FillWeight = 235.8726F;
             this.Staff_Name.Frozen = true;
             this.Staff_Name.HeaderText = "Name";
             this.Staff_Name.MinimumWidth = 8;
             this.Staff_Name.Name = "Staff_Name";
             this.Staff_Name.ReadOnly = true;
-            this.Staff_Name.Width = 150;
+            this.Staff_Name.Width = 350;
             // 
             // Staff_role
             // 
-            this.Staff_role.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.Staff_role.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.Staff_role.DataPropertyName = "staff_role";
-            this.Staff_role.FillWeight = 102.2727F;
-            this.Staff_role.Frozen = true;
             this.Staff_role.HeaderText = "Role";
             this.Staff_role.MinimumWidth = 8;
             this.Staff_role.Name = "Staff_role";
             this.Staff_role.ReadOnly = true;
-            this.Staff_role.Width = 75;
             // 
             // Staff_detail_button
             // 
-            this.Staff_detail_button.FillWeight = 55.78709F;
+            this.Staff_detail_button.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.Staff_detail_button.FillWeight = 50F;
             this.Staff_detail_button.HeaderText = "";
             this.Staff_detail_button.Image = global::PBL3___Cosmetics_Store_Management_App.Properties.Resources.detail;
             this.Staff_detail_button.ImageLayout = System.Windows.Forms.DataGridViewImageCellLayout.Zoom;
             this.Staff_detail_button.MinimumWidth = 8;
             this.Staff_detail_button.Name = "Staff_detail_button";
             this.Staff_detail_button.ReadOnly = true;
+            this.Staff_detail_button.Width = 40;
             // 
             // Staff_edit_button
             // 
-            this.Staff_edit_button.FillWeight = 55.78709F;
+            this.Staff_edit_button.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.Staff_edit_button.FillWeight = 50F;
             this.Staff_edit_button.HeaderText = "";
             this.Staff_edit_button.Image = global::PBL3___Cosmetics_Store_Management_App.Properties.Resources.edit;
             this.Staff_edit_button.ImageLayout = System.Windows.Forms.DataGridViewImageCellLayout.Zoom;
             this.Staff_edit_button.MinimumWidth = 8;
             this.Staff_edit_button.Name = "Staff_edit_button";
             this.Staff_edit_button.ReadOnly = true;
+            this.Staff_edit_button.Width = 40;
             // 
             // Staff_dele_button
             // 
-            this.Staff_dele_button.FillWeight = 55.78709F;
+            this.Staff_dele_button.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.Staff_dele_button.FillWeight = 50F;
             this.Staff_dele_button.HeaderText = "";
             this.Staff_dele_button.Image = global::PBL3___Cosmetics_Store_Management_App.Properties.Resources.delete;
             this.Staff_dele_button.ImageLayout = System.Windows.Forms.DataGridViewImageCellLayout.Zoom;
             this.Staff_dele_button.MinimumWidth = 8;
             this.Staff_dele_button.Name = "Staff_dele_button";
             this.Staff_dele_button.ReadOnly = true;
+            this.Staff_dele_button.Width = 40;
             // 
             // frmStaffView
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(239)))), ((int)(((byte)(230)))));
-            this.ClientSize = new System.Drawing.Size(1227, 852);
+            this.ClientSize = new System.Drawing.Size(1091, 682);
             this.Controls.Add(this.dtgv_staff);
             this.Controls.Add(this.Searchtxtbox);
             this.Controls.Add(this.label2);
@@ -304,7 +309,6 @@
             this.Controls.Add(this.guna2Separator1);
             this.Controls.Add(this.guna2ImageButton1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "frmStaffView";
             this.Text = "frmStaffView";
             ((System.ComponentModel.ISupportInitialize)(this.dtgv_staff)).EndInit();

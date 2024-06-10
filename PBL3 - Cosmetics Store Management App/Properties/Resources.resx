@@ -124,11 +124,11 @@
   <data name="product_green" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\product_green.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="customer_green1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\customer_green1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="436312905_1663466177750201_6079289450384587936_n" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\436312905_1663466177750201_6079289450384587936_n.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="receipt_white" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\receipt_white.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="user_white" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\user_white.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -141,6 +141,9 @@
   </data>
   <data name="product_white" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\product_white.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="logo" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\logo.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="receipt_green" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\receipt_green.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -181,8 +184,8 @@
   <data name="search_green" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\search_green.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="logo" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\logo.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="customer_green1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\customer_green1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="printer_green" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\printer_green.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -196,7 +199,7 @@
   <data name="pos_green" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\pos_green.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="receipt_white" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\receipt_white.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="calendar_white" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\calendar_white.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

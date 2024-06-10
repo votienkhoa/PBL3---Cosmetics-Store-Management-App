@@ -89,13 +89,13 @@
     <Compile Include="Controllers\ReceiptController.cs" />
     <Compile Include="Controllers\ReportController.cs" />
     <Compile Include="Data Access\DatabaseContext.cs" />
-    <Compile Include="dsSellByCategory.cs">
-      <DependentUpon>dsSellByCategory.xsd</DependentUpon>
+    <Compile Include="dsReport.cs">
+      <DependentUpon>dsReport.xsd</DependentUpon>
     </Compile>
-    <Compile Include="dsSellByCategory.Designer.cs">
+    <Compile Include="dsReport.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>dsSellByCategory.xsd</DependentUpon>
+      <DependentUpon>dsReport.xsd</DependentUpon>
     </Compile>
     <Compile Include="Entities\Receipt.cs" />
     <Compile Include="Entities\ReceiptDetail.cs" />
@@ -152,11 +152,11 @@
     <Compile Include="Views\frmReceiptView.Designer.cs">
       <DependentUpon>frmReceiptView.cs</DependentUpon>
     </Compile>
-    <Compile Include="Views\frmSellByCategory.cs">
+    <Compile Include="Views\frmReportDetail.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Views\frmSellByCategory.Designer.cs">
-      <DependentUpon>frmSellByCategory.cs</DependentUpon>
+    <Compile Include="Views\frmReportDetail.Designer.cs">
+      <DependentUpon>frmReportDetail.cs</DependentUpon>
     </Compile>
     <Compile Include="Views\frmStaffAdd.cs">
       <SubType>Form</SubType>
@@ -261,8 +261,8 @@
     <EmbeddedResource Include="Views\frmReceiptView.resx">
       <DependentUpon>frmReceiptView.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Views\frmSellByCategory.resx">
-      <DependentUpon>frmSellByCategory.cs</DependentUpon>
+    <EmbeddedResource Include="Views\frmReportDetail.resx">
+      <DependentUpon>frmReportDetail.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Views\frmStaffAdd.resx">
       <DependentUpon>frmStaffAdd.cs</DependentUpon>
@@ -279,6 +279,9 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </EmbeddedResource>
     <EmbeddedResource Include="Views\rptSellByCategory.rdlc">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\rptSellByProduct.rdlc">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </EmbeddedResource>
     <EmbeddedResource Include="Views\usProduct.resx">
@@ -317,16 +320,16 @@
     <EmbeddedResource Include="Views\frmStorageView.resx">
       <DependentUpon>frmStorageView.cs</DependentUpon>
     </EmbeddedResource>
-    <None Include="dsSellByCategory.xsc">
-      <DependentUpon>dsSellByCategory.xsd</DependentUpon>
+    <None Include="dsReport.xsc">
+      <DependentUpon>dsReport.xsd</DependentUpon>
     </None>
-    <None Include="dsSellByCategory.xsd">
+    <None Include="dsReport.xsd">
       <SubType>Designer</SubType>
       <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>dsSellByCategory.Designer.cs</LastGenOutput>
+      <LastGenOutput>dsReport.Designer.cs</LastGenOutput>
     </None>
-    <None Include="dsSellByCategory.xss">
-      <DependentUpon>dsSellByCategory.xsd</DependentUpon>
+    <None Include="dsReport.xss">
+      <DependentUpon>dsReport.xsd</DependentUpon>
     </None>
     <None Include="packages.config" />
     <None Include="PBL3___Cosmetics_Store_Management_App.Entities.ReceiptPrint1.datasource" />
@@ -443,6 +446,7 @@
     <None Include="Resources\printer_green.png" />
     <None Include="Resources\receipt_green.png" />
     <None Include="Resources\receipt_white.png" />
+    <None Include="Resources\calendar_white.png" />
     <Content Include="SqlServerTypes\readme.htm" />
     <Content Include="SqlServerTypes\x64\msvcr120.dll">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>

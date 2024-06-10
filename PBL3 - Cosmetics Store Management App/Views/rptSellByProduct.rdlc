@@ -7,7 +7,7 @@
         <DataProvider>System.Data.DataSet</DataProvider>
         <ConnectString>/* Local Connection */</ConnectString>
       </ConnectionProperties>
-      <rd:DataSourceID>0cd27b15-696a-4faa-b9d5-852b648aaf75</rd:DataSourceID>
+      <rd:DataSourceID>e74a04d2-916b-497a-96ed-ab6a53aa6c28</rd:DataSourceID>
     </DataSource>
   </DataSources>
   <DataSets>
@@ -17,8 +17,8 @@
         <CommandText>/* Local Query */</CommandText>
       </Query>
       <Fields>
-        <Field Name="category_name">
-          <DataField>category_name</DataField>
+        <Field Name="product_name">
+          <DataField>product_name</DataField>
           <rd:TypeName>System.String</rd:TypeName>
         </Field>
         <Field Name="product_quantity">
@@ -32,8 +32,8 @@
       </Fields>
       <rd:DataSetInfo>
         <rd:DataSetName>dsSellByCategory</rd:DataSetName>
-        <rd:SchemaPath>D:\Code\PBL3 - Cosmetics Store Management App\PBL3 - Cosmetics Store Management App\dsSellByCategory.xsd</rd:SchemaPath>
-        <rd:TableName>DataTable1</rd:TableName>
+        <rd:SchemaPath>D:\Code\PBL3 - Cosmetics Store Management App\PBL3 - Cosmetics Store Management App\dsReport.xsd</rd:SchemaPath>
+        <rd:TableName>DataTable2</rd:TableName>
         <rd:TableAdapterFillMethod />
         <rd:TableAdapterGetDataMethod />
         <rd:TableAdapterName />
@@ -48,13 +48,13 @@
             <TablixBody>
               <TablixColumns>
                 <TablixColumn>
-                  <Width>2.8in</Width>
+                  <Width>2.94204in</Width>
                 </TablixColumn>
                 <TablixColumn>
-                  <Width>1.09565in</Width>
+                  <Width>1.1971in</Width>
                 </TablixColumn>
                 <TablixColumn>
-                  <Width>1.91304in</Width>
+                  <Width>1.77101in</Width>
                 </TablixColumn>
               </TablixColumns>
               <TablixRows>
@@ -63,14 +63,14 @@
                   <TablixCells>
                     <TablixCell>
                       <CellContents>
-                        <Textbox Name="Textbox5">
+                        <Textbox Name="Textbox22">
                           <CanGrow>true</CanGrow>
                           <KeepTogether>true</KeepTogether>
                           <Paragraphs>
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value>Category Name</Value>
+                                  <Value>Product Name</Value>
                                   <Style>
                                     <FontSize>12pt</FontSize>
                                     <FontWeight>Bold</FontWeight>
@@ -82,7 +82,7 @@
                               </Style>
                             </Paragraph>
                           </Paragraphs>
-                          <rd:DefaultName>Textbox5</rd:DefaultName>
+                          <rd:DefaultName>Textbox22</rd:DefaultName>
                           <Style>
                             <Border>
                               <Style>Solid</Style>
@@ -199,14 +199,14 @@
                   <TablixCells>
                     <TablixCell>
                       <CellContents>
-                        <Textbox Name="category_name">
+                        <Textbox Name="product_name">
                           <CanGrow>true</CanGrow>
                           <KeepTogether>true</KeepTogether>
                           <Paragraphs>
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value>=Fields!category_name.Value</Value>
+                                  <Value>=Fields!product_name.Value</Value>
                                   <Style>
                                     <FontStyle>Italic</FontStyle>
                                   </Style>
@@ -217,7 +217,7 @@
                               </Style>
                             </Paragraph>
                           </Paragraphs>
-                          <rd:DefaultName>category_name</rd:DefaultName>
+                          <rd:DefaultName>product_name</rd:DefaultName>
                           <Style>
                             <Border>
                               <Style>Solid</Style>
@@ -353,10 +353,10 @@
               </TablixMembers>
             </TablixRowHierarchy>
             <DataSetName>DataSet1</DataSetName>
-            <Top>1.95271in</Top>
-            <Left>0.43218in</Left>
+            <Top>1.8782in</Top>
+            <Left>0.36393in</Left>
             <Height>0.91739in</Height>
-            <Width>5.80869in</Width>
+            <Width>5.91015in</Width>
             <Style>
               <Border>
                 <Style>Solid</Style>
@@ -395,8 +395,8 @@
               </Paragraph>
             </Paragraphs>
             <rd:DefaultName>Textbox11</rd:DefaultName>
-            <Top>0.51913in</Top>
-            <Left>0.31043in</Left>
+            <Top>0.44462in</Top>
+            <Left>0.24218in</Left>
             <Height>0.45in</Height>
             <Width>6.18957in</Width>
             <ZIndex>1</ZIndex>
@@ -430,8 +430,8 @@
               </Paragraph>
             </Paragraphs>
             <rd:DefaultName>Textbox12</rd:DefaultName>
-            <Top>3.07445in</Top>
-            <Left>3.23218in</Left>
+            <Top>2.99994in</Top>
+            <Left>3.40742in</Left>
             <Height>0.23611in</Height>
             <Width>1.09565in</Width>
             <ZIndex>2</ZIndex>
@@ -472,8 +472,8 @@
               </Paragraph>
             </Paragraphs>
             <rd:DefaultName>Textbox12</rd:DefaultName>
-            <Top>3.32445in</Top>
-            <Left>3.23219in</Left>
+            <Top>3.24994in</Top>
+            <Left>3.40743in</Left>
             <Height>0.25in</Height>
             <Width>1.09565in</Width>
             <ZIndex>3</ZIndex>
@@ -507,8 +507,8 @@
               </Paragraph>
             </Paragraphs>
             <rd:DefaultName>Textbox12</rd:DefaultName>
-            <Top>3.8038in</Top>
-            <Left>3.23219in</Left>
+            <Top>3.72929in</Top>
+            <Left>3.40743in</Left>
             <Height>0.25in</Height>
             <Width>1.09565in</Width>
             <ZIndex>4</ZIndex>
@@ -542,10 +542,10 @@
               </Paragraph>
             </Paragraphs>
             <rd:DefaultName>Textbox12</rd:DefaultName>
-            <Top>3.07445in</Top>
-            <Left>4.32783in</Left>
+            <Top>2.99994in</Top>
+            <Left>4.50307in</Left>
             <Height>0.23611in</Height>
-            <Width>1.91304in</Width>
+            <Width>1.77101in</Width>
             <ZIndex>5</ZIndex>
             <Style>
               <Border>
@@ -577,10 +577,10 @@
               </Paragraph>
             </Paragraphs>
             <rd:DefaultName>Textbox12</rd:DefaultName>
-            <Top>3.32445in</Top>
-            <Left>4.32783in</Left>
+            <Top>3.24994in</Top>
+            <Left>4.50307in</Left>
             <Height>0.25in</Height>
-            <Width>1.91304in</Width>
+            <Width>1.77101in</Width>
             <ZIndex>6</ZIndex>
             <Style>
               <Border>
@@ -612,10 +612,10 @@
               </Paragraph>
             </Paragraphs>
             <rd:DefaultName>Textbox12</rd:DefaultName>
-            <Top>3.8038in</Top>
-            <Left>4.32783in</Left>
+            <Top>3.72929in</Top>
+            <Left>4.50307in</Left>
             <Height>0.40652in</Height>
-            <Width>1.91304in</Width>
+            <Width>1.77101in</Width>
             <ZIndex>7</ZIndex>
             <Style>
               <Border>
@@ -644,8 +644,8 @@
               </Paragraph>
             </Paragraphs>
             <rd:DefaultName>Textbox4</rd:DefaultName>
-            <Top>1.28435in</Top>
-            <Left>0.43217in</Left>
+            <Top>1.20984in</Top>
+            <Left>0.36392in</Left>
             <Height>0.22222in</Height>
             <Width>0.78261in</Width>
             <ZIndex>8</ZIndex>
@@ -676,8 +676,8 @@
               </Paragraph>
             </Paragraphs>
             <rd:DefaultName>Textbox4</rd:DefaultName>
-            <Top>1.53435in</Top>
-            <Left>0.43217in</Left>
+            <Top>1.45984in</Top>
+            <Left>0.36392in</Left>
             <Height>0.25in</Height>
             <Width>0.78261in</Width>
             <ZIndex>9</ZIndex>
@@ -706,8 +706,8 @@
               </Paragraph>
             </Paragraphs>
             <rd:DefaultName>Textbox8</rd:DefaultName>
-            <Top>1.28435in</Top>
-            <Left>1.31913in</Left>
+            <Top>1.20984in</Top>
+            <Left>1.25088in</Left>
             <Height>0.25in</Height>
             <Width>1.71304in</Width>
             <ZIndex>10</ZIndex>
@@ -736,8 +736,8 @@
               </Paragraph>
             </Paragraphs>
             <rd:DefaultName>Textbox8</rd:DefaultName>
-            <Top>1.53435in</Top>
-            <Left>1.31913in</Left>
+            <Top>1.45984in</Top>
+            <Left>1.25088in</Left>
             <Height>0.25in</Height>
             <Width>1.71304in</Width>
             <ZIndex>11</ZIndex>
@@ -761,32 +761,16 @@
         <RightMargin>1in</RightMargin>
         <TopMargin>1in</TopMargin>
         <BottomMargin>1in</BottomMargin>
-        <Style>
-          <Border>
-            <Style>None</Style>
-          </Border>
-          <TopBorder>
-            <Width>1pt</Width>
-          </TopBorder>
-          <BottomBorder>
-            <Width>1pt</Width>
-          </BottomBorder>
-          <LeftBorder>
-            <Width>1pt</Width>
-          </LeftBorder>
-          <RightBorder>
-            <Width>1pt</Width>
-          </RightBorder>
-        </Style>
+        <Style />
       </Page>
     </ReportSection>
   </ReportSections>
   <ReportParameters>
-    <ReportParameter Name="subtotal">
+    <ReportParameter Name="start">
       <DataType>String</DataType>
       <Prompt>ReportParameter1</Prompt>
     </ReportParameter>
-    <ReportParameter Name="discount">
+    <ReportParameter Name="end">
       <DataType>String</DataType>
       <Prompt>ReportParameter1</Prompt>
     </ReportParameter>
@@ -794,11 +778,11 @@
       <DataType>String</DataType>
       <Prompt>ReportParameter1</Prompt>
     </ReportParameter>
-    <ReportParameter Name="start">
+    <ReportParameter Name="discount">
       <DataType>String</DataType>
       <Prompt>ReportParameter1</Prompt>
     </ReportParameter>
-    <ReportParameter Name="end">
+    <ReportParameter Name="subtotal">
       <DataType>String</DataType>
       <Prompt>ReportParameter1</Prompt>
     </ReportParameter>
@@ -811,12 +795,12 @@
         <CellDefinition>
           <ColumnIndex>0</ColumnIndex>
           <RowIndex>0</RowIndex>
-          <ParameterName>subtotal</ParameterName>
+          <ParameterName>start</ParameterName>
         </CellDefinition>
         <CellDefinition>
           <ColumnIndex>1</ColumnIndex>
           <RowIndex>0</RowIndex>
-          <ParameterName>discount</ParameterName>
+          <ParameterName>end</ParameterName>
         </CellDefinition>
         <CellDefinition>
           <ColumnIndex>2</ColumnIndex>
@@ -826,16 +810,16 @@
         <CellDefinition>
           <ColumnIndex>3</ColumnIndex>
           <RowIndex>0</RowIndex>
-          <ParameterName>start</ParameterName>
+          <ParameterName>discount</ParameterName>
         </CellDefinition>
         <CellDefinition>
           <ColumnIndex>0</ColumnIndex>
           <RowIndex>1</RowIndex>
-          <ParameterName>end</ParameterName>
+          <ParameterName>subtotal</ParameterName>
         </CellDefinition>
       </CellDefinitions>
     </GridLayoutDefinition>
   </ReportParametersLayout>
   <rd:ReportUnitType>Inch</rd:ReportUnitType>
-  <rd:ReportID>7311cd84-e98f-43a7-92d0-819b057aa105</rd:ReportID>
+  <rd:ReportID>f96bd9da-3000-44b7-87f8-3c881e216580</rd:ReportID>
 </Report>
