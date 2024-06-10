@@ -52,7 +52,6 @@
             // 
             // picProduct
             // 
-            this.picProduct.Image = global::PBL3___Cosmetics_Store_Management_App.Properties.Resources.innisfree;
             this.picProduct.ImageRotate = 0F;
             this.picProduct.Location = new System.Drawing.Point(35, 14);
             this.picProduct.Name = "picProduct";

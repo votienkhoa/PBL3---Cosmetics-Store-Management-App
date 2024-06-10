@@ -32,17 +32,17 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.dgvProducts = new Guna.UI2.WinForms.Guna2DataGridView();
-            this.guna2TextBox1 = new Guna.UI2.WinForms.Guna2TextBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
-            this.guna2Separator1 = new Guna.UI2.WinForms.Guna2Separator();
-            this.btnAdd = new Guna.UI2.WinForms.Guna2ImageButton();
             this.Product_ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Product_Name = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Product_Price = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Product_Detail = new System.Windows.Forms.DataGridViewImageColumn();
             this.Product_Edit = new System.Windows.Forms.DataGridViewImageColumn();
             this.Product_Delete = new System.Windows.Forms.DataGridViewImageColumn();
+            this.txt_Search = new Guna.UI2.WinForms.Guna2TextBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.guna2Separator1 = new Guna.UI2.WinForms.Guna2Separator();
+            this.btnAdd = new Guna.UI2.WinForms.Guna2ImageButton();
             ((System.ComponentModel.ISupportInitialize)(this.dgvProducts)).BeginInit();
             this.SuspendLayout();
             // 
@@ -114,80 +114,6 @@
             this.dgvProducts.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.Black;
             this.dgvProducts.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvProducts_CellContentClick);
             // 
-            // guna2TextBox1
-            // 
-            this.guna2TextBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.guna2TextBox1.AutoRoundedCorners = true;
-            this.guna2TextBox1.BorderRadius = 22;
-            this.guna2TextBox1.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.guna2TextBox1.DefaultText = "";
-            this.guna2TextBox1.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.guna2TextBox1.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.guna2TextBox1.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.guna2TextBox1.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.guna2TextBox1.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2TextBox1.Font = new System.Drawing.Font("Segoe UI", 10.01739F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2TextBox1.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2TextBox1.IconLeft = global::PBL3___Cosmetics_Store_Management_App.Properties.Resources.search_green;
-            this.guna2TextBox1.IconLeftOffset = new System.Drawing.Point(10, 0);
-            this.guna2TextBox1.Location = new System.Drawing.Point(676, 95);
-            this.guna2TextBox1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.guna2TextBox1.Name = "guna2TextBox1";
-            this.guna2TextBox1.PasswordChar = '\0';
-            this.guna2TextBox1.PlaceholderText = "Search Here";
-            this.guna2TextBox1.SelectedText = "";
-            this.guna2TextBox1.Size = new System.Drawing.Size(320, 46);
-            this.guna2TextBox1.TabIndex = 15;
-            this.guna2TextBox1.TextOffset = new System.Drawing.Point(10, 0);
-            // 
-            // label2
-            // 
-            this.label2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.label2.AutoSize = true;
-            this.label2.BackColor = System.Drawing.Color.Transparent;
-            this.label2.Font = new System.Drawing.Font("Segoe UI Semibold", 10.01739F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(688, 68);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(59, 21);
-            this.label2.TabIndex = 14;
-            this.label2.Text = "Search";
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.Color.Transparent;
-            this.label1.Font = new System.Drawing.Font("Segoe UI Semibold", 13.77391F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(62, 31);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(131, 30);
-            this.label1.TabIndex = 13;
-            this.label1.Text = "Product List";
-            // 
-            // guna2Separator1
-            // 
-            this.guna2Separator1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.guna2Separator1.BackColor = System.Drawing.Color.Transparent;
-            this.guna2Separator1.FillThickness = 2;
-            this.guna2Separator1.Location = new System.Drawing.Point(51, 142);
-            this.guna2Separator1.Name = "guna2Separator1";
-            this.guna2Separator1.Size = new System.Drawing.Size(988, 27);
-            this.guna2Separator1.TabIndex = 12;
-            // 
-            // btnAdd
-            // 
-            this.btnAdd.CheckedState.ImageSize = new System.Drawing.Size(64, 64);
-            this.btnAdd.HoverState.ImageSize = new System.Drawing.Size(64, 64);
-            this.btnAdd.Image = global::PBL3___Cosmetics_Store_Management_App.Properties.Resources.plus_green;
-            this.btnAdd.ImageOffset = new System.Drawing.Point(0, 0);
-            this.btnAdd.ImageRotate = 0F;
-            this.btnAdd.Location = new System.Drawing.Point(67, 71);
-            this.btnAdd.Name = "btnAdd";
-            this.btnAdd.PressedState.ImageSize = new System.Drawing.Size(64, 64);
-            this.btnAdd.Size = new System.Drawing.Size(72, 70);
-            this.btnAdd.TabIndex = 11;
-            this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
-            // 
             // Product_ID
             // 
             this.Product_ID.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
@@ -253,6 +179,81 @@
             this.Product_Delete.ReadOnly = true;
             this.Product_Delete.Width = 40;
             // 
+            // txt_Search
+            // 
+            this.txt_Search.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.txt_Search.AutoRoundedCorners = true;
+            this.txt_Search.BorderRadius = 22;
+            this.txt_Search.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txt_Search.DefaultText = "";
+            this.txt_Search.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txt_Search.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txt_Search.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txt_Search.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txt_Search.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txt_Search.Font = new System.Drawing.Font("Segoe UI", 10.01739F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_Search.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txt_Search.IconLeft = global::PBL3___Cosmetics_Store_Management_App.Properties.Resources.search_green;
+            this.txt_Search.IconLeftOffset = new System.Drawing.Point(10, 0);
+            this.txt_Search.Location = new System.Drawing.Point(676, 95);
+            this.txt_Search.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.txt_Search.Name = "txt_Search";
+            this.txt_Search.PasswordChar = '\0';
+            this.txt_Search.PlaceholderText = "Search Here";
+            this.txt_Search.SelectedText = "";
+            this.txt_Search.Size = new System.Drawing.Size(320, 46);
+            this.txt_Search.TabIndex = 15;
+            this.txt_Search.TextOffset = new System.Drawing.Point(10, 0);
+            this.txt_Search.TextChanged += new System.EventHandler(this.txt_Search_TextChanged);
+            // 
+            // label2
+            // 
+            this.label2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.label2.AutoSize = true;
+            this.label2.BackColor = System.Drawing.Color.Transparent;
+            this.label2.Font = new System.Drawing.Font("Segoe UI Semibold", 10.01739F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(688, 68);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(59, 21);
+            this.label2.TabIndex = 14;
+            this.label2.Text = "Search";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.Transparent;
+            this.label1.Font = new System.Drawing.Font("Segoe UI Semibold", 13.77391F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(62, 31);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(131, 30);
+            this.label1.TabIndex = 13;
+            this.label1.Text = "Product List";
+            // 
+            // guna2Separator1
+            // 
+            this.guna2Separator1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.guna2Separator1.BackColor = System.Drawing.Color.Transparent;
+            this.guna2Separator1.FillThickness = 2;
+            this.guna2Separator1.Location = new System.Drawing.Point(51, 142);
+            this.guna2Separator1.Name = "guna2Separator1";
+            this.guna2Separator1.Size = new System.Drawing.Size(988, 27);
+            this.guna2Separator1.TabIndex = 12;
+            // 
+            // btnAdd
+            // 
+            this.btnAdd.CheckedState.ImageSize = new System.Drawing.Size(64, 64);
+            this.btnAdd.HoverState.ImageSize = new System.Drawing.Size(64, 64);
+            this.btnAdd.Image = global::PBL3___Cosmetics_Store_Management_App.Properties.Resources.plus_green;
+            this.btnAdd.ImageOffset = new System.Drawing.Point(0, 0);
+            this.btnAdd.ImageRotate = 0F;
+            this.btnAdd.Location = new System.Drawing.Point(67, 71);
+            this.btnAdd.Name = "btnAdd";
+            this.btnAdd.PressedState.ImageSize = new System.Drawing.Size(64, 64);
+            this.btnAdd.Size = new System.Drawing.Size(72, 70);
+            this.btnAdd.TabIndex = 11;
+            this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
+            // 
             // frmProductView
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -261,7 +262,7 @@
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.ClientSize = new System.Drawing.Size(1090, 680);
             this.Controls.Add(this.dgvProducts);
-            this.Controls.Add(this.guna2TextBox1);
+            this.Controls.Add(this.txt_Search);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.guna2Separator1);
@@ -279,7 +280,7 @@
 
         #endregion
         private Guna.UI2.WinForms.Guna2DataGridView dgvProducts;
-        private Guna.UI2.WinForms.Guna2TextBox guna2TextBox1;
+        private Guna.UI2.WinForms.Guna2TextBox txt_Search;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private Guna.UI2.WinForms.Guna2Separator guna2Separator1;

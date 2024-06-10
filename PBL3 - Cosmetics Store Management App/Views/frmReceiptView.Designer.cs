@@ -28,11 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            this.guna2BorderlessForm1 = new Guna.UI2.WinForms.Guna2BorderlessForm(this.components);
             this.dgvReceipts = new Guna.UI2.WinForms.Guna2DataGridView();
             this.Receipt_ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Receipt_Time = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -48,12 +46,6 @@
             this.dataGridViewImageColumn3 = new System.Windows.Forms.DataGridViewImageColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dgvReceipts)).BeginInit();
             this.SuspendLayout();
-            // 
-            // guna2BorderlessForm1
-            // 
-            this.guna2BorderlessForm1.ContainerControl = this;
-            this.guna2BorderlessForm1.DockIndicatorTransparencyValue = 0.6D;
-            this.guna2BorderlessForm1.TransparentWhileDrag = true;
             // 
             // dgvReceipts
             // 
@@ -242,6 +234,7 @@
             this.txtSearch.Size = new System.Drawing.Size(320, 46);
             this.txtSearch.TabIndex = 24;
             this.txtSearch.TextOffset = new System.Drawing.Point(10, 0);
+            this.txtSearch.TextChanged += new System.EventHandler(this.txtSearch_TextChanged);
             // 
             // btnAdd
             // 
@@ -291,8 +284,6 @@
         }
 
         #endregion
-
-        private Guna.UI2.WinForms.Guna2BorderlessForm guna2BorderlessForm1;
         private Guna.UI2.WinForms.Guna2TextBox txtSearch;
         private Guna.UI2.WinForms.Guna2ImageButton btnAdd;
         private Guna.UI2.WinForms.Guna2DataGridView dgvReceipts;

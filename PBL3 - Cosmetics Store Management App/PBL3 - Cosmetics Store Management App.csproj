@@ -87,7 +87,16 @@
     <Compile Include="Controllers\FileHelper.cs" />
     <Compile Include="Controllers\ProductController.cs" />
     <Compile Include="Controllers\ReceiptController.cs" />
+    <Compile Include="Controllers\ReportController.cs" />
     <Compile Include="Data Access\DatabaseContext.cs" />
+    <Compile Include="dsSellByCategory.cs">
+      <DependentUpon>dsSellByCategory.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="dsSellByCategory.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dsSellByCategory.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Entities\Receipt.cs" />
     <Compile Include="Entities\ReceiptDetail.cs" />
     <Compile Include="Entities\ReceiptPrint.cs" />
@@ -112,6 +121,12 @@
     <Compile Include="Infrastructure\Interfaces\IRepository.cs" />
     <Compile Include="Infrastructure\Unit of work\IUnitOfWork.cs" />
     <Compile Include="Infrastructure\Unit of work\UnitOfWork.cs" />
+    <Compile Include="Views\frmDateTimePicker.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\frmDateTimePicker.Designer.cs">
+      <DependentUpon>frmDateTimePicker.cs</DependentUpon>
+    </Compile>
     <Compile Include="Views\frmReceiptDetail.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -136,6 +151,12 @@
     </Compile>
     <Compile Include="Views\frmReceiptView.Designer.cs">
       <DependentUpon>frmReceiptView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\frmSellByCategory.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\frmSellByCategory.Designer.cs">
+      <DependentUpon>frmSellByCategory.cs</DependentUpon>
     </Compile>
     <Compile Include="Views\frmStaffAdd.cs">
       <SubType>Form</SubType>
@@ -225,6 +246,9 @@
     <Compile Include="Views\frmStorageView.Designer.cs">
       <DependentUpon>frmStorageView.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Views\frmDateTimePicker.resx">
+      <DependentUpon>frmDateTimePicker.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Views\frmReceiptDetail.resx">
       <DependentUpon>frmReceiptDetail.cs</DependentUpon>
     </EmbeddedResource>
@@ -236,6 +260,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Views\frmReceiptView.resx">
       <DependentUpon>frmReceiptView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\frmSellByCategory.resx">
+      <DependentUpon>frmSellByCategory.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Views\frmStaffAdd.resx">
       <DependentUpon>frmStaffAdd.cs</DependentUpon>
@@ -249,6 +276,9 @@
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="Views\rptReceipt.rdlc">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\rptSellByCategory.rdlc">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </EmbeddedResource>
     <EmbeddedResource Include="Views\usProduct.resx">
@@ -287,6 +317,17 @@
     <EmbeddedResource Include="Views\frmStorageView.resx">
       <DependentUpon>frmStorageView.cs</DependentUpon>
     </EmbeddedResource>
+    <None Include="dsSellByCategory.xsc">
+      <DependentUpon>dsSellByCategory.xsd</DependentUpon>
+    </None>
+    <None Include="dsSellByCategory.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dsSellByCategory.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="dsSellByCategory.xss">
+      <DependentUpon>dsSellByCategory.xsd</DependentUpon>
+    </None>
     <None Include="packages.config" />
     <None Include="PBL3___Cosmetics_Store_Management_App.Entities.ReceiptPrint1.datasource" />
     <None Include="Properties\Settings.settings">

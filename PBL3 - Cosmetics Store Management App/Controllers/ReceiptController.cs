@@ -23,6 +23,18 @@ namespace PBL3___Cosmetics_Store_Management_App.Controllers
         {
             return unitOfWork.ReceiptRepo.GetAll().ToList();
         }
+
+        public List<Receipt> Search(string txt)
+        {
+            if (txt == "")
+            {
+                return unitOfWork.ReceiptRepo.GetAll().ToList();
+            }
+            else
+            {
+                return unitOfWork.ReceiptRepo.Find(p => p.receipt_id.Contains(txt)).ToList();
+            }
+        }
         public string GenerateID()
         {
             int max = unitOfWork.ReceiptRepo.GetMaxID();

@@ -58,5 +58,10 @@ namespace PBL3___Cosmetics_Store_Management_App.View
 
             frmLoad();
         }
+
+        private void txt_Search_TextChanged(object sender, EventArgs e)
+        {
+            dgvProducts.DataSource = ProductController.Instance.Search(txt_Search.Text);
+        }
     }
 }

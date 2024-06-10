@@ -1,4 +1,5 @@
 ﻿using PBL3___Cosmetics_Store_Management_App.Controllers;
+using PBL3___Cosmetics_Store_Management_App.Entities;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -26,7 +27,9 @@ namespace PBL3___Cosmetics_Store_Management_App.Views
 
         private void frmLoad()
         {
-            dgvReceipts.DataSource = ReceiptController.Instance.GetData();
+            List<Receipt> data = ReceiptController.Instance.GetData();
+            data.Reverse();
+            dgvReceipts.DataSource = data;
         }
 
         private void dgvReceipts_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -34,13 +37,18 @@ namespace PBL3___Cosmetics_Store_Management_App.Views
             string ID = dgvReceipts.CurrentRow.Cells[0].Value.ToString(); 
             if (dgvReceipts.CurrentCell.OwningColumn.Name == "Receipt_Detail")
             {
-                frmReceipt frm = new frmReceipt()
+                frmReceiptDetail frm = new frmReceiptDetail()
                 {
                     listReceipt = ReceiptController.Instance.GetList_ReceiptPrint(ID),
                     receipt = ReceiptController.Instance.GetByID(ID)
                 };
                 frm.Show();
             }
+        }
+
+        private void txtSearch_TextChanged(object sender, EventArgs e)
+        {
+            dgvReceipts.DataSource = ReceiptController.Instance.Search(txtSearch.Text);
         }
     }
 }
