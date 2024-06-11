@@ -1,5 +1,7 @@
 ﻿using PBL3___Cosmetics_Store_Management_App.Controllers;
 using PBL3___Cosmetics_Store_Management_App.Entities;
+using PBL3___Cosmetics_Store_Management_App.Views;
+using PBL3___Cosmetics_Store_Management_App.View;
 using System;
 using System.Windows.Forms;
 
@@ -29,7 +31,7 @@ namespace PBL3___Cosmetics_Store_Management_App
 
         private void btnCategory_Click(object sender, EventArgs e)
         {
-            AddControl(new View.frmCategoryView());
+            AddControl(new frmCategoryView());
         }
 
         private void btnProduct_Click(object sender, EventArgs e)
@@ -52,5 +54,9 @@ namespace PBL3___Cosmetics_Store_Management_App
             AddControl(new View.frmReportView());
         }
 
+        private void btnReceipt_Click(object sender, EventArgs e)
+        {
+            AddControl(new frmReceiptView());
+        }
     }
 }

@@ -258,7 +258,6 @@
             // imgProduct
             // 
             this.imgProduct.FillColor = System.Drawing.Color.Transparent;
-            this.imgProduct.Image = global::PBL3___Cosmetics_Store_Management_App.Properties.Resources.innisfree;
             this.imgProduct.ImageRotate = 0F;
             this.imgProduct.Location = new System.Drawing.Point(158, 129);
             this.imgProduct.Name = "imgProduct";

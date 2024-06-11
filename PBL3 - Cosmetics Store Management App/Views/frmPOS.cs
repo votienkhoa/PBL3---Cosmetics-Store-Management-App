@@ -1,6 +1,7 @@
 ﻿using Guna.UI2.WinForms;
 using PBL3___Cosmetics_Store_Management_App.Controllers;
 using PBL3___Cosmetics_Store_Management_App.Entities;
+using PBL3___Cosmetics_Store_Management_App.Views;
 using System;
 using System.Collections.Generic;
 using System.Data;
@@ -176,8 +177,24 @@ namespace PBL3___Cosmetics_Store_Management_App
 
             else
             {
-                ReceiptController.Instance.Receipt_Pay(Dt, lbSubtotal.Text, currentStaff.staff_id, txtDiscount.Text);
-                Dt.Rows.Clear();
+                DialogResult confirmation = MessageBox.Show(
+                    "Are you sure you want to proceed with payment and print the receipt?",
+                    "Payment Confirmation",
+                    MessageBoxButtons.YesNo,
+                    MessageBoxIcon.Question
+                );
+                if (confirmation == DialogResult.Yes)
+                {
+                    Receipt new_receipt = ReceiptController.Instance.Receipt_Pay(Dt, lbSubtotal.Text, currentStaff.staff_id, txtDiscount.Text);
+                    frmReceiptDetail frm = new frmReceiptDetail()
+                    {
+                        listReceipt = ReceiptController.Instance.GetList_ReceiptPrint(new_receipt.receipt_id),
+                        receipt = new_receipt
+                    };
+                    frm.ShowDialog();
+                    Dt.Rows.Clear();
+                }
+                
             }
         }
 
@@ -205,6 +222,6 @@ namespace PBL3___Cosmetics_Store_Management_App
 
         #endregion
 
-        
+
     }
 }

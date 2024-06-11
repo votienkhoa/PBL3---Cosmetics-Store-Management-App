@@ -31,6 +31,20 @@ namespace PBL3___Cosmetics_Store_Management_App.Controllers
             return unitOfWork.ProductRepo.Find(p => p.category.category_name == category).ToList();
         }
 
+        public List<Product> Search(string txt)
+        {
+            if (txt == "")
+            {
+                return unitOfWork.ProductRepo.GetAll().ToList();
+            }
+            else
+            {
+                return unitOfWork.ProductRepo.Find(p => p.product_name.Contains(txt)
+                                                     || p.product_id.Contains(txt)
+                                                   ).ToList();
+            }
+        }
+
         public void AddOrUpdate(Product oldProduct, string name, string id, string origin, string unit, string price, string category, string image)
         {
             double tmp;

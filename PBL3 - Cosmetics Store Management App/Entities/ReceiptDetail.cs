@@ -17,7 +17,7 @@ namespace PBL3___Cosmetics_Store_Management_App.Entities
         [Key, Column(Order = 1)]
         public string product_id { get; set; }
 
-        public string product_quantity { get; set; }
+        public int product_quantity { get; set; }
 
         [ForeignKey("receipt_id")]
         public virtual Receipt receipt { get; set; }

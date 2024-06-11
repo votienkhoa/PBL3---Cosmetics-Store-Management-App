@@ -88,11 +88,23 @@
     <Compile Include="Controllers\FileHelper.cs" />
     <Compile Include="Controllers\ProductController.cs" />
     <Compile Include="Controllers\ReceiptController.cs" />
+    <Compile Include="Controllers\ReportController.cs" />
     <Compile Include="Data Access\DatabaseContext.cs" />
     <Compile Include="Entities\Customer.cs" />
     <Compile Include="Entities\Receipt.cs" />
     <Compile Include="Entities\ReceiptDetail.cs" />
     <Compile Include="Infrastructure\Implementations\CustomerRepository.cs" />
+    <Compile Include="dsReport.cs">
+      <DependentUpon>dsReport.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="dsReport.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dsReport.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\Receipt.cs" />
+    <Compile Include="Entities\ReceiptDetail.cs" />
+    <Compile Include="Entities\ReceiptPrint.cs" />
     <Compile Include="Infrastructure\Implementations\ReceiptDetailRepository.cs" />
     <Compile Include="Infrastructure\Implementations\ReceiptRepository.cs" />
     <Compile Include="Infrastructure\Interfaces\ICustomerRepository.cs" />
@@ -115,11 +127,17 @@
     <Compile Include="Infrastructure\Interfaces\IRepository.cs" />
     <Compile Include="Infrastructure\Unit of work\IUnitOfWork.cs" />
     <Compile Include="Infrastructure\Unit of work\UnitOfWork.cs" />
-    <Compile Include="Views\Form1.cs">
+    <Compile Include="Views\frmDateTimePicker.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Views\Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <Compile Include="Views\frmDateTimePicker.Designer.cs">
+      <DependentUpon>frmDateTimePicker.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\frmReceiptDetail.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\frmReceiptDetail.Designer.cs">
+      <DependentUpon>frmReceiptDetail.cs</DependentUpon>
     </Compile>
     <Compile Include="Views\frmLogin.cs">
       <SubType>Form</SubType>
@@ -134,6 +152,18 @@
       <DependentUpon>frmPOS.cs</DependentUpon>
     </Compile>
     <Compile Include="SqlServerTypes\Loader.cs" />
+    <Compile Include="Views\frmReceiptView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\frmReceiptView.Designer.cs">
+      <DependentUpon>frmReceiptView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\frmReportDetail.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\frmReportDetail.Designer.cs">
+      <DependentUpon>frmReportDetail.cs</DependentUpon>
+    </Compile>
     <Compile Include="Views\frmStaffAdd.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -146,7 +176,9 @@
     <Compile Include="Views\frmMain.Designer.cs">
       <DependentUpon>frmMain.cs</DependentUpon>
     </Compile>
-    <Compile Include="Program.cs" />
+    <Compile Include="Program.cs">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Views\usProduct.cs">
       <SubType>UserControl</SubType>
@@ -220,14 +252,23 @@
     <Compile Include="Views\frmStorageView.Designer.cs">
       <DependentUpon>frmStorageView.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="Views\Form1.resx">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <EmbeddedResource Include="Views\frmDateTimePicker.resx">
+      <DependentUpon>frmDateTimePicker.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\frmReceiptDetail.resx">
+      <DependentUpon>frmReceiptDetail.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Views\frmLogin.resx">
       <DependentUpon>frmLogin.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Views\frmPOS.resx">
       <DependentUpon>frmPOS.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\frmReceiptView.resx">
+      <DependentUpon>frmReceiptView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\frmReportDetail.resx">
+      <DependentUpon>frmReportDetail.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Views\frmStaffAdd.resx">
       <DependentUpon>frmStaffAdd.cs</DependentUpon>
@@ -239,6 +280,15 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <SubType>Designer</SubType>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\rptReceipt.rdlc">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\rptSellByCategory.rdlc">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\rptSellByProduct.rdlc">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </EmbeddedResource>
     <EmbeddedResource Include="Views\usProduct.resx">
       <DependentUpon>usProduct.cs</DependentUpon>
@@ -276,7 +326,19 @@
     <EmbeddedResource Include="Views\frmStorageView.resx">
       <DependentUpon>frmStorageView.cs</DependentUpon>
     </EmbeddedResource>
+    <None Include="dsReport.xsc">
+      <DependentUpon>dsReport.xsd</DependentUpon>
+    </None>
+    <None Include="dsReport.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dsReport.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="dsReport.xss">
+      <DependentUpon>dsReport.xsd</DependentUpon>
+    </None>
     <None Include="packages.config" />
+    <None Include="PBL3___Cosmetics_Store_Management_App.Entities.ReceiptPrint1.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -387,6 +449,10 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\user_white.png" />
+    <None Include="Resources\printer_green.png" />
+    <None Include="Resources\receipt_green.png" />
+    <None Include="Resources\receipt_white.png" />
+    <None Include="Resources\calendar_white.png" />
     <Content Include="SqlServerTypes\readme.htm" />
     <Content Include="SqlServerTypes\x64\msvcr120.dll">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
