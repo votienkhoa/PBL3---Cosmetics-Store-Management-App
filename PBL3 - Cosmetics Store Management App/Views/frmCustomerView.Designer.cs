@@ -40,12 +40,9 @@
             this.label1 = new System.Windows.Forms.Label();
             this.guna2Separator1 = new Guna.UI2.WinForms.Guna2Separator();
             this.dtgv_customer = new Guna.UI2.WinForms.Guna2DataGridView();
-            this.ID_Customer = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Customer_ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Customer_Name = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Customer_Phone = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Staff_detail_button = new System.Windows.Forms.DataGridViewImageColumn();
-            this.Staff_edit_button = new System.Windows.Forms.DataGridViewImageColumn();
-            this.Staff_dele_button = new System.Windows.Forms.DataGridViewImageColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dtgv_customer)).BeginInit();
             this.SuspendLayout();
             // 
@@ -160,133 +157,96 @@
             // 
             // dtgv_customer
             // 
+            this.dtgv_customer.AllowUserToAddRows = false;
+            this.dtgv_customer.AllowUserToDeleteRows = false;
+            this.dtgv_customer.AllowUserToResizeColumns = false;
+            this.dtgv_customer.AllowUserToResizeRows = false;
             dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
             this.dtgv_customer.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.dtgv_customer.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(232)))), ((int)(((byte)(234)))), ((int)(((byte)(237)))));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI Semibold", 10.01739F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Control;
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.dtgv_customer.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
-            this.dtgv_customer.ColumnHeadersHeight = 35;
+            this.dtgv_customer.ColumnHeadersHeight = 40;
             this.dtgv_customer.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.ID_Customer,
-            this.dataGridViewTextBoxColumn1,
-            this.Customer_Phone,
-            this.Staff_detail_button,
-            this.Staff_edit_button,
-            this.Staff_dele_button});
+            this.Customer_ID,
+            this.Customer_Name,
+            this.Customer_Phone});
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.139131F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(254)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(241)))), ((int)(((byte)(243)))));
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.Black;
             dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.dtgv_customer.DefaultCellStyle = dataGridViewCellStyle3;
-            this.dtgv_customer.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            this.dtgv_customer.Location = new System.Drawing.Point(47, 172);
-            this.dtgv_customer.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.dtgv_customer.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(241)))), ((int)(((byte)(243)))));
+            this.dtgv_customer.Location = new System.Drawing.Point(47, 164);
             this.dtgv_customer.Name = "dtgv_customer";
             this.dtgv_customer.ReadOnly = true;
             this.dtgv_customer.RowHeadersVisible = false;
-            this.dtgv_customer.RowHeadersWidth = 62;
-            this.dtgv_customer.RowTemplate.Height = 28;
-            this.dtgv_customer.Size = new System.Drawing.Size(988, 469);
-            this.dtgv_customer.TabIndex = 20;
+            this.dtgv_customer.RowHeadersWidth = 49;
+            this.dtgv_customer.RowTemplate.Height = 30;
+            this.dtgv_customer.Size = new System.Drawing.Size(988, 448);
+            this.dtgv_customer.TabIndex = 19;
+            this.dtgv_customer.Theme = Guna.UI2.WinForms.Enums.DataGridViewPresetThemes.LightGrid;
             this.dtgv_customer.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
             this.dtgv_customer.ThemeStyle.AlternatingRowsStyle.Font = null;
             this.dtgv_customer.ThemeStyle.AlternatingRowsStyle.ForeColor = System.Drawing.Color.Empty;
             this.dtgv_customer.ThemeStyle.AlternatingRowsStyle.SelectionBackColor = System.Drawing.Color.Empty;
             this.dtgv_customer.ThemeStyle.AlternatingRowsStyle.SelectionForeColor = System.Drawing.Color.Empty;
             this.dtgv_customer.ThemeStyle.BackColor = System.Drawing.Color.White;
-            this.dtgv_customer.ThemeStyle.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            this.dtgv_customer.ThemeStyle.HeaderStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            this.dtgv_customer.ThemeStyle.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(241)))), ((int)(((byte)(243)))));
+            this.dtgv_customer.ThemeStyle.HeaderStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(232)))), ((int)(((byte)(234)))), ((int)(((byte)(237)))));
             this.dtgv_customer.ThemeStyle.HeaderStyle.BorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            this.dtgv_customer.ThemeStyle.HeaderStyle.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dtgv_customer.ThemeStyle.HeaderStyle.ForeColor = System.Drawing.Color.White;
+            this.dtgv_customer.ThemeStyle.HeaderStyle.Font = new System.Drawing.Font("Segoe UI Semibold", 10.01739F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dtgv_customer.ThemeStyle.HeaderStyle.ForeColor = System.Drawing.Color.Black;
             this.dtgv_customer.ThemeStyle.HeaderStyle.HeaightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
-            this.dtgv_customer.ThemeStyle.HeaderStyle.Height = 35;
+            this.dtgv_customer.ThemeStyle.HeaderStyle.Height = 40;
             this.dtgv_customer.ThemeStyle.ReadOnly = true;
             this.dtgv_customer.ThemeStyle.RowsStyle.BackColor = System.Drawing.Color.White;
             this.dtgv_customer.ThemeStyle.RowsStyle.BorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
-            this.dtgv_customer.ThemeStyle.RowsStyle.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dtgv_customer.ThemeStyle.RowsStyle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            this.dtgv_customer.ThemeStyle.RowsStyle.Height = 28;
-            this.dtgv_customer.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            this.dtgv_customer.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            this.dtgv_customer.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtgv_customer_CellContentClick);
+            this.dtgv_customer.ThemeStyle.RowsStyle.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.139131F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(254)));
+            this.dtgv_customer.ThemeStyle.RowsStyle.ForeColor = System.Drawing.Color.Black;
+            this.dtgv_customer.ThemeStyle.RowsStyle.Height = 30;
+            this.dtgv_customer.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(241)))), ((int)(((byte)(243)))));
+            this.dtgv_customer.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.Black;
             // 
-            // ID_Customer
+            // Customer_ID
             // 
-            this.ID_Customer.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            this.ID_Customer.DataPropertyName = "customer_id";
-            this.ID_Customer.FillWeight = 94.49339F;
-            this.ID_Customer.Frozen = true;
-            this.ID_Customer.HeaderText = "ID";
-            this.ID_Customer.MinimumWidth = 8;
-            this.ID_Customer.Name = "ID_Customer";
-            this.ID_Customer.ReadOnly = true;
-            this.ID_Customer.Width = 40;
+            this.Customer_ID.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.Customer_ID.DataPropertyName = "customer_id";
+            this.Customer_ID.HeaderText = "ID";
+            this.Customer_ID.MinimumWidth = 70;
+            this.Customer_ID.Name = "Customer_ID";
+            this.Customer_ID.ReadOnly = true;
+            this.Customer_ID.Width = 150;
             // 
-            // dataGridViewTextBoxColumn1
+            // Customer_Name
             // 
-            this.dataGridViewTextBoxColumn1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            this.dataGridViewTextBoxColumn1.DataPropertyName = "customer_name";
-            this.dataGridViewTextBoxColumn1.FillWeight = 235.8726F;
-            this.dataGridViewTextBoxColumn1.Frozen = true;
-            this.dataGridViewTextBoxColumn1.HeaderText = "Name";
-            this.dataGridViewTextBoxColumn1.MinimumWidth = 8;
-            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
-            this.dataGridViewTextBoxColumn1.ReadOnly = true;
-            this.dataGridViewTextBoxColumn1.Width = 150;
+            this.Customer_Name.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.Customer_Name.DataPropertyName = "customer_name";
+            this.Customer_Name.FillWeight = 70F;
+            this.Customer_Name.HeaderText = "Name";
+            this.Customer_Name.MinimumWidth = 6;
+            this.Customer_Name.Name = "Customer_Name";
+            this.Customer_Name.ReadOnly = true;
+            this.Customer_Name.Width = 350;
             // 
             // Customer_Phone
             // 
-            this.Customer_Phone.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
             this.Customer_Phone.DataPropertyName = "customer_phone";
-            this.Customer_Phone.FillWeight = 102.2727F;
-            this.Customer_Phone.Frozen = true;
             this.Customer_Phone.HeaderText = "Phone";
-            this.Customer_Phone.MinimumWidth = 8;
+            this.Customer_Phone.MinimumWidth = 6;
             this.Customer_Phone.Name = "Customer_Phone";
             this.Customer_Phone.ReadOnly = true;
-            this.Customer_Phone.Width = 75;
-            // 
-            // Staff_detail_button
-            // 
-            this.Staff_detail_button.FillWeight = 55.78709F;
-            this.Staff_detail_button.HeaderText = "";
-            this.Staff_detail_button.Image = global::PBL3___Cosmetics_Store_Management_App.Properties.Resources.detail;
-            this.Staff_detail_button.ImageLayout = System.Windows.Forms.DataGridViewImageCellLayout.Zoom;
-            this.Staff_detail_button.MinimumWidth = 8;
-            this.Staff_detail_button.Name = "Staff_detail_button";
-            this.Staff_detail_button.ReadOnly = true;
-            // 
-            // Staff_edit_button
-            // 
-            this.Staff_edit_button.FillWeight = 55.78709F;
-            this.Staff_edit_button.HeaderText = "";
-            this.Staff_edit_button.Image = global::PBL3___Cosmetics_Store_Management_App.Properties.Resources.edit;
-            this.Staff_edit_button.ImageLayout = System.Windows.Forms.DataGridViewImageCellLayout.Zoom;
-            this.Staff_edit_button.MinimumWidth = 8;
-            this.Staff_edit_button.Name = "Staff_edit_button";
-            this.Staff_edit_button.ReadOnly = true;
-            // 
-            // Staff_dele_button
-            // 
-            this.Staff_dele_button.FillWeight = 55.78709F;
-            this.Staff_dele_button.HeaderText = "";
-            this.Staff_dele_button.Image = global::PBL3___Cosmetics_Store_Management_App.Properties.Resources.delete;
-            this.Staff_dele_button.ImageLayout = System.Windows.Forms.DataGridViewImageCellLayout.Zoom;
-            this.Staff_dele_button.MinimumWidth = 8;
-            this.Staff_dele_button.Name = "Staff_dele_button";
-            this.Staff_dele_button.ReadOnly = true;
             // 
             // frmCustomerView
             // 
@@ -303,6 +263,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frmCustomerView";
             this.Text = "frmCustomerView";
+            this.Load += new System.EventHandler(this.frmCustomerView_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dtgv_customer)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -319,11 +280,8 @@
         private System.Windows.Forms.DataGridViewImageColumn dataGridViewImageColumn2;
         private System.Windows.Forms.DataGridViewImageColumn dataGridViewImageColumn1;
         private Guna.UI2.WinForms.Guna2DataGridView dtgv_customer;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ID_Customer;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Customer_ID;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Customer_Name;
         private System.Windows.Forms.DataGridViewTextBoxColumn Customer_Phone;
-        private System.Windows.Forms.DataGridViewImageColumn Staff_detail_button;
-        private System.Windows.Forms.DataGridViewImageColumn Staff_edit_button;
-        private System.Windows.Forms.DataGridViewImageColumn Staff_dele_button;
     }
 }

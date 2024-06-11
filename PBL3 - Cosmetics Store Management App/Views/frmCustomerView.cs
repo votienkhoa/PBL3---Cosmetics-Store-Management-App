@@ -15,8 +15,8 @@ namespace PBL3___Cosmetics_Store_Management_App.View
 
         public void dgvLoad()
         {
-            // dtgv_customer.AutoGenerateColumns = false;
-            //dtgv_customer.DataSource = CustomerController.Instance.getData();
+           dtgv_customer.AutoGenerateColumns = false;
+           dtgv_customer.DataSource = CustomerController.Instance.getData();
 
         }
 
@@ -28,6 +28,16 @@ namespace PBL3___Cosmetics_Store_Management_App.View
 
 
         private void dtgv_customer_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void dgvCategories_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void frmCustomerView_Load(object sender, EventArgs e)
         {
 
         }

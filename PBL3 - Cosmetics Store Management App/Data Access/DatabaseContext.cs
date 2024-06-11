@@ -25,6 +25,7 @@ namespace PBL3___Cosmetics_Store_Management_App.Data_Access
         public virtual DbSet<Receipt> Receipts { get; set; }
         public virtual DbSet<ReceiptDetail> ReceiptsDetails { get; set;}
         public virtual DbSet<Staff> Staffs { get; set; }
+        public virtual DbSet<Customer> Customers { get; set; }
 
 
 

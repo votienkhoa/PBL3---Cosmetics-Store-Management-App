@@ -6,6 +6,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace PBL3___Cosmetics_Store_Management_App.Controllers
 {
@@ -23,8 +24,12 @@ namespace PBL3___Cosmetics_Store_Management_App.Controllers
         }
         public void delete(Customer data)
         {
-            unitOfWork.CustomerRepo.Remove(data);
-            unitOfWork.Save();
+            DialogResult result = MessageBox.Show("Are you sure you want to delete \"" + data.customer_name + "\" customer?", "Delete Customer", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+            if (result == DialogResult.Yes)
+            {
+                unitOfWork.CustomerRepo.Remove(data);
+                unitOfWork.Save();
+            }
         }
         public void update(Customer data)
         {
@@ -39,6 +44,10 @@ namespace PBL3___Cosmetics_Store_Management_App.Controllers
             {
                 return unitOfWork.CustomerRepo.Find(p => p.customer_id.Contains(m) || p.customer_name.Contains(m)).ToList();
             }
+        }
+        public List <Customer> ffind(Customer data)
+        {
+            return unitOfWork.CustomerRepo.Find(p => p.customer_phone.Equals(data.customer_phone)).ToList();
         }
     }
 }
