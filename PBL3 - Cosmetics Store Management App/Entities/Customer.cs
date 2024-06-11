@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace PBL3___Cosmetics_Store_Management_App.Entities
 {
-    [Table("Customer")]
+    [Table("customer")]
     public class Customer
     {
         public Customer()
