@@ -17,10 +17,9 @@ namespace PBL3___Cosmetics_Store_Management_App.Entities
         }
         [Key]
         [Required]
-        public string customer_id { get; set; }
-        public string customer_name { get; set; }
         public string customer_phone { get; set; }
-        [DatabaseGenerated(DatabaseGeneratedOption.None)]
+
+        public string customer_name { get; set; }
         public virtual ICollection<Receipt> receipts { get;}
 
     }

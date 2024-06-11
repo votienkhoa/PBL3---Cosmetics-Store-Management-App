@@ -43,8 +43,9 @@ namespace PBL3___Cosmetics_Store_Management_App.Controllers
             return "RC" + date + max.ToString("D4");
         }
 
-        public Receipt Receipt_Pay(DataTable receipt, string subtotal, string staff_id, string txt_discount)
+        public Receipt Receipt_Pay(DataTable receipt, string subtotal, string staff_id, string txt_discount, Customer cs)
         {
+            string customer_phone = (cs != null) ? cs.customer_phone : null;
             string receipt_id = GenerateID();
             double discount = (txt_discount == "") ? 0 : Convert.ToDouble(txt_discount);
             Receipt cur = new Receipt()
@@ -54,6 +55,7 @@ namespace PBL3___Cosmetics_Store_Management_App.Controllers
                 receipt_discount = discount,
                 receipt_total = Double.Parse(subtotal, System.Globalization.NumberStyles.AllowThousands) * (100 - discount) / 100,       
                 staff_id = staff_id,
+                customer_phone = customer_phone
             };
             unitOfWork.ReceiptRepo.Add(cur);
 

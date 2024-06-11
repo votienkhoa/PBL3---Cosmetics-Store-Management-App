@@ -30,7 +30,10 @@ namespace PBL3___Cosmetics_Store_Management_App.Views
         {
             double subtotal = receipt.receipt_total / (100 - receipt.receipt_discount) * 100;
             string staff_name = StaffController.Instance.GetByID(receipt.staff_id).staff_name;
-            ReportParameter[] param = new ReportParameter[7];
+            Customer current_customer = CustomerController.Instance.GetByID(receipt.customer_phone);
+            string customer_name = (current_customer != null) ? current_customer.customer_name : "None";
+
+            ReportParameter[] param = new ReportParameter[8];
             param[0] = new ReportParameter("receipt_id", receipt.receipt_id);
             param[1] = new ReportParameter("receipt_date", receipt.receipt_date.ToString("d/M/yyyy"));
             param[2] = new ReportParameter("receipt_time", receipt.receipt_date.ToString("HH:mm:ss"));
@@ -38,6 +41,7 @@ namespace PBL3___Cosmetics_Store_Management_App.Views
             param[4] = new ReportParameter("discount", receipt.receipt_discount.ToString() + "%");
             param[5] = new ReportParameter("sell_agent", staff_name);
             param[6] = new ReportParameter("subtotal", subtotal.ToString("N0"));
+            param[7] = new ReportParameter("customer", customer_name);
 
 
             var source = new ReportDataSource("DataSet1", listReceipt);

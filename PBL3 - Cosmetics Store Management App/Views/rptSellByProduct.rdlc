@@ -382,7 +382,7 @@
               <Paragraph>
                 <TextRuns>
                   <TextRun>
-                    <Value>Report Sell by Category</Value>
+                    <Value>Report Sell by Product</Value>
                     <Style>
                       <FontSize>18pt</FontSize>
                       <FontWeight>Bold</FontWeight>

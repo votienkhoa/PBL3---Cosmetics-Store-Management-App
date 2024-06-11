@@ -13,6 +13,14 @@ namespace PBL3___Cosmetics_Store_Management_App.Controllers
     internal class CustomerController : SingletonBase <CustomerController>
     {
         private UnitOfWork unitOfWork = new UnitOfWork(new Data_Access.DatabaseContext());
+        public Customer GetByID(string ID)
+        {
+            return unitOfWork.CustomerRepo.Get(ID);
+        }
+        public Customer GetByPhone(string number)
+        {
+            return unitOfWork.CustomerRepo.Find(p => p.customer_phone == number).FirstOrDefault();
+        }
         public List <Customer> getData()
         {
             return unitOfWork.CustomerRepo.GetAll().ToList();
@@ -27,6 +35,10 @@ namespace PBL3___Cosmetics_Store_Management_App.Controllers
             DialogResult result = MessageBox.Show("Are you sure you want to delete \"" + data.customer_name + "\" customer?", "Delete Customer", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
             if (result == DialogResult.Yes)
             {
+                foreach (var tmp in data.receipts)
+                {
+                    tmp.customer_phone = null;
+                }
                 unitOfWork.CustomerRepo.Remove(data);
                 unitOfWork.Save();
             }
@@ -42,7 +54,7 @@ namespace PBL3___Cosmetics_Store_Management_App.Controllers
                 return unitOfWork.CustomerRepo.GetAll().ToList();
             else
             {
-                return unitOfWork.CustomerRepo.Find(p => p.customer_id.Contains(m) || p.customer_name.Contains(m)).ToList();
+                return unitOfWork.CustomerRepo.Find(p => p.customer_phone.Contains(m) || p.customer_name.Contains(m)).ToList();
             }
         }
         public List <Customer> ffind(Customer data)

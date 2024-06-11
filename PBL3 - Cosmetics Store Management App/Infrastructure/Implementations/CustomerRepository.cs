@@ -20,11 +20,11 @@ namespace PBL3___Cosmetics_Store_Management_App.Infrastructure.Implementations
         {
             get { return Context as DatabaseContext; }
         }
-        List<Receipt> GetReceitps(string customerId)
-        {
-            var data = DatabaseContext.Receipts.Where(p => p.customer_id == customerId).ToList();
-            return data;
-        }
+        //List<Receipt> GetReceitps(string customerId)
+        //{
+        //    //var data = DatabaseContext.Receipts.Where(p => p.customer_id == customerId).ToList();
+        //    //return data;
+        //}
 
         List<Receipt> ICustomerRepository.GetReceitps(string customerId)
         {

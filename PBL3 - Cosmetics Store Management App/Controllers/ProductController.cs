@@ -1,9 +1,11 @@
-﻿using PBL3___Cosmetics_Store_Management_App.DTO;
+﻿using PBL3___Cosmetics_Store_Management_App.Data_Access;
+using PBL3___Cosmetics_Store_Management_App.DTO;
 using PBL3___Cosmetics_Store_Management_App.Entities;
 using PBL3___Cosmetics_Store_Management_App.Repositories.Unit_of_work;
 using System;
 using System.Collections.Generic;
 using System.Data.Entity.Core;
+using System.Data.Entity.Migrations;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -76,9 +78,22 @@ namespace PBL3___Cosmetics_Store_Management_App.Controllers
             unitOfWork.Save();
         }
 
+        public void AddOrUpdate(Product prod)
+        {
+            
+            //unitOfWork.ProductRepo.Update(prod);
+            //unitOfWork.Save();
+            using (DatabaseContext db = new DatabaseContext())
+            {
+                db.Products.AddOrUpdate(prod);
+                db.SaveChanges();
+            }
+        }
+
         public void Delete(Product product)
         {
-            DialogResult result = MessageBox.Show("Are you sure you want to delete \"" + product.product_name + "\" category?", "Delete Category", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+            DialogResult result = MessageBox.Show("Are you sure you want to delete product \"" + product.product_name + "\"?" +
+                                                  "\nThis will be affect to old receipt!!", "Delete Category", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
             if (result == DialogResult.Yes)
             {
                 unitOfWork.ProductRepo.Remove(product);

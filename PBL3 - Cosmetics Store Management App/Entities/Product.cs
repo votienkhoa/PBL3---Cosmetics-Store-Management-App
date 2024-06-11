@@ -14,6 +14,7 @@ namespace PBL3___Cosmetics_Store_Management_App.Entities
         public Product()
         {
             receiptdetails = new HashSet<ReceiptDetail>();
+            product_stock = 0;
         }
 
         [Key]
@@ -24,6 +25,7 @@ namespace PBL3___Cosmetics_Store_Management_App.Entities
         public double product_price { get; set;}
         public byte[] product_image { get; set;}
         public int category_id { get; set;}
+        public int product_stock { get; set;}
 
         [ForeignKey("category_id")]
         public virtual Category category { get; set; }

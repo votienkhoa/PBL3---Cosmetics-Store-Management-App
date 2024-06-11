@@ -17,9 +17,10 @@ namespace PBL3___Cosmetics_Store_Management_App
             RegisterClick(this);
         }
 
-        private void usProduct_Load(object sender, EventArgs e)
+        public void usProduct_Load(object sender, EventArgs e)
         {
             lbName.Text = product.product_name;
+            lbStock.Text = product.product_stock.ToString();
             picProduct.Image = FileHelper.BytesToBitmap(product.product_image);
         }
 
@@ -35,7 +36,7 @@ namespace PBL3___Cosmetics_Store_Management_App
 
         private void RaiseProductClick(object sender, EventArgs e)
         {
-            UserControlClick?.Invoke(this, product);
+            UserControlClick?.Invoke(this, product);          
         }        
     }
 }

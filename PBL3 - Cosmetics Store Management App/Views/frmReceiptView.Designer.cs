@@ -42,7 +42,6 @@
             this.dataGridViewImageColumn1 = new System.Windows.Forms.DataGridViewImageColumn();
             this.dataGridViewImageColumn2 = new System.Windows.Forms.DataGridViewImageColumn();
             this.txtSearch = new Guna.UI2.WinForms.Guna2TextBox();
-            this.btnAdd = new Guna.UI2.WinForms.Guna2ImageButton();
             this.dataGridViewImageColumn3 = new System.Windows.Forms.DataGridViewImageColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dgvReceipts)).BeginInit();
             this.SuspendLayout();
@@ -169,7 +168,7 @@
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Segoe UI Semibold", 13.77391F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(60, 35);
+            this.label1.Location = new System.Drawing.Point(44, 65);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(136, 30);
             this.label1.TabIndex = 22;
@@ -236,19 +235,6 @@
             this.txtSearch.TextOffset = new System.Drawing.Point(10, 0);
             this.txtSearch.TextChanged += new System.EventHandler(this.txtSearch_TextChanged);
             // 
-            // btnAdd
-            // 
-            this.btnAdd.CheckedState.ImageSize = new System.Drawing.Size(64, 64);
-            this.btnAdd.HoverState.ImageSize = new System.Drawing.Size(64, 64);
-            this.btnAdd.Image = global::PBL3___Cosmetics_Store_Management_App.Properties.Resources.plus_green;
-            this.btnAdd.ImageOffset = new System.Drawing.Point(0, 0);
-            this.btnAdd.ImageRotate = 0F;
-            this.btnAdd.Location = new System.Drawing.Point(65, 75);
-            this.btnAdd.Name = "btnAdd";
-            this.btnAdd.PressedState.ImageSize = new System.Drawing.Size(64, 64);
-            this.btnAdd.Size = new System.Drawing.Size(72, 70);
-            this.btnAdd.TabIndex = 20;
-            // 
             // dataGridViewImageColumn3
             // 
             this.dataGridViewImageColumn3.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
@@ -268,7 +254,6 @@
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(239)))), ((int)(((byte)(230)))));
             this.ClientSize = new System.Drawing.Size(1087, 689);
             this.Controls.Add(this.txtSearch);
-            this.Controls.Add(this.btnAdd);
             this.Controls.Add(this.dgvReceipts);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
@@ -285,7 +270,6 @@
 
         #endregion
         private Guna.UI2.WinForms.Guna2TextBox txtSearch;
-        private Guna.UI2.WinForms.Guna2ImageButton btnAdd;
         private Guna.UI2.WinForms.Guna2DataGridView dgvReceipts;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;

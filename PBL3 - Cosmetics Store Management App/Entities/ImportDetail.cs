@@ -18,7 +18,7 @@ namespace PBL3___Cosmetics_Store_Management_App.Entities
         public string product_id { get; set; }
         public int product_quantity { get; set; }
         public DateTime product_MFG { get; set; }
-        public DateTime Product_EXP { get; set; }
+        public DateTime product_EXP { get; set; }
 
         [ForeignKey("import_id")]
         public virtual Import import { get; set; }

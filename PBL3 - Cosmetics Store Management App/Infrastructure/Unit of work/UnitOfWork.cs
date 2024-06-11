@@ -21,8 +21,8 @@ namespace PBL3___Cosmetics_Store_Management_App.Repositories.Unit_of_work
         private IReceiptDetailRepository _ReceiptDetailRepo;
         private IStaffRepository _StaffRepo;
         private ICustomerRepository _CustomerRepo;
-
-
+        private IImportRepository _ImportRepo;
+        private IImportDetailRepository _ImportDetailRepo;
 
 
         public UnitOfWork(DatabaseContext context)
@@ -96,6 +96,28 @@ namespace PBL3___Cosmetics_Store_Management_App.Repositories.Unit_of_work
                     _CustomerRepo = new CustomerRepository(Context);
                 }
                 return _CustomerRepo;
+            }
+        }
+        public IImportRepository ImportRepo
+        {
+            get
+            {
+                if (_ImportRepo == null)
+                {
+                    _ImportRepo = new ImportRepository(Context);
+                }
+                return _ImportRepo;
+            }
+        }
+        public IImportDetailRepository ImportDetailRepo
+        {
+            get
+            {
+                if (_ImportDetailRepo == null)
+                {
+                    _ImportDetailRepo = new ImportDetailRepository(Context);
+                }
+                return _ImportDetailRepo;
             }
         }
         #endregion

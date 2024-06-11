@@ -99,8 +99,18 @@ namespace PBL3___Cosmetics_Store_Management_App
         public void Product_Click(object sender, Product e)
         {
             bool check = false;
+            foreach (var x in pnProduct.Controls)
+            {
+                usProduct tmp = x as usProduct;
+                if (tmp.product.product_name == e.product_name)
+                {
+                    tmp.product.product_stock -= 1;
+                    tmp.usProduct_Load(sender, new EventArgs());
+                }
+            }
             foreach (DataRow i in Dt.Rows)
             {
+               
                if (i[2].ToString() == e.product_name)
                {
                     check = true;
@@ -131,6 +141,15 @@ namespace PBL3___Cosmetics_Store_Management_App
             if (dgvReceipt.CurrentCell.OwningColumn.Name == "POS_Del")
             {
                 string name = dgvReceipt.CurrentRow.Cells[1].Value.ToString();
+                foreach (var x in pnProduct.Controls)
+                {
+                    usProduct tmp = x as usProduct;
+                    if (tmp.product.product_name == name)
+                    {
+                        tmp.product.product_stock += 1;
+                        tmp.usProduct_Load(sender, new EventArgs());
+                    }
+                }
                 foreach (DataRow i in Dt.Rows)
                 {
                     if (i[2].ToString() == name)
@@ -173,10 +192,22 @@ namespace PBL3___Cosmetics_Store_Management_App
 
         private void btnPay_Click(object sender, EventArgs e)
         {
-            if (Dt.Rows.Count == 0) MessageBox.Show("The receipt is empty. Please add products before payment!", "Empty Receipt", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-
+            if (Dt.Rows.Count == 0)
+            {
+                MessageBox.Show("The receipt is empty. Please add products before payment!", "Empty Receipt", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
             else
             {
+                
+                Customer current_customer = null;
+                using (frmCustomerChoose cs  = new frmCustomerChoose())
+                {
+                    if (cs.ShowDialog() == DialogResult.OK)
+                    {
+                        current_customer = cs.current_customer;
+                    }
+                }
                 DialogResult confirmation = MessageBox.Show(
                     "Are you sure you want to proceed with payment and print the receipt?",
                     "Payment Confirmation",
@@ -185,7 +216,7 @@ namespace PBL3___Cosmetics_Store_Management_App
                 );
                 if (confirmation == DialogResult.Yes)
                 {
-                    Receipt new_receipt = ReceiptController.Instance.Receipt_Pay(Dt, lbSubtotal.Text, currentStaff.staff_id, txtDiscount.Text);
+                    Receipt new_receipt = ReceiptController.Instance.Receipt_Pay(Dt, lbSubtotal.Text, currentStaff.staff_id, txtDiscount.Text, current_customer);
                     frmReceiptDetail frm = new frmReceiptDetail()
                     {
                         listReceipt = ReceiptController.Instance.GetList_ReceiptPrint(new_receipt.receipt_id),
@@ -193,8 +224,14 @@ namespace PBL3___Cosmetics_Store_Management_App
                     };
                     frm.ShowDialog();
                     Dt.Rows.Clear();
+                    txtDiscount.Text = "";
                 }
-                
+
+            }
+            foreach (var x in pnProduct.Controls)
+            {
+                usProduct tmp = x as usProduct;
+                ProductController.Instance.AddOrUpdate(tmp.product);
             }
         }
 

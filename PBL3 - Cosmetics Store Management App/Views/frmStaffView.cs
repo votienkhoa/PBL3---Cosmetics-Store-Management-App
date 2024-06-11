@@ -19,12 +19,7 @@ namespace PBL3___Cosmetics_Store_Management_App.View
             dtgv_staff.AutoGenerateColumns= false;
             dtgv_staff.DataSource = StaffController.Instance.getData();
         }
-        
-
-        private void dgvStaff_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
+       
 
         private void guna2ImageButton1_Click(object sender, EventArgs e)
         {

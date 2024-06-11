@@ -40,9 +40,10 @@
             this.label1 = new System.Windows.Forms.Label();
             this.guna2Separator1 = new Guna.UI2.WinForms.Guna2Separator();
             this.dtgv_customer = new Guna.UI2.WinForms.Guna2DataGridView();
-            this.Customer_ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Customer_Name = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Customer_Phone = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Customer_Name = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Customer_Edit = new System.Windows.Forms.DataGridViewImageColumn();
+            this.Customer_Del = new System.Windows.Forms.DataGridViewImageColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dtgv_customer)).BeginInit();
             this.SuspendLayout();
             // 
@@ -130,7 +131,7 @@
             this.label2.Font = new System.Drawing.Font("Segoe UI Semibold", 10.01739F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.Location = new System.Drawing.Point(684, 66);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(61, 23);
+            this.label2.Size = new System.Drawing.Size(59, 21);
             this.label2.TabIndex = 17;
             this.label2.Text = "Search";
             // 
@@ -141,7 +142,7 @@
             this.label1.Font = new System.Drawing.Font("Segoe UI Semibold", 13.77391F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(58, 29);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(155, 31);
+            this.label1.Size = new System.Drawing.Size(149, 30);
             this.label1.TabIndex = 16;
             this.label1.Text = "Customer List";
             // 
@@ -176,9 +177,10 @@
             this.dtgv_customer.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.dtgv_customer.ColumnHeadersHeight = 40;
             this.dtgv_customer.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Customer_ID,
+            this.Customer_Phone,
             this.Customer_Name,
-            this.Customer_Phone});
+            this.Customer_Edit,
+            this.Customer_Del});
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
             dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.139131F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(254)));
@@ -218,35 +220,49 @@
             this.dtgv_customer.ThemeStyle.RowsStyle.Height = 30;
             this.dtgv_customer.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(241)))), ((int)(((byte)(243)))));
             this.dtgv_customer.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.Black;
+            this.dtgv_customer.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtgv_customer_CellContentClick_1);
             // 
-            // Customer_ID
+            // Customer_Phone
             // 
-            this.Customer_ID.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            this.Customer_ID.DataPropertyName = "customer_id";
-            this.Customer_ID.HeaderText = "ID";
-            this.Customer_ID.MinimumWidth = 70;
-            this.Customer_ID.Name = "Customer_ID";
-            this.Customer_ID.ReadOnly = true;
-            this.Customer_ID.Width = 150;
+            this.Customer_Phone.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.Customer_Phone.DataPropertyName = "customer_phone";
+            this.Customer_Phone.HeaderText = "Phone";
+            this.Customer_Phone.MinimumWidth = 6;
+            this.Customer_Phone.Name = "Customer_Phone";
+            this.Customer_Phone.ReadOnly = true;
+            this.Customer_Phone.Width = 200;
             // 
             // Customer_Name
             // 
-            this.Customer_Name.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.Customer_Name.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.Customer_Name.DataPropertyName = "customer_name";
             this.Customer_Name.FillWeight = 70F;
             this.Customer_Name.HeaderText = "Name";
             this.Customer_Name.MinimumWidth = 6;
             this.Customer_Name.Name = "Customer_Name";
             this.Customer_Name.ReadOnly = true;
-            this.Customer_Name.Width = 350;
             // 
-            // Customer_Phone
+            // Customer_Edit
             // 
-            this.Customer_Phone.DataPropertyName = "customer_phone";
-            this.Customer_Phone.HeaderText = "Phone";
-            this.Customer_Phone.MinimumWidth = 6;
-            this.Customer_Phone.Name = "Customer_Phone";
-            this.Customer_Phone.ReadOnly = true;
+            this.Customer_Edit.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.Customer_Edit.HeaderText = "";
+            this.Customer_Edit.Image = global::PBL3___Cosmetics_Store_Management_App.Properties.Resources.edit;
+            this.Customer_Edit.ImageLayout = System.Windows.Forms.DataGridViewImageCellLayout.Zoom;
+            this.Customer_Edit.MinimumWidth = 6;
+            this.Customer_Edit.Name = "Customer_Edit";
+            this.Customer_Edit.ReadOnly = true;
+            this.Customer_Edit.Width = 70;
+            // 
+            // Customer_Del
+            // 
+            this.Customer_Del.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.Customer_Del.HeaderText = "";
+            this.Customer_Del.Image = global::PBL3___Cosmetics_Store_Management_App.Properties.Resources.delete;
+            this.Customer_Del.ImageLayout = System.Windows.Forms.DataGridViewImageCellLayout.Zoom;
+            this.Customer_Del.MinimumWidth = 6;
+            this.Customer_Del.Name = "Customer_Del";
+            this.Customer_Del.ReadOnly = true;
+            this.Customer_Del.Width = 70;
             // 
             // frmCustomerView
             // 
@@ -280,8 +296,9 @@
         private System.Windows.Forms.DataGridViewImageColumn dataGridViewImageColumn2;
         private System.Windows.Forms.DataGridViewImageColumn dataGridViewImageColumn1;
         private Guna.UI2.WinForms.Guna2DataGridView dtgv_customer;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Customer_ID;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Customer_Name;
         private System.Windows.Forms.DataGridViewTextBoxColumn Customer_Phone;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Customer_Name;
+        private System.Windows.Forms.DataGridViewImageColumn Customer_Edit;
+        private System.Windows.Forms.DataGridViewImageColumn Customer_Del;
     }
 }

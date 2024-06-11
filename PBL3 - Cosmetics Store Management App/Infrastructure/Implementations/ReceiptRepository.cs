@@ -27,9 +27,17 @@ namespace PBL3___Cosmetics_Store_Management_App.Infrastructure.Implementations
 
             if (DatabaseContext.Receipts.Any())
             {
-                var current_max = DatabaseContext.Receipts.Select(p => p.receipt_id)
+                string date = DateTime.Now.ToString("yyMMdd");
+                string tmp_id = "RC" + date + "0000";
+                var current_max = DatabaseContext.Receipts.Where(i => string.Compare(i.receipt_id, tmp_id) == 1)
+                                                          .Select(p => p.receipt_id)
                                                           .OrderByDescending(id => id)
                                                           .FirstOrDefault();
+
+                if (current_max == null)
+                {
+                    return 1;
+                }
                 max = int.Parse(current_max.Substring(8)) + 1;
             }
             return max;

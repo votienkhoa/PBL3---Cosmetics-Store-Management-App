@@ -8,7 +8,7 @@ namespace PBL3___Cosmetics_Store_Management_App.View
 {
     public partial class frmCustomerAdd : Form
     {
-        // public Customer CurCustomer = null;
+        public Customer current_customer = null;
         public delegate void MyDel();
         public MyDel reload { get; set; }
         public frmCustomerAdd()
@@ -17,14 +17,20 @@ namespace PBL3___Cosmetics_Store_Management_App.View
         }
         private void btnSave_Click(object sender, System.EventArgs e)
         {
+            if (txtName.Text == "" || txtPhone.Text == "")
+            {
+                MessageBox.Show("Do not leave any field empty!", "Invalid input", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
             Customer CurCustomer = new Customer();
             CurCustomer.customer_name = txtName.Text.ToString();
-            CurCustomer.customer_id = txtID.Text.ToString();
             CurCustomer.customer_phone = txtPhone.Text.ToString();
             List<Customer> CC = CustomerController.Instance.ffind(CurCustomer);
             if (CC.Count == 0)
             {
                 CustomerController.Instance.add(CurCustomer);
+                current_customer = CurCustomer;
+                DialogResult = DialogResult.OK;
             }
             else
             {

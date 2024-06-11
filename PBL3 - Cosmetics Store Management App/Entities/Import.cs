@@ -17,12 +17,14 @@ namespace PBL3___Cosmetics_Store_Management_App.Entities
         [Key]
         [Required]
         public string import_id {  get; set; }
-        public string import_provider { get; set; }
+        public string provider_id { get; set; }
         public DateTime import_date { get; set; }
         public string staff_id { get; set; }
         public virtual ICollection<ImportDetail> importdetails { get; set;}
 
         [ForeignKey("staff_id")]
         public virtual Staff staff { get; set; }
+        [ForeignKey("provider_id")]
+        public virtual Provider provider { get; set; }
     }
 }

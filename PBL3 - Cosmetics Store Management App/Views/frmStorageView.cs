@@ -23,7 +23,7 @@ namespace PBL3___Cosmetics_Store_Management_App.View
                 new DataColumn("EXP", typeof (DateTime))
             });
 
-            dt.Rows.Add("Sữa rửa mặt Innisfree", 30, new DateTime(2023, 6, 30).Date, new DateTime(2025, 6, 30));
+            dt.Rows.Add("Sữa rửa mặt Innisfree", 30, new DateTime(2023, 6, 30), new DateTime(2025, 6, 30));
             dt.Rows.Add("Sữa rửa mặt Innisfree", 20, new DateTime(2024, 5, 12), new DateTime(2026, 5, 12));
             dt.Rows.Add("Kem chống nắng Annesa", 50, new DateTime(2022, 2, 28), new DateTime(2025, 8, 28));
             dt.Rows.Add("Kem chống nắng Annesa", 20, new DateTime(2024, 1, 17), new DateTime(2027, 6, 17));
@@ -33,7 +33,7 @@ namespace PBL3___Cosmetics_Store_Management_App.View
             {
                 dgvStaff.Rows.Add(i.ItemArray);
             }
-
+            
         }
 
         private void Browse(object sender, EventArgs e)

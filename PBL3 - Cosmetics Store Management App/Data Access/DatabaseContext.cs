@@ -28,6 +28,7 @@ namespace PBL3___Cosmetics_Store_Management_App.Data_Access
         public virtual DbSet<Customer> Customers { get; set; }
         public virtual DbSet<Import> Imports { get; set; }
         public virtual DbSet<ImportDetail> ImportDetails { get; set; }
+        public virtual DbSet<Provider> Providers { get; set; }
 
 
 

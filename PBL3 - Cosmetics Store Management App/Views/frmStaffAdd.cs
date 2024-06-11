@@ -40,6 +40,11 @@ namespace PBL3___Cosmetics_Store_Management_App
                     CbbRole.SelectedItem = "StoreKeeper";
                 }
             }
+            if (check)
+            {
+                staff_id.ReadOnly = true;
+                staff_id.PlaceholderText = "ID will be auto generated";
+            }
             if( checkfrm )
             {
                 label1.Text = "Information Staff"; btnSave.Enabled = false;  btnCancel.Text = "Exit";
@@ -95,6 +100,7 @@ namespace PBL3___Cosmetics_Store_Management_App
             catch (Exception ex) { MessageBox.Show(ex.Message); }
             if (Check)
             {
+                _staff.staff_id = StaffController.Instance.AutoGenerateID(_staff.staff_role);
                 StaffController.Instance.add(_staff);
                 back();
                 this.Dispose(true);

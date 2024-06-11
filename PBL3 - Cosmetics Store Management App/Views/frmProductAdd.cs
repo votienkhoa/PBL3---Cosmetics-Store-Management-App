@@ -85,9 +85,10 @@ namespace PBL3___Cosmetics_Store_Management_App.View
                 string imagePath = txtPath.Text;
 
                 ProductController.Instance.AddOrUpdate(currentProduct, name,id, origin, unit, price, category, imagePath);
+                this.Dispose();
+                
             }
 
-            this.Dispose();
         }
 
         
