@@ -11,6 +11,10 @@ namespace PBL3___Cosmetics_Store_Management_App.Entities
     [Table("Customer")]
     public class Customer
     {
+        public Customer()
+        {
+            receipts = new HashSet<Receipt>();
+        }
         [Key]
         [Required]
         public string customer_id { get; set; }

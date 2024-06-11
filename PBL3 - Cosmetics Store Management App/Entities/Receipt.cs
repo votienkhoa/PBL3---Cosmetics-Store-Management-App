@@ -25,5 +25,7 @@ namespace PBL3___Cosmetics_Store_Management_App.Entities
         public virtual ICollection<ReceiptDetail> receiptdetails { get; set; }
         [ForeignKey("staff_id")]
         public virtual Staff staff { get; set; }
+        [ForeignKey("customer_id")]
+        public virtual Customer customer { get; set; }
     }
 }

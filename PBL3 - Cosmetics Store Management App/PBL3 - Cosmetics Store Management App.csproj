@@ -91,6 +91,8 @@
     <Compile Include="Controllers\ReportController.cs" />
     <Compile Include="Data Access\DatabaseContext.cs" />
     <Compile Include="Entities\Customer.cs" />
+    <Compile Include="Entities\Import.cs" />
+    <Compile Include="Entities\ImportDetail.cs" />
     <Compile Include="Entities\Receipt.cs" />
     <Compile Include="Entities\ReceiptDetail.cs" />
     <Compile Include="Infrastructure\Implementations\CustomerRepository.cs" />

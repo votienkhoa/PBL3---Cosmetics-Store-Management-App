@@ -188,7 +188,7 @@
             this.Staff_dele_button});
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.139131F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             dataGridViewCellStyle3.ForeColor = System.Drawing.Color.Black;
             dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(241)))), ((int)(((byte)(243)))));
             dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.Black;
@@ -242,23 +242,22 @@
             // 
             // Staff_Name
             // 
-            this.Staff_Name.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.Staff_Name.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.Staff_Name.DataPropertyName = "staff_name";
-            this.Staff_Name.Frozen = true;
             this.Staff_Name.HeaderText = "Name";
             this.Staff_Name.MinimumWidth = 8;
             this.Staff_Name.Name = "Staff_Name";
             this.Staff_Name.ReadOnly = true;
-            this.Staff_Name.Width = 350;
             // 
             // Staff_role
             // 
-            this.Staff_role.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Staff_role.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
             this.Staff_role.DataPropertyName = "staff_role";
             this.Staff_role.HeaderText = "Role";
             this.Staff_role.MinimumWidth = 8;
             this.Staff_role.Name = "Staff_role";
             this.Staff_role.ReadOnly = true;
+            this.Staff_role.Width = 200;
             // 
             // Staff_detail_button
             // 
