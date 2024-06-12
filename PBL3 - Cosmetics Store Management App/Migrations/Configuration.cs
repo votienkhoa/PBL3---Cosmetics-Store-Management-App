@@ -19,7 +19,16 @@
 
             //  You can use the DbSet<T>.AddOrUpdate() helper extension method
             //  to avoid creating duplicate seed data.
-
+            context.Staffs.AddOrUpdate(new Entities.Staff()
+            {
+                staff_id = "MNG-000",
+                staff_name = "Admin",
+                staff_PhoneNumber = "0905599024",
+                staff_birthday = DateTime.Now,
+                staff_address = "Da Nang",
+                staff_password = "admin",
+                staff_role = 1
+            });
 
         }
     }

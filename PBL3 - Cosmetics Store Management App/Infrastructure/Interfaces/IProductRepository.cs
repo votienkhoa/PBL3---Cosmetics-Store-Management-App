@@ -9,6 +9,6 @@ namespace PBL3___Cosmetics_Store_Management_App.Repositories.Interfaces
 {
     public interface IProductRepository : IRepository<Product>
     {
-
+        int GetMaxID();
     }
 }

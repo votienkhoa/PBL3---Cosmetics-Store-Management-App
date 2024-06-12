@@ -17,6 +17,10 @@ namespace PBL3___Cosmetics_Store_Management_App.Controllers
     {
         private UnitOfWork unitOfWork = new UnitOfWork(new DatabaseContext());
 
+        public Import GetByID(string id)
+        {
+            return unitOfWork.ImportRepo.Get(id);
+        }
         public List<Import> GetAll()
         {
             return unitOfWork.ImportRepo.GetAll().ToList();

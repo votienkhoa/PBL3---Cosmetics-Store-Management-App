@@ -253,6 +253,26 @@ namespace PBL3___Cosmetics_Store_Management_App.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap provider_green {
+            get {
+                object obj = ResourceManager.GetObject("provider_green", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap provider_white {
+            get {
+                object obj = ResourceManager.GetObject("provider_white", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap receipt_green {
             get {
                 object obj = ResourceManager.GetObject("receipt_green", resourceCulture);

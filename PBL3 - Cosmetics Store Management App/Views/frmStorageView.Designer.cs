@@ -45,14 +45,14 @@
             this.guna2ControlBox2 = new Guna.UI2.WinForms.Guna2ControlBox();
             this.guna2ControlBox1 = new Guna.UI2.WinForms.Guna2ControlBox();
             this.dgvImport = new Guna.UI2.WinForms.Guna2DataGridView();
-            this.Import_ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Provider = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Date = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Staff_Detail = new System.Windows.Forms.DataGridViewImageColumn();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.guna2Separator1 = new Guna.UI2.WinForms.Guna2Separator();
             this.guna2BorderlessForm2 = new Guna.UI2.WinForms.Guna2BorderlessForm(this.components);
+            this.Import_ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Provider = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Date = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Import_Detail = new System.Windows.Forms.DataGridViewImageColumn();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvImport)).BeginInit();
             this.SuspendLayout();
@@ -219,7 +219,7 @@
             this.Import_ID,
             this.Provider,
             this.Date,
-            this.Staff_Detail});
+            this.Import_Detail});
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
             dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.139131F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(254)));
@@ -261,49 +261,8 @@
             this.dgvImport.ThemeStyle.RowsStyle.Height = 30;
             this.dgvImport.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(241)))), ((int)(((byte)(243)))));
             this.dgvImport.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.Black;
+            this.dgvImport.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvImport_CellContentClick);
             this.dgvImport.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.dgvImport_CellFormatting);
-            // 
-            // Import_ID
-            // 
-            this.Import_ID.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            this.Import_ID.DataPropertyName = "import_id";
-            this.Import_ID.FillWeight = 70F;
-            this.Import_ID.HeaderText = "ID";
-            this.Import_ID.MinimumWidth = 6;
-            this.Import_ID.Name = "Import_ID";
-            this.Import_ID.ReadOnly = true;
-            this.Import_ID.Width = 300;
-            // 
-            // Provider
-            // 
-            this.Provider.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            this.Provider.DataPropertyName = "provider_id";
-            this.Provider.HeaderText = "Provider";
-            this.Provider.MinimumWidth = 6;
-            this.Provider.Name = "Provider";
-            this.Provider.ReadOnly = true;
-            this.Provider.Width = 200;
-            // 
-            // Date
-            // 
-            this.Date.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.Date.DataPropertyName = "import_date";
-            this.Date.HeaderText = "Date";
-            this.Date.MinimumWidth = 6;
-            this.Date.Name = "Date";
-            this.Date.ReadOnly = true;
-            // 
-            // Staff_Detail
-            // 
-            this.Staff_Detail.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            this.Staff_Detail.FillWeight = 50F;
-            this.Staff_Detail.HeaderText = "";
-            this.Staff_Detail.Image = global::PBL3___Cosmetics_Store_Management_App.Properties.Resources.detail;
-            this.Staff_Detail.ImageLayout = System.Windows.Forms.DataGridViewImageCellLayout.Zoom;
-            this.Staff_Detail.MinimumWidth = 6;
-            this.Staff_Detail.Name = "Staff_Detail";
-            this.Staff_Detail.ReadOnly = true;
-            this.Staff_Detail.Width = 40;
             // 
             // label2
             // 
@@ -341,6 +300,48 @@
             this.guna2BorderlessForm2.ContainerControl = this;
             this.guna2BorderlessForm2.DockIndicatorTransparencyValue = 0.6D;
             this.guna2BorderlessForm2.TransparentWhileDrag = true;
+            // 
+            // Import_ID
+            // 
+            this.Import_ID.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.Import_ID.DataPropertyName = "import_id";
+            this.Import_ID.FillWeight = 70F;
+            this.Import_ID.HeaderText = "ID";
+            this.Import_ID.MinimumWidth = 6;
+            this.Import_ID.Name = "Import_ID";
+            this.Import_ID.ReadOnly = true;
+            this.Import_ID.Width = 300;
+            // 
+            // Provider
+            // 
+            this.Provider.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.Provider.DataPropertyName = "provider_id";
+            this.Provider.HeaderText = "Provider";
+            this.Provider.MinimumWidth = 6;
+            this.Provider.Name = "Provider";
+            this.Provider.ReadOnly = true;
+            this.Provider.Width = 200;
+            // 
+            // Date
+            // 
+            this.Date.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Date.DataPropertyName = "import_date";
+            this.Date.HeaderText = "Date";
+            this.Date.MinimumWidth = 6;
+            this.Date.Name = "Date";
+            this.Date.ReadOnly = true;
+            // 
+            // Import_Detail
+            // 
+            this.Import_Detail.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.Import_Detail.FillWeight = 50F;
+            this.Import_Detail.HeaderText = "";
+            this.Import_Detail.Image = global::PBL3___Cosmetics_Store_Management_App.Properties.Resources.detail;
+            this.Import_Detail.ImageLayout = System.Windows.Forms.DataGridViewImageCellLayout.Zoom;
+            this.Import_Detail.MinimumWidth = 6;
+            this.Import_Detail.Name = "Import_Detail";
+            this.Import_Detail.ReadOnly = true;
+            this.Import_Detail.Width = 40;
             // 
             // frmStorageView
             // 
@@ -391,6 +392,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Import_ID;
         private System.Windows.Forms.DataGridViewTextBoxColumn Provider;
         private System.Windows.Forms.DataGridViewTextBoxColumn Date;
-        private System.Windows.Forms.DataGridViewImageColumn Staff_Detail;
+        private System.Windows.Forms.DataGridViewImageColumn Import_Detail;
     }
 }

@@ -58,5 +58,16 @@ namespace PBL3___Cosmetics_Store_Management_App
         {
             AddControl(new frmReceiptView());
         }
+        private void btnProvider_Click(object sender, EventArgs e)
+        {
+            AddControl(new frmProviderView());
+        }
+
+        private void btnLogout_Click(object sender, EventArgs e)
+        {
+            Close();
+        }
+
+       
     }
 }

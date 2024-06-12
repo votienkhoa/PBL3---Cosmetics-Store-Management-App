@@ -31,9 +31,8 @@ namespace PBL3___Cosmetics_Store_Management_App.View
         private void btnAdd_Click(object sender, EventArgs e)
         {
             frmCategoryAdd frm = new frmCategoryAdd();
-            frm.reload += new frmCategoryAdd.MyDel(frmLoad);
-
             frm.ShowDialog();
+            frmLoad();
         }
 
         private void dgvCategories_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -48,7 +47,6 @@ namespace PBL3___Cosmetics_Store_Management_App.View
                 {
                     currentCategory = cur
                 };
-                frm.reload += new frmCategoryAdd.MyDel(frmLoad);
                 frm.ShowDialog ();
             }
 

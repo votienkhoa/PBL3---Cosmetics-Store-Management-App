@@ -61,5 +61,14 @@ namespace PBL3___Cosmetics_Store_Management_App.Controllers
         {
             return unitOfWork.CustomerRepo.Find(p => p.customer_phone.Equals(data.customer_phone)).ToList();
         }
+        public int PurchaseCount(string phone)
+        {
+            int cnt = 0;
+            foreach (var receipt in unitOfWork.ReceiptRepo.GetAll())
+            {
+                if (receipt.customer_phone.Equals(phone)) { cnt++; }
+            }
+            return cnt; 
+        }
     }
 }

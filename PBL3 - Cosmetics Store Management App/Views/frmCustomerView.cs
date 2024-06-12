@@ -11,8 +11,7 @@ namespace PBL3___Cosmetics_Store_Management_App.View
         public frmCustomerView()
         {
             InitializeComponent();
-            dgvLoad();
-
+            
         }
 
         public void dgvLoad()
@@ -31,7 +30,7 @@ namespace PBL3___Cosmetics_Store_Management_App.View
 
         private void frmCustomerView_Load(object sender, EventArgs e)
         {
-
+            dgvLoad();
         }
 
         private void dtgv_customer_CellContentClick_1(object sender, DataGridViewCellEventArgs e)
@@ -43,6 +42,22 @@ namespace PBL3___Cosmetics_Store_Management_App.View
                 CustomerController.Instance.delete(cur);
             }
             dgvLoad();
+        }
+
+        private void dtgv_customer_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
+        {
+            e.CellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
+
+            if (dtgv_customer.Columns[e.ColumnIndex].Name == "Count")
+            {
+                var row = dtgv_customer.Rows[e.RowIndex];
+                e.Value = CustomerController.Instance.PurchaseCount(row.Cells[0].Value.ToString());
+            }
+        }
+
+        private void txtSearch_TextChanged(object sender, EventArgs e)
+        {
+            dtgv_customer.DataSource = CustomerController.Instance.Search(txtSearch.Text);
         }
     }
 }

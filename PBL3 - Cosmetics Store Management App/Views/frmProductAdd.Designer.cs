@@ -298,7 +298,8 @@
             this.txtID.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtID.Name = "txtID";
             this.txtID.PasswordChar = '\0';
-            this.txtID.PlaceholderText = "Enter ID";
+            this.txtID.PlaceholderText = "ID will be auto-generated";
+            this.txtID.ReadOnly = true;
             this.txtID.SelectedText = "";
             this.txtID.Size = new System.Drawing.Size(229, 46);
             this.txtID.TabIndex = 2;

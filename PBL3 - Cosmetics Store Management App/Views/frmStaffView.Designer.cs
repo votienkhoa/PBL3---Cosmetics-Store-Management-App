@@ -201,7 +201,7 @@
             this.dtgv_staff.ReadOnly = true;
             this.dtgv_staff.RowHeadersVisible = false;
             this.dtgv_staff.RowHeadersWidth = 62;
-            this.dtgv_staff.RowTemplate.Height = 30;
+            this.dtgv_staff.RowTemplate.Height = 40;
             this.dtgv_staff.Size = new System.Drawing.Size(988, 469);
             this.dtgv_staff.TabIndex = 10;
             this.dtgv_staff.Theme = Guna.UI2.WinForms.Enums.DataGridViewPresetThemes.LightGrid;
@@ -223,7 +223,7 @@
             this.dtgv_staff.ThemeStyle.RowsStyle.BorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
             this.dtgv_staff.ThemeStyle.RowsStyle.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dtgv_staff.ThemeStyle.RowsStyle.ForeColor = System.Drawing.Color.Black;
-            this.dtgv_staff.ThemeStyle.RowsStyle.Height = 30;
+            this.dtgv_staff.ThemeStyle.RowsStyle.Height = 40;
             this.dtgv_staff.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(241)))), ((int)(((byte)(243)))));
             this.dtgv_staff.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.Black;
             this.dtgv_staff.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtgv_staff_CellContentClick);

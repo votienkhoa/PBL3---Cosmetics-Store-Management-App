@@ -284,6 +284,25 @@ namespace PBL3___Cosmetics_Store_Management_App
             }
         }
 
+        private void btnHistory_Click(object sender, EventArgs e)
+        {
+            frmReceiptView frm = new frmReceiptView()
+            {
+                current_staff = currentStaff
+            };
+            frm.ShowDialog();
+        }
+        private void dgvReceipt_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
+        {
+            if (dgvReceipt.Columns[e.ColumnIndex].Name == "POS_Price" || dgvReceipt.Columns[e.ColumnIndex].Name == "POS_Amount")
+            {
+                if (e.Value != null && double.TryParse(e.Value.ToString(), out double value))
+                {
+                    e.Value = value.ToString("N0");
+                }
+            }
+        }
+
         #endregion
 
 

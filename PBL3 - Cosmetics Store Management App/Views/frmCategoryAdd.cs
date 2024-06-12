@@ -8,9 +8,6 @@ namespace PBL3___Cosmetics_Store_Management_App.View
     public partial class frmCategoryAdd : Form
     {
         public Category currentCategory = null;
-
-        public delegate void MyDel();
-        public MyDel reload { get; set; }
         public frmCategoryAdd()
         {
             InitializeComponent();
@@ -32,6 +29,11 @@ namespace PBL3___Cosmetics_Store_Management_App.View
 
         private void btnSave_Click(object sender, System.EventArgs e)
         {
+            if (txtName.Text == "")
+            {
+                MessageBox.Show("Please enter name!");
+                return;
+            }
             if (currentCategory == null)
             {
                 CategoryController.Instance.Add(txtName.Text);
@@ -40,7 +42,6 @@ namespace PBL3___Cosmetics_Store_Management_App.View
             {
                 CategoryController.Instance.Update(currentCategory, txtName.Text);
             }
-            reload();
             this.Dispose();
         }
         

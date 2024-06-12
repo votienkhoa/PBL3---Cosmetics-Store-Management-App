@@ -23,6 +23,10 @@ namespace PBL3___Cosmetics_Store_Management_App.Controllers
         {
             return unitOfWork.ReceiptRepo.GetAll().ToList();
         }
+        public List<Receipt> GetByStaff(string staff_id)
+        {
+            return unitOfWork.ReceiptRepo.Find(p => p.staff_id == staff_id).ToList();
+        }
 
         public List<Receipt> Search(string txt)
         {

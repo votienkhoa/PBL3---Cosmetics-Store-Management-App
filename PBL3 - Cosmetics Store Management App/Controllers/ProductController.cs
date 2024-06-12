@@ -47,7 +47,7 @@ namespace PBL3___Cosmetics_Store_Management_App.Controllers
             }
         }
 
-        public void AddOrUpdate(Product oldProduct, string name, string id, string origin, string unit, string price, string category, string image)
+        public void AddOrUpdate(Product oldProduct, string name, string origin, string unit, string price, string category, string image)
         {
             double tmp;
             if (!double.TryParse(price, out tmp))
@@ -59,7 +59,7 @@ namespace PBL3___Cosmetics_Store_Management_App.Controllers
             Product product = new Product()
             {
                 product_name = name,
-                product_id = id,
+                product_id = GenerateID(),
                 product_origin = origin,
                 product_unit = unit,
                 product_price = tmp,
@@ -80,16 +80,12 @@ namespace PBL3___Cosmetics_Store_Management_App.Controllers
 
         public void AddOrUpdate(Product prod)
         {
-            
-            //unitOfWork.ProductRepo.Update(prod);
-            //unitOfWork.Save();
             using (DatabaseContext db = new DatabaseContext())
             {
                 db.Products.AddOrUpdate(prod);
                 db.SaveChanges();
             }
         }
-
         public void Delete(Product product)
         {
             DialogResult result = MessageBox.Show("Are you sure you want to delete product \"" + product.product_name + "\"?" +
@@ -100,6 +96,11 @@ namespace PBL3___Cosmetics_Store_Management_App.Controllers
                 unitOfWork.Save();
             }
         }
+        public string GenerateID()
+        {
+            return "SP" + unitOfWork.ProductRepo.GetMaxID().ToString("D4");
+        }
+
 
 
     }

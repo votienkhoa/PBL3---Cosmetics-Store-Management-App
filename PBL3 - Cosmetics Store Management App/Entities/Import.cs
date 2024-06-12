@@ -8,6 +8,7 @@ using System.Threading.Tasks;
 
 namespace PBL3___Cosmetics_Store_Management_App.Entities
 {
+    [Table("imports")]
     public class Import
     {
         public Import()
@@ -17,7 +18,7 @@ namespace PBL3___Cosmetics_Store_Management_App.Entities
         [Key]
         [Required]
         public string import_id {  get; set; }
-        public string provider_id { get; set; }
+        public int provider_id { get; set; }
         public DateTime import_date { get; set; }
         public string staff_id { get; set; }
         public virtual ICollection<ImportDetail> importdetails { get; set;}

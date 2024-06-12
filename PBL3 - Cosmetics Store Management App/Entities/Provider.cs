@@ -8,6 +8,7 @@ using System.Threading.Tasks;
 
 namespace PBL3___Cosmetics_Store_Management_App.Entities
 {
+    [Table("providers")]
     public class Provider
     {
         public Provider()
@@ -18,7 +19,7 @@ namespace PBL3___Cosmetics_Store_Management_App.Entities
         [Key]
         [Required]
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
-        public string provider_id { get; set; }
+        public int provider_id { get; set; }
         public string provider_name { get; set; }
         public ICollection<Import> imports { get; set; }
     }

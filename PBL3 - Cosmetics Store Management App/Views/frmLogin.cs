@@ -23,6 +23,16 @@ namespace PBL3___Cosmetics_Store_Management_App.Views
         {
             this.Dispose();
         }
+        private void Open_Form(Form frm)
+        {
+            this.Hide();
+            frm.ShowDialog();
+
+            txtPassword.Text = "";
+            txtUsername.Text = "";
+
+            this.Show();
+        }
 
         private void btnLogin_Click(object sender, EventArgs e)
         {
@@ -33,35 +43,22 @@ namespace PBL3___Cosmetics_Store_Management_App.Views
             {
                 MessageBox.Show("Incorrect password or username!", "Login failed!", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-            else if (_staff.staff_role == 1)
+            else
             {
-                frmMain frm = new frmMain()
+                Form frm = null;
+                switch (_staff.staff_role)
                 {
-                    currentStaff = _staff
-                };
-                this.Hide();
-                frm.ShowDialog();
-                this.Close();
-            }
-            else if (_staff.staff_role == 2)
-            {
-                frmPOS frm = new frmPOS()
-                {
-                    currentStaff = _staff
-                };
-                this.Hide();               
-                frm.ShowDialog();
-                this.Close();
-            }
-            else if (_staff.staff_role == 3)
-            {
-                this.Hide();
-                frmStorageView frmMain = new frmStorageView()
-                {
-                    current_staff = _staff
-                };
-                frmMain.ShowDialog();
-                this.Close();
+                    case 1:
+                        frm = new frmMain() { currentStaff = _staff};
+                        break;
+                    case 2:
+                        frm = new frmPOS() { currentStaff = _staff};
+                        break;
+                    case 3:
+                        frm = new frmStorageView() { currentStaff = _staff};
+                        break;
+                }
+                Open_Form(frm);
             }
         }
     }

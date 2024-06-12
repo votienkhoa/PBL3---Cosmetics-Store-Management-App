@@ -9,6 +9,7 @@ using System.Windows.Forms;
 
 namespace PBL3___Cosmetics_Store_Management_App.Entities
 {
+    [Table("importdetails")]
     public class ImportDetail
     {
         [Key, Column(Order = 0)]

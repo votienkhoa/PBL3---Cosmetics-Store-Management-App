@@ -265,6 +265,18 @@
     <Compile Include="Migrations\202406111045026_Update.Designer.cs">
       <DependentUpon>202406111045026_Update.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202406121159190_InitialCreate.cs" />
+    <Compile Include="Migrations\202406121159190_InitialCreate.Designer.cs">
+      <DependentUpon>202406121159190_InitialCreate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202406121200164_InitialCreate1.cs" />
+    <Compile Include="Migrations\202406121200164_InitialCreate1.Designer.cs">
+      <DependentUpon>202406121200164_InitialCreate1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202406121201223_Import.cs" />
+    <Compile Include="Migrations\202406121201223_Import.Designer.cs">
+      <DependentUpon>202406121201223_Import.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Infrastructure\Implementations\CategoryRepository.cs" />
     <Compile Include="Infrastructure\Implementations\ProductRepository.cs" />
@@ -285,6 +297,18 @@
     </Compile>
     <Compile Include="Views\frmDateTimePicker.Designer.cs">
       <DependentUpon>frmDateTimePicker.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\frmProviderAdd.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\frmProviderAdd.Designer.cs">
+      <DependentUpon>frmProviderAdd.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\frmProviderView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\frmProviderView.Designer.cs">
+      <DependentUpon>frmProviderView.cs</DependentUpon>
     </Compile>
     <Compile Include="Views\frmReceiptDetail.cs">
       <SubType>Form</SubType>
@@ -408,11 +432,26 @@
     <EmbeddedResource Include="Migrations\202406111045026_Update.resx">
       <DependentUpon>202406111045026_Update.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202406121159190_InitialCreate.resx">
+      <DependentUpon>202406121159190_InitialCreate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202406121200164_InitialCreate1.resx">
+      <DependentUpon>202406121200164_InitialCreate1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202406121201223_Import.resx">
+      <DependentUpon>202406121201223_Import.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Views\frmCustomerChoose.resx">
       <DependentUpon>frmCustomerChoose.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Views\frmDateTimePicker.resx">
       <DependentUpon>frmDateTimePicker.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\frmProviderAdd.resx">
+      <DependentUpon>frmProviderAdd.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\frmProviderView.resx">
+      <DependentUpon>frmProviderView.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Views\frmReceiptDetail.resx">
       <DependentUpon>frmReceiptDetail.cs</DependentUpon>
@@ -439,6 +478,9 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <SubType>Designer</SubType>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\rptImport.rdlc">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </EmbeddedResource>
     <EmbeddedResource Include="Views\rptReceipt.rdlc">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
@@ -612,6 +654,8 @@
     <None Include="Resources\receipt_green.png" />
     <None Include="Resources\receipt_white.png" />
     <None Include="Resources\calendar_white.png" />
+    <None Include="Resources\provider_green.png" />
+    <None Include="Resources\provider_white.png" />
     <Content Include="SqlServerTypes\readme.htm" />
     <Content Include="SqlServerTypes\x64\msvcr120.dll">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>

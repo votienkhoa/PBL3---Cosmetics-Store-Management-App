@@ -21,7 +21,6 @@ namespace PBL3___Cosmetics_Store_Management_App.View
             if (currentProduct != null)
             {
                 lbHeader.Text = "Edit Product";
-                txtID.ReadOnly = true;
 
                 txtID.Text = currentProduct.product_id;
                 txtName.Text = currentProduct.product_name;
@@ -77,14 +76,13 @@ namespace PBL3___Cosmetics_Store_Management_App.View
             else
             {
                 string name = txtName.Text;
-                string id = txtID.Text;
                 string origin = txtOrigin.Text;
                 string unit = txtUnit.Text;
                 string price = txtPrice.Text;
                 string category = cbbCategory.SelectedItem.ToString();
                 string imagePath = txtPath.Text;
 
-                ProductController.Instance.AddOrUpdate(currentProduct, name,id, origin, unit, price, category, imagePath);
+                ProductController.Instance.AddOrUpdate(currentProduct, name, origin, unit, price, category, imagePath);
                 this.Dispose();
                 
             }

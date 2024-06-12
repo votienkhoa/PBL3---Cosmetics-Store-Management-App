@@ -89,5 +89,24 @@ namespace PBL3___Cosmetics_Store_Management_App.Controllers
 
             return Dt;
         }
+        public DataTable ImportReport(string import_id)
+        {
+            DataTable Dt = new DataTable();
+            Dt.Columns.AddRange(new DataColumn[]
+            {
+                new DataColumn("product_name", typeof(string)),
+                new DataColumn("product_quantity", typeof(int)),
+                new DataColumn("product_MFG", typeof(DateTime)),
+                new DataColumn("product_EXP", typeof(DateTime)),
+            });
+            
+            List<ImportDetail> ImportDetails = unitOfWork.ImportDetailRepo.Find(p => p.import_id == import_id).ToList();
+            foreach (ImportDetail detail in ImportDetails)
+            {
+                string name = unitOfWork.ProductRepo.Get(detail.product_id).product_name;
+                Dt.Rows.Add(name, detail.product_quantity, detail.product_MFG, detail.product_EXP);
+            }
+            return Dt;
+        }
     }
 }

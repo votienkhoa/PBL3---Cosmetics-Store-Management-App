@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
@@ -43,6 +44,8 @@
             this.dataGridViewImageColumn2 = new System.Windows.Forms.DataGridViewImageColumn();
             this.txtSearch = new Guna.UI2.WinForms.Guna2TextBox();
             this.dataGridViewImageColumn3 = new System.Windows.Forms.DataGridViewImageColumn();
+            this.pnTop = new Guna.UI2.WinForms.Guna2Panel();
+            this.guna2DragControl1 = new Guna.UI2.WinForms.Guna2DragControl(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.dgvReceipts)).BeginInit();
             this.SuspendLayout();
             // 
@@ -50,6 +53,8 @@
             // 
             this.dgvReceipts.AllowUserToAddRows = false;
             this.dgvReceipts.AllowUserToDeleteRows = false;
+            this.dgvReceipts.AllowUserToResizeColumns = false;
+            this.dgvReceipts.AllowUserToResizeRows = false;
             dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
             this.dgvReceipts.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.dgvReceipts.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
@@ -83,7 +88,7 @@
             this.dgvReceipts.ReadOnly = true;
             this.dgvReceipts.RowHeadersVisible = false;
             this.dgvReceipts.RowHeadersWidth = 49;
-            this.dgvReceipts.RowTemplate.Height = 35;
+            this.dgvReceipts.RowTemplate.Height = 40;
             this.dgvReceipts.Size = new System.Drawing.Size(988, 475);
             this.dgvReceipts.TabIndex = 25;
             this.dgvReceipts.Theme = Guna.UI2.WinForms.Enums.DataGridViewPresetThemes.LightGrid;
@@ -105,7 +110,7 @@
             this.dgvReceipts.ThemeStyle.RowsStyle.BorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
             this.dgvReceipts.ThemeStyle.RowsStyle.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.139131F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(254)));
             this.dgvReceipts.ThemeStyle.RowsStyle.ForeColor = System.Drawing.Color.Black;
-            this.dgvReceipts.ThemeStyle.RowsStyle.Height = 35;
+            this.dgvReceipts.ThemeStyle.RowsStyle.Height = 40;
             this.dgvReceipts.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(241)))), ((int)(((byte)(243)))));
             this.dgvReceipts.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.Black;
             this.dgvReceipts.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvReceipts_CellContentClick);
@@ -167,10 +172,10 @@
             // 
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.Color.Transparent;
-            this.label1.Font = new System.Drawing.Font("Segoe UI Semibold", 13.77391F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(44, 65);
+            this.label1.Font = new System.Drawing.Font("Segoe UI Semibold", 16.27826F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(43, 109);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(136, 30);
+            this.label1.Size = new System.Drawing.Size(160, 36);
             this.label1.TabIndex = 22;
             this.label1.Text = "Receipts List";
             // 
@@ -247,12 +252,27 @@
             this.dataGridViewImageColumn3.ReadOnly = true;
             this.dataGridViewImageColumn3.Width = 198;
             // 
+            // pnTop
+            // 
+            this.pnTop.Dock = System.Windows.Forms.DockStyle.Top;
+            this.pnTop.Location = new System.Drawing.Point(0, 0);
+            this.pnTop.Name = "pnTop";
+            this.pnTop.Size = new System.Drawing.Size(1087, 53);
+            this.pnTop.TabIndex = 26;
+            // 
+            // guna2DragControl1
+            // 
+            this.guna2DragControl1.DockIndicatorTransparencyValue = 0.6D;
+            this.guna2DragControl1.TargetControl = this.pnTop;
+            this.guna2DragControl1.UseTransparentDrag = true;
+            // 
             // frmReceiptView
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(239)))), ((int)(((byte)(230)))));
             this.ClientSize = new System.Drawing.Size(1087, 689);
+            this.Controls.Add(this.pnTop);
             this.Controls.Add(this.txtSearch);
             this.Controls.Add(this.dgvReceipts);
             this.Controls.Add(this.label2);
@@ -260,6 +280,7 @@
             this.Controls.Add(this.guna2Separator1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frmReceiptView";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmReceiptView";
             this.Load += new System.EventHandler(this.frmReceiptView_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvReceipts)).EndInit();
@@ -281,5 +302,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Receipt_Time;
         private System.Windows.Forms.DataGridViewTextBoxColumn Receipt_Total;
         private System.Windows.Forms.DataGridViewImageColumn Receipt_Detail;
+        private Guna.UI2.WinForms.Guna2Panel pnTop;
+        private Guna.UI2.WinForms.Guna2DragControl guna2DragControl1;
     }
 }
