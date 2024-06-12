@@ -98,7 +98,15 @@ namespace PBL3___Cosmetics_Store_Management_App
         #region Events
         public void Product_Click(object sender, Product e)
         {
-            bool check = false;
+            if (e.product_stock == 0)
+            {
+                MessageBox.Show("This product is out of stock!", 
+                                "Out of stock",
+                                MessageBoxButtons.OK,
+                                MessageBoxIcon.Error);
+                return;
+            }
+            //----------------------
             foreach (var x in pnProduct.Controls)
             {
                 usProduct tmp = x as usProduct;
@@ -108,6 +116,8 @@ namespace PBL3___Cosmetics_Store_Management_App
                     tmp.usProduct_Load(sender, new EventArgs());
                 }
             }
+            //----------------------
+            bool check = false;
             foreach (DataRow i in Dt.Rows)
             {
                
@@ -141,6 +151,7 @@ namespace PBL3___Cosmetics_Store_Management_App
             if (dgvReceipt.CurrentCell.OwningColumn.Name == "POS_Del")
             {
                 string name = dgvReceipt.CurrentRow.Cells[1].Value.ToString();
+                //-----------
                 foreach (var x in pnProduct.Controls)
                 {
                     usProduct tmp = x as usProduct;
@@ -150,6 +161,7 @@ namespace PBL3___Cosmetics_Store_Management_App
                         tmp.usProduct_Load(sender, new EventArgs());
                     }
                 }
+                //-----------
                 foreach (DataRow i in Dt.Rows)
                 {
                     if (i[2].ToString() == name)
@@ -183,6 +195,20 @@ namespace PBL3___Cosmetics_Store_Management_App
         }
         private void btnNew_Click(object sender, EventArgs e)
         {
+            foreach (DataRow row in Dt.Rows)
+            {
+                string ID = row[1].ToString();
+                int quantity = Convert.ToInt32(row[3].ToString());
+                foreach (var x in pnProduct.Controls)
+                {
+                    usProduct tmp = x as usProduct;
+                    if (tmp.product.product_id == ID)
+                    {
+                        tmp.product.product_stock += quantity;
+                        tmp.usProduct_Load(sender, new EventArgs());
+                    }
+                }
+            }
             Dt.Rows.Clear();
 
             lbSubtotal.Text = 0.ToString(); 
@@ -208,6 +234,7 @@ namespace PBL3___Cosmetics_Store_Management_App
                         current_customer = cs.current_customer;
                     }
                 }
+                //---------------------
                 DialogResult confirmation = MessageBox.Show(
                     "Are you sure you want to proceed with payment and print the receipt?",
                     "Payment Confirmation",

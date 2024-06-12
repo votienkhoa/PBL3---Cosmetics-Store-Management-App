@@ -31,6 +31,8 @@
             this.components = new System.ComponentModel.Container();
             this.guna2BorderlessForm1 = new Guna.UI2.WinForms.Guna2BorderlessForm(this.components);
             this.guna2Panel3 = new Guna.UI2.WinForms.Guna2Panel();
+            this.guna2HtmlLabel1 = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            this.cbbProvider = new Guna.UI2.WinForms.Guna2ComboBox();
             this.txtPath = new Guna.UI2.WinForms.Guna2TextBox();
             this.btnBrowse = new Guna.UI2.WinForms.Guna2Button();
             this.label2 = new System.Windows.Forms.Label();
@@ -41,8 +43,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.guna2PictureBox1 = new Guna.UI2.WinForms.Guna2PictureBox();
             this.guna2DragControl1 = new Guna.UI2.WinForms.Guna2DragControl(this.components);
-            this.cbbProvider = new Guna.UI2.WinForms.Guna2ComboBox();
-            this.guna2HtmlLabel1 = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            this.btnInstruction = new Guna.UI2.WinForms.Guna2Button();
             this.guna2Panel3.SuspendLayout();
             this.guna2Panel2.SuspendLayout();
             this.guna2Panel1.SuspendLayout();
@@ -68,8 +69,35 @@
             this.guna2Panel3.Font = new System.Drawing.Font("Segoe UI", 10.01739F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2Panel3.Location = new System.Drawing.Point(0, 113);
             this.guna2Panel3.Name = "guna2Panel3";
-            this.guna2Panel3.Size = new System.Drawing.Size(486, 356);
+            this.guna2Panel3.Size = new System.Drawing.Size(486, 376);
             this.guna2Panel3.TabIndex = 11;
+            // 
+            // guna2HtmlLabel1
+            // 
+            this.guna2HtmlLabel1.BackColor = System.Drawing.Color.Transparent;
+            this.guna2HtmlLabel1.Font = new System.Drawing.Font("Segoe UI Semibold", 11.89565F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.guna2HtmlLabel1.Location = new System.Drawing.Point(170, 53);
+            this.guna2HtmlLabel1.Name = "guna2HtmlLabel1";
+            this.guna2HtmlLabel1.Size = new System.Drawing.Size(143, 27);
+            this.guna2HtmlLabel1.TabIndex = 5;
+            this.guna2HtmlLabel1.Text = "Choose Provider";
+            // 
+            // cbbProvider
+            // 
+            this.cbbProvider.AutoRoundedCorners = true;
+            this.cbbProvider.BackColor = System.Drawing.Color.Transparent;
+            this.cbbProvider.BorderRadius = 17;
+            this.cbbProvider.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.cbbProvider.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbbProvider.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.cbbProvider.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.cbbProvider.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.cbbProvider.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
+            this.cbbProvider.ItemHeight = 30;
+            this.cbbProvider.Location = new System.Drawing.Point(60, 91);
+            this.cbbProvider.Name = "cbbProvider";
+            this.cbbProvider.Size = new System.Drawing.Size(367, 36);
+            this.cbbProvider.TabIndex = 4;
             // 
             // txtPath
             // 
@@ -131,7 +159,7 @@
             this.guna2Panel2.Controls.Add(this.btnCancel);
             this.guna2Panel2.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.guna2Panel2.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(232)))), ((int)(((byte)(223)))), ((int)(((byte)(202)))));
-            this.guna2Panel2.Location = new System.Drawing.Point(0, 469);
+            this.guna2Panel2.Location = new System.Drawing.Point(0, 489);
             this.guna2Panel2.Name = "guna2Panel2";
             this.guna2Panel2.Size = new System.Drawing.Size(486, 88);
             this.guna2Panel2.TabIndex = 10;
@@ -155,6 +183,7 @@
             this.btnSave.Size = new System.Drawing.Size(130, 57);
             this.btnSave.TabIndex = 1;
             this.btnSave.Text = "Save";
+            this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
             // 
             // btnCancel
             // 
@@ -182,6 +211,7 @@
             // guna2Panel1
             // 
             this.guna2Panel1.BackColor = System.Drawing.Color.Transparent;
+            this.guna2Panel1.Controls.Add(this.btnInstruction);
             this.guna2Panel1.Controls.Add(this.label1);
             this.guna2Panel1.Controls.Add(this.guna2PictureBox1);
             this.guna2Panel1.Dock = System.Windows.Forms.DockStyle.Top;
@@ -220,39 +250,30 @@
             this.guna2DragControl1.TargetControl = this.guna2Panel1;
             this.guna2DragControl1.UseTransparentDrag = true;
             // 
-            // cbbProvider
+            // btnInstruction
             // 
-            this.cbbProvider.AutoRoundedCorners = true;
-            this.cbbProvider.BackColor = System.Drawing.Color.Transparent;
-            this.cbbProvider.BorderRadius = 17;
-            this.cbbProvider.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.cbbProvider.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cbbProvider.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.cbbProvider.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.cbbProvider.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.cbbProvider.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
-            this.cbbProvider.ItemHeight = 30;
-            this.cbbProvider.Location = new System.Drawing.Point(60, 91);
-            this.cbbProvider.Name = "cbbProvider";
-            this.cbbProvider.Size = new System.Drawing.Size(367, 36);
-            this.cbbProvider.TabIndex = 4;
-            // 
-            // guna2HtmlLabel1
-            // 
-            this.guna2HtmlLabel1.BackColor = System.Drawing.Color.Transparent;
-            this.guna2HtmlLabel1.Font = new System.Drawing.Font("Segoe UI Semibold", 11.89565F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2HtmlLabel1.Location = new System.Drawing.Point(170, 53);
-            this.guna2HtmlLabel1.Name = "guna2HtmlLabel1";
-            this.guna2HtmlLabel1.Size = new System.Drawing.Size(143, 27);
-            this.guna2HtmlLabel1.TabIndex = 5;
-            this.guna2HtmlLabel1.Text = "Choose Provider";
+            this.btnInstruction.Animated = true;
+            this.btnInstruction.BorderRadius = 10;
+            this.btnInstruction.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnInstruction.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnInstruction.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnInstruction.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnInstruction.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(79)))), ((int)(((byte)(111)))), ((int)(((byte)(82)))));
+            this.btnInstruction.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btnInstruction.ForeColor = System.Drawing.Color.White;
+            this.btnInstruction.Location = new System.Drawing.Point(330, 12);
+            this.btnInstruction.Name = "btnInstruction";
+            this.btnInstruction.Size = new System.Drawing.Size(144, 33);
+            this.btnInstruction.TabIndex = 6;
+            this.btnInstruction.Text = "Instruction";
+            this.btnInstruction.Click += new System.EventHandler(this.btnInstruction_Click);
             // 
             // frmStorageAdd
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(239)))), ((int)(((byte)(230)))));
-            this.ClientSize = new System.Drawing.Size(486, 557);
+            this.ClientSize = new System.Drawing.Size(486, 577);
             this.Controls.Add(this.guna2Panel3);
             this.Controls.Add(this.guna2Panel2);
             this.Controls.Add(this.guna2Panel1);
@@ -287,5 +308,6 @@
         private Guna.UI2.WinForms.Guna2TextBox txtPath;
         private Guna.UI2.WinForms.Guna2ComboBox cbbProvider;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel1;
+        private Guna.UI2.WinForms.Guna2Button btnInstruction;
     }
 }

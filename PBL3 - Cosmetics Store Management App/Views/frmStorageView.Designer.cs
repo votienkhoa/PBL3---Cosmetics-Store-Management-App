@@ -34,12 +34,6 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.guna2BorderlessForm1 = new Guna.UI2.WinForms.Guna2BorderlessForm(this.components);
-            this.Staff_Del = new System.Windows.Forms.DataGridViewImageColumn();
-            this.Staff_Detail = new System.Windows.Forms.DataGridViewImageColumn();
-            this.Product_EXP = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Product_MFG = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Product_Quantity = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Product_Name = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.guna2PictureBox1 = new Guna.UI2.WinForms.Guna2PictureBox();
             this.guna2ImageButton2 = new Guna.UI2.WinForms.Guna2ImageButton();
             this.guna2TextBox1 = new Guna.UI2.WinForms.Guna2TextBox();
@@ -50,14 +44,17 @@
             this.guna2ControlBox3 = new Guna.UI2.WinForms.Guna2ControlBox();
             this.guna2ControlBox2 = new Guna.UI2.WinForms.Guna2ControlBox();
             this.guna2ControlBox1 = new Guna.UI2.WinForms.Guna2ControlBox();
-            this.dgvStaff = new Guna.UI2.WinForms.Guna2DataGridView();
-            this.Staff_Edit = new System.Windows.Forms.DataGridViewImageColumn();
+            this.dgvImport = new Guna.UI2.WinForms.Guna2DataGridView();
+            this.Import_ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Provider = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Date = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Staff_Detail = new System.Windows.Forms.DataGridViewImageColumn();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.guna2Separator1 = new Guna.UI2.WinForms.Guna2Separator();
             this.guna2BorderlessForm2 = new Guna.UI2.WinForms.Guna2BorderlessForm(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvStaff)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvImport)).BeginInit();
             this.SuspendLayout();
             // 
             // guna2BorderlessForm1
@@ -66,65 +63,6 @@
             this.guna2BorderlessForm1.ContainerControl = this;
             this.guna2BorderlessForm1.DockIndicatorTransparencyValue = 0.6D;
             this.guna2BorderlessForm1.TransparentWhileDrag = true;
-            // 
-            // Staff_Del
-            // 
-            this.Staff_Del.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            this.Staff_Del.FillWeight = 50F;
-            this.Staff_Del.HeaderText = "";
-            this.Staff_Del.Image = global::PBL3___Cosmetics_Store_Management_App.Properties.Resources.delete;
-            this.Staff_Del.ImageLayout = System.Windows.Forms.DataGridViewImageCellLayout.Zoom;
-            this.Staff_Del.MinimumWidth = 6;
-            this.Staff_Del.Name = "Staff_Del";
-            this.Staff_Del.ReadOnly = true;
-            this.Staff_Del.Width = 40;
-            // 
-            // Staff_Detail
-            // 
-            this.Staff_Detail.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            this.Staff_Detail.FillWeight = 50F;
-            this.Staff_Detail.HeaderText = "";
-            this.Staff_Detail.Image = global::PBL3___Cosmetics_Store_Management_App.Properties.Resources.detail;
-            this.Staff_Detail.ImageLayout = System.Windows.Forms.DataGridViewImageCellLayout.Zoom;
-            this.Staff_Detail.MinimumWidth = 6;
-            this.Staff_Detail.Name = "Staff_Detail";
-            this.Staff_Detail.ReadOnly = true;
-            this.Staff_Detail.Width = 40;
-            // 
-            // Product_EXP
-            // 
-            this.Product_EXP.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            this.Product_EXP.HeaderText = "EXP";
-            this.Product_EXP.MinimumWidth = 6;
-            this.Product_EXP.Name = "Product_EXP";
-            this.Product_EXP.ReadOnly = true;
-            this.Product_EXP.Width = 200;
-            // 
-            // Product_MFG
-            // 
-            this.Product_MFG.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            this.Product_MFG.HeaderText = "MFG";
-            this.Product_MFG.MinimumWidth = 6;
-            this.Product_MFG.Name = "Product_MFG";
-            this.Product_MFG.ReadOnly = true;
-            this.Product_MFG.Width = 200;
-            // 
-            // Product_Quantity
-            // 
-            this.Product_Quantity.HeaderText = "Quantity";
-            this.Product_Quantity.MinimumWidth = 50;
-            this.Product_Quantity.Name = "Product_Quantity";
-            this.Product_Quantity.ReadOnly = true;
-            // 
-            // Product_Name
-            // 
-            this.Product_Name.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            this.Product_Name.FillWeight = 70F;
-            this.Product_Name.HeaderText = "Name";
-            this.Product_Name.MinimumWidth = 6;
-            this.Product_Name.Name = "Product_Name";
-            this.Product_Name.ReadOnly = true;
-            this.Product_Name.Width = 300;
             // 
             // guna2PictureBox1
             // 
@@ -260,12 +198,14 @@
             this.guna2ControlBox1.Size = new System.Drawing.Size(45, 29);
             this.guna2ControlBox1.TabIndex = 24;
             // 
-            // dgvStaff
+            // dgvImport
             // 
-            this.dgvStaff.AllowUserToAddRows = false;
-            this.dgvStaff.AllowUserToDeleteRows = false;
+            this.dgvImport.AllowUserToAddRows = false;
+            this.dgvImport.AllowUserToDeleteRows = false;
+            this.dgvImport.AllowUserToResizeColumns = false;
+            this.dgvImport.AllowUserToResizeRows = false;
             dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
-            this.dgvStaff.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            this.dgvImport.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(232)))), ((int)(((byte)(234)))), ((int)(((byte)(237)))));
             dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI Semibold", 10.01739F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -273,16 +213,13 @@
             dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Control;
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvStaff.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
-            this.dgvStaff.ColumnHeadersHeight = 35;
-            this.dgvStaff.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Product_Name,
-            this.Product_Quantity,
-            this.Product_MFG,
-            this.Product_EXP,
-            this.Staff_Detail,
-            this.Staff_Edit,
-            this.Staff_Del});
+            this.dgvImport.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            this.dgvImport.ColumnHeadersHeight = 35;
+            this.dgvImport.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Import_ID,
+            this.Provider,
+            this.Date,
+            this.Staff_Detail});
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
             dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.139131F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(254)));
@@ -290,52 +227,83 @@
             dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(241)))), ((int)(((byte)(243)))));
             dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.Black;
             dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvStaff.DefaultCellStyle = dataGridViewCellStyle3;
-            this.dgvStaff.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(241)))), ((int)(((byte)(243)))));
-            this.dgvStaff.Location = new System.Drawing.Point(50, 174);
-            this.dgvStaff.Name = "dgvStaff";
-            this.dgvStaff.ReadOnly = true;
-            this.dgvStaff.RowHeadersVisible = false;
-            this.dgvStaff.RowHeadersWidth = 49;
+            this.dgvImport.DefaultCellStyle = dataGridViewCellStyle3;
+            this.dgvImport.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(241)))), ((int)(((byte)(243)))));
+            this.dgvImport.Location = new System.Drawing.Point(50, 174);
+            this.dgvImport.Name = "dgvImport";
+            this.dgvImport.ReadOnly = true;
+            this.dgvImport.RowHeadersVisible = false;
+            this.dgvImport.RowHeadersWidth = 49;
             dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.dgvStaff.RowsDefaultCellStyle = dataGridViewCellStyle4;
-            this.dgvStaff.RowTemplate.Height = 30;
-            this.dgvStaff.Size = new System.Drawing.Size(988, 475);
-            this.dgvStaff.TabIndex = 23;
-            this.dgvStaff.Theme = Guna.UI2.WinForms.Enums.DataGridViewPresetThemes.LightGrid;
-            this.dgvStaff.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
-            this.dgvStaff.ThemeStyle.AlternatingRowsStyle.Font = null;
-            this.dgvStaff.ThemeStyle.AlternatingRowsStyle.ForeColor = System.Drawing.Color.Empty;
-            this.dgvStaff.ThemeStyle.AlternatingRowsStyle.SelectionBackColor = System.Drawing.Color.Empty;
-            this.dgvStaff.ThemeStyle.AlternatingRowsStyle.SelectionForeColor = System.Drawing.Color.Empty;
-            this.dgvStaff.ThemeStyle.BackColor = System.Drawing.Color.White;
-            this.dgvStaff.ThemeStyle.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(241)))), ((int)(((byte)(243)))));
-            this.dgvStaff.ThemeStyle.HeaderStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(232)))), ((int)(((byte)(234)))), ((int)(((byte)(237)))));
-            this.dgvStaff.ThemeStyle.HeaderStyle.BorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            this.dgvStaff.ThemeStyle.HeaderStyle.Font = new System.Drawing.Font("Segoe UI Semibold", 10.01739F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dgvStaff.ThemeStyle.HeaderStyle.ForeColor = System.Drawing.Color.Black;
-            this.dgvStaff.ThemeStyle.HeaderStyle.HeaightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
-            this.dgvStaff.ThemeStyle.HeaderStyle.Height = 35;
-            this.dgvStaff.ThemeStyle.ReadOnly = true;
-            this.dgvStaff.ThemeStyle.RowsStyle.BackColor = System.Drawing.Color.White;
-            this.dgvStaff.ThemeStyle.RowsStyle.BorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
-            this.dgvStaff.ThemeStyle.RowsStyle.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.139131F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(254)));
-            this.dgvStaff.ThemeStyle.RowsStyle.ForeColor = System.Drawing.Color.Black;
-            this.dgvStaff.ThemeStyle.RowsStyle.Height = 30;
-            this.dgvStaff.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(241)))), ((int)(((byte)(243)))));
-            this.dgvStaff.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.Black;
+            this.dgvImport.RowsDefaultCellStyle = dataGridViewCellStyle4;
+            this.dgvImport.RowTemplate.Height = 30;
+            this.dgvImport.Size = new System.Drawing.Size(988, 475);
+            this.dgvImport.TabIndex = 23;
+            this.dgvImport.Theme = Guna.UI2.WinForms.Enums.DataGridViewPresetThemes.LightGrid;
+            this.dgvImport.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
+            this.dgvImport.ThemeStyle.AlternatingRowsStyle.Font = null;
+            this.dgvImport.ThemeStyle.AlternatingRowsStyle.ForeColor = System.Drawing.Color.Empty;
+            this.dgvImport.ThemeStyle.AlternatingRowsStyle.SelectionBackColor = System.Drawing.Color.Empty;
+            this.dgvImport.ThemeStyle.AlternatingRowsStyle.SelectionForeColor = System.Drawing.Color.Empty;
+            this.dgvImport.ThemeStyle.BackColor = System.Drawing.Color.White;
+            this.dgvImport.ThemeStyle.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(241)))), ((int)(((byte)(243)))));
+            this.dgvImport.ThemeStyle.HeaderStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(232)))), ((int)(((byte)(234)))), ((int)(((byte)(237)))));
+            this.dgvImport.ThemeStyle.HeaderStyle.BorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            this.dgvImport.ThemeStyle.HeaderStyle.Font = new System.Drawing.Font("Segoe UI Semibold", 10.01739F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dgvImport.ThemeStyle.HeaderStyle.ForeColor = System.Drawing.Color.Black;
+            this.dgvImport.ThemeStyle.HeaderStyle.HeaightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
+            this.dgvImport.ThemeStyle.HeaderStyle.Height = 35;
+            this.dgvImport.ThemeStyle.ReadOnly = true;
+            this.dgvImport.ThemeStyle.RowsStyle.BackColor = System.Drawing.Color.White;
+            this.dgvImport.ThemeStyle.RowsStyle.BorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
+            this.dgvImport.ThemeStyle.RowsStyle.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.139131F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(254)));
+            this.dgvImport.ThemeStyle.RowsStyle.ForeColor = System.Drawing.Color.Black;
+            this.dgvImport.ThemeStyle.RowsStyle.Height = 30;
+            this.dgvImport.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(241)))), ((int)(((byte)(243)))));
+            this.dgvImport.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.Black;
+            this.dgvImport.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.dgvImport_CellFormatting);
             // 
-            // Staff_Edit
+            // Import_ID
             // 
-            this.Staff_Edit.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            this.Staff_Edit.FillWeight = 50F;
-            this.Staff_Edit.HeaderText = "";
-            this.Staff_Edit.Image = global::PBL3___Cosmetics_Store_Management_App.Properties.Resources.edit;
-            this.Staff_Edit.ImageLayout = System.Windows.Forms.DataGridViewImageCellLayout.Zoom;
-            this.Staff_Edit.MinimumWidth = 6;
-            this.Staff_Edit.Name = "Staff_Edit";
-            this.Staff_Edit.ReadOnly = true;
-            this.Staff_Edit.Width = 40;
+            this.Import_ID.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.Import_ID.DataPropertyName = "import_id";
+            this.Import_ID.FillWeight = 70F;
+            this.Import_ID.HeaderText = "ID";
+            this.Import_ID.MinimumWidth = 6;
+            this.Import_ID.Name = "Import_ID";
+            this.Import_ID.ReadOnly = true;
+            this.Import_ID.Width = 300;
+            // 
+            // Provider
+            // 
+            this.Provider.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.Provider.DataPropertyName = "provider_id";
+            this.Provider.HeaderText = "Provider";
+            this.Provider.MinimumWidth = 6;
+            this.Provider.Name = "Provider";
+            this.Provider.ReadOnly = true;
+            this.Provider.Width = 200;
+            // 
+            // Date
+            // 
+            this.Date.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Date.DataPropertyName = "import_date";
+            this.Date.HeaderText = "Date";
+            this.Date.MinimumWidth = 6;
+            this.Date.Name = "Date";
+            this.Date.ReadOnly = true;
+            // 
+            // Staff_Detail
+            // 
+            this.Staff_Detail.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.Staff_Detail.FillWeight = 50F;
+            this.Staff_Detail.HeaderText = "";
+            this.Staff_Detail.Image = global::PBL3___Cosmetics_Store_Management_App.Properties.Resources.detail;
+            this.Staff_Detail.ImageLayout = System.Windows.Forms.DataGridViewImageCellLayout.Zoom;
+            this.Staff_Detail.MinimumWidth = 6;
+            this.Staff_Detail.Name = "Staff_Detail";
+            this.Staff_Detail.ReadOnly = true;
+            this.Staff_Detail.Width = 40;
             // 
             // label2
             // 
@@ -387,15 +355,16 @@
             this.Controls.Add(this.guna2ControlBox3);
             this.Controls.Add(this.guna2ControlBox2);
             this.Controls.Add(this.guna2ControlBox1);
-            this.Controls.Add(this.dgvStaff);
+            this.Controls.Add(this.dgvImport);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.guna2Separator1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frmStorageView";
             this.Text = "frmStorageView";
+            this.Load += new System.EventHandler(this.frmStorageView_Load);
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvStaff)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvImport)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -411,14 +380,7 @@
         private Guna.UI2.WinForms.Guna2ControlBox guna2ControlBox3;
         private Guna.UI2.WinForms.Guna2ControlBox guna2ControlBox2;
         private Guna.UI2.WinForms.Guna2ControlBox guna2ControlBox1;
-        private Guna.UI2.WinForms.Guna2DataGridView dgvStaff;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Product_Name;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Product_Quantity;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Product_MFG;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Product_EXP;
-        private System.Windows.Forms.DataGridViewImageColumn Staff_Detail;
-        private System.Windows.Forms.DataGridViewImageColumn Staff_Edit;
-        private System.Windows.Forms.DataGridViewImageColumn Staff_Del;
+        private Guna.UI2.WinForms.Guna2DataGridView dgvImport;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private Guna.UI2.WinForms.Guna2Separator guna2Separator1;
@@ -426,5 +388,9 @@
         private System.Windows.Forms.DataGridViewImageColumn dataGridViewImageColumn2;
         private System.Windows.Forms.DataGridViewImageColumn dataGridViewImageColumn1;
         private Guna.UI2.WinForms.Guna2BorderlessForm guna2BorderlessForm2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Import_ID;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Provider;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Date;
+        private System.Windows.Forms.DataGridViewImageColumn Staff_Detail;
     }
 }

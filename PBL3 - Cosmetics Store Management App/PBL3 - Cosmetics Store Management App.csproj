@@ -220,6 +220,7 @@
     <Compile Include="Controllers\FileHelper.cs" />
     <Compile Include="Controllers\ImportController.cs" />
     <Compile Include="Controllers\ProductController.cs" />
+    <Compile Include="Controllers\ProviderController.cs" />
     <Compile Include="Controllers\ReceiptController.cs" />
     <Compile Include="Controllers\ReportController.cs" />
     <Compile Include="Data Access\DatabaseContext.cs" />
@@ -243,11 +244,13 @@
     <Compile Include="Entities\ReceiptPrint.cs" />
     <Compile Include="Infrastructure\Implementations\ImportDetailRepository.cs" />
     <Compile Include="Infrastructure\Implementations\ImportRepository.cs" />
+    <Compile Include="Infrastructure\Implementations\ProviderRepository.cs" />
     <Compile Include="Infrastructure\Implementations\ReceiptDetailRepository.cs" />
     <Compile Include="Infrastructure\Implementations\ReceiptRepository.cs" />
     <Compile Include="Infrastructure\Interfaces\ICustomerRepository.cs" />
     <Compile Include="Infrastructure\Interfaces\IImportDetailRepository.cs" />
     <Compile Include="Infrastructure\Interfaces\IImportRepository.cs" />
+    <Compile Include="Infrastructure\Interfaces\IProviderRepository.cs" />
     <Compile Include="Infrastructure\Interfaces\IReceiptDetailRepository.cs" />
     <Compile Include="Infrastructure\Interfaces\IReceiptRepository.cs" />
     <Compile Include="Controllers\StaffController.cs" />

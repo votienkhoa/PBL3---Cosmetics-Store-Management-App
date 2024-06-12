@@ -21,6 +21,7 @@ namespace PBL3___Cosmetics_Store_Management_App
         {
             lbName.Text = product.product_name;
             lbStock.Text = product.product_stock.ToString();
+            lbPrice.Text = product.product_price.ToString("N0");
             picProduct.Image = FileHelper.BytesToBitmap(product.product_image);
         }
 

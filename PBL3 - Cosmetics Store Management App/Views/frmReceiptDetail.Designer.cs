@@ -43,16 +43,16 @@
             this.reportViewer1.Size = new System.Drawing.Size(703, 713);
             this.reportViewer1.TabIndex = 0;
             // 
-            // frmReceipt
+            // frmReceiptDetail
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
             this.ClientSize = new System.Drawing.Size(703, 713);
             this.Controls.Add(this.reportViewer1);
-            this.Name = "frmReceipt";
+            this.Name = "frmReceiptDetail";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Form1";
+            this.Text = "Receipt";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.ResumeLayout(false);
             this.PerformLayout();

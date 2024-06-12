@@ -1,4 +1,5 @@
 ﻿using IronXL;
+using PBL3___Cosmetics_Store_Management_App.Controllers;
 using PBL3___Cosmetics_Store_Management_App.Entities;
 using System;
 using System.Collections.Generic;
@@ -9,6 +10,7 @@ namespace PBL3___Cosmetics_Store_Management_App.View
 {
     public partial class frmStorageAdd : Form
     {
+        public Staff current_staff {  get; set; }
         public frmStorageAdd()
         {
             InitializeComponent();
@@ -28,37 +30,46 @@ namespace PBL3___Cosmetics_Store_Management_App.View
 
                 if (openFileDialog.ShowDialog() == DialogResult.OK)
                 {
-                    
+                    if (FileHelper.IsFileLocked(openFileDialog.FileName))
+                    {
+                        MessageBox.Show("The file is already open by another process!");
+                    }
+                    else
+                    {
+                        txtPath.Text = openFileDialog.FileName;
+                    }
                 }
             }
         }
 
         private void frmStorageAdd_Load(object sender, System.EventArgs e)
         {
+            cbbProvider.Items.AddRange(ProviderController.Instance.GetAllName().ToArray());
 
         }
 
-        private List<ImportDetail> ReadExcelFile(string filePath)
+        private void btnSave_Click(object sender, EventArgs e)
         {
-            WorkBook workbook = WorkBook.Load(filePath);
-            WorkSheet sheet = workbook.WorkSheets[0];
-
-            int row = sheet.RowCount;
-            int column = sheet.ColumnCount;
-
-            List<ImportDetail> list = new List<ImportDetail>();
-            for (int i = 0; i < row; i++)
+            if (txtPath.Text == "" || cbbProvider.SelectedItem == null)
             {
-                ImportDetail tmp = new ImportDetail()
-                {
-                    product_id = sheet.GetCellAt(i, 0).Text,
-                    product_quantity = Convert.ToInt32(sheet.GetCellAt(i,1).Text),
-                    product_MFG = Convert.ToDateTime(sheet.GetCellAt(i,2).Text),
-                    product_EXP = Convert.ToDateTime(sheet.GetCellAt(i, 3).Text),
-                };
-                list.Add(tmp);
+                MessageBox.Show("Do not leave any field empty!", "Invalid input", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-            return list;
+            else
+            {
+                ImportController.Instance.Import(txtPath.Text, cbbProvider.SelectedItem.ToString(), current_staff.staff_id);
+                Close();
+            }
+        }
+
+        private void btnInstruction_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("*INSTRUCTION:  The correct format for the Excel file to be submitted is as follows:" +
+                            "\r\n\n- The file must contain exactly 4 columns." +
+                            "\r\n- The first column should be the product code (which already exists in the system).\r\n- The second column should be the quantity of the product." +
+                            "\r\n- The third and fourth columns should be the production date and the expiry date, respectively." +
+                            "\r\n- System will read from the second row (first row is header)",
+                            "Instruction"
+                            );
         }
     }
 }

@@ -23,7 +23,7 @@ namespace PBL3___Cosmetics_Store_Management_App.Repositories.Unit_of_work
         private ICustomerRepository _CustomerRepo;
         private IImportRepository _ImportRepo;
         private IImportDetailRepository _ImportDetailRepo;
-
+        private IProviderRepository _ProviderRepo;
 
         public UnitOfWork(DatabaseContext context)
         {
@@ -118,6 +118,17 @@ namespace PBL3___Cosmetics_Store_Management_App.Repositories.Unit_of_work
                     _ImportDetailRepo = new ImportDetailRepository(Context);
                 }
                 return _ImportDetailRepo;
+            }
+        }
+        public IProviderRepository ProviderRepo
+        {
+            get
+            {
+                if (_ProviderRepo == null)
+                {
+                    _ProviderRepo = new ProviderRepository(Context);
+                }
+                return _ProviderRepo;
             }
         }
         #endregion

@@ -22,5 +22,19 @@ namespace PBL3___Cosmetics_Store_Management_App.Controllers
                 return new Bitmap(ms);
             }
         }
+        public static bool IsFileLocked(string filePath)
+        {
+            try
+            {
+                using (FileStream fs = File.Open(filePath, FileMode.Open, FileAccess.ReadWrite, FileShare.None))
+                {
+                    return false;
+                }
+            }
+            catch (IOException)
+            {
+                return true;
+            }
+        }
     }
 }

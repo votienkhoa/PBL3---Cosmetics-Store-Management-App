@@ -18,6 +18,7 @@ namespace PBL3___Cosmetics_Store_Management_App.Repositories.Unit_of_work
         ICustomerRepository CustomerRepo { get; }
         IImportRepository ImportRepo { get; }
         IImportDetailRepository ImportDetailRepo { get; }
+        IProviderRepository ProviderRepo { get; }
 
         void Save();
 

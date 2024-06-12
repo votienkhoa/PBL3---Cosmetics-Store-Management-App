@@ -27,7 +27,7 @@ namespace PBL3___Cosmetics_Store_Management_App.Infrastructure.Implementations
             string tmp_id = "IP" + date + "00";
             
             string current_max = DatabaseContext.Imports.Where(p => string.Compare(p.import_id, tmp_id) == 1)
-                                                         .Select(i => i.provider_id)
+                                                         .Select(i => i.import_id)
                                                          .OrderByDescending(id => id)
                                                          .FirstOrDefault();
 

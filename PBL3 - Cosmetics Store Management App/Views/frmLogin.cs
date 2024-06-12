@@ -56,7 +56,10 @@ namespace PBL3___Cosmetics_Store_Management_App.Views
             else if (_staff.staff_role == 3)
             {
                 this.Hide();
-                frmStorageView frmMain = new frmStorageView();
+                frmStorageView frmMain = new frmStorageView()
+                {
+                    current_staff = _staff
+                };
                 frmMain.ShowDialog();
                 this.Close();
             }
