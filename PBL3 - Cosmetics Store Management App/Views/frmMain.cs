@@ -41,7 +41,7 @@ namespace PBL3___Cosmetics_Store_Management_App
 
         private void btnStaff_Click(object sender, EventArgs e)
         {
-            AddControl(new View.frmStaffView());
+            AddControl(new View.frmStaffView() { current_staff = currentStaff});
         }
 
         private void btnCustomer_Click(object sender, EventArgs e)

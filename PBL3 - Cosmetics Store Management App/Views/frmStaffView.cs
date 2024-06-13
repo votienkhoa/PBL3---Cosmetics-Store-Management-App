@@ -8,6 +8,7 @@ namespace PBL3___Cosmetics_Store_Management_App.View
 {
     public partial class frmStaffView : Form
     {
+        public Staff current_staff {  get; set; }
         public frmStaffView()
         {
             InitializeComponent();
@@ -75,8 +76,19 @@ namespace PBL3___Cosmetics_Store_Management_App.View
             }
             if (dtgv_staff.CurrentCell.OwningColumn.Name == "Staff_dele_button")
             {
-                StaffController.Instance.Delete(staff);
-                frmLoad();
+                DialogResult result = MessageBox.Show("Are you sure you want to delete staff \"" + staff.staff_id + "\"?" +
+                                                  "\nThis can be affect your data!!", "Delete Staff", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+                if (result == DialogResult.Yes)
+                {
+                    if (staff.staff_id == current_staff.staff_id)
+                    {
+                        MessageBox.Show("You can't delete your account", "Invalid operation", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        return;
+                    }
+                    StaffController.Instance.Delete(staff);
+                    frmLoad();
+                }
+                
             }
         }
 

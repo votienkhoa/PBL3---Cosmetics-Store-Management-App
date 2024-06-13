@@ -82,6 +82,11 @@ namespace PBL3___Cosmetics_Store_Management_App
 
         private void btnSave_Click(object sender, EventArgs e)
         {
+            if (CbbRole.SelectedItem == null)
+            {
+                MessageBox.Show("Please choose staff role!");
+                return;
+            }
             try
             {
                 _staff.staff_id = staff_id.Text.ToString();
